@@ -135,6 +135,7 @@ endobj
           
             //AddRow(false, 10, "T1", align, "First Column", "Second Column");
             //textAndtable.AddRow(false, 10, "T1", align, "Second Row", "Second Row");
+            content.SetStream(TextObject(0,0,"BOLLOX",12,"left"));
 
             var file = new FileStream(@"c:\Dumpzone\pdfgen.pdf", FileMode.Append);
             file.Write(page.GetPageDict(file.Length, out size), 0, size);
