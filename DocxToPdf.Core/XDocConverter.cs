@@ -26,14 +26,15 @@ namespace DocxToPdf.Core
             int fontSize = 9;
             double hScale = 1.1;
             double vScale = 1.6;
+            string fontName = "T1";
+
             var paras = xdoc.Descendants(w + "p").ToList();
 
-            StringWriter output = new StringWriter();
 
-            InitPdf();
-            
+            CreateTestPdf(@"c:\dumpzone\test.pdf");
 
 //            StreamWriter output = new StreamWriter(@"c:\dumpzone\output.pdf");
+            StringWriter output = new StringWriter();
             output.WriteLine(GetHeader());
             output.WriteLine(
         @"4 0 obj
@@ -78,7 +79,7 @@ stream");
                     //no text? skip object output!
                     if (!string.IsNullOrEmpty(textNode.Text))
                     {
-                        var run = TextObject(textNode.TabPos, yPos, textNode.Text, fontSize, textNode.Justification);
+                        var run = TextObject(textNode.TabPos, yPos, textNode.Text,fontName, fontSize, textNode.Justification);
                         output.WriteLine(run);
                     }
                 }
@@ -108,26 +109,27 @@ endobj
             return output.ToString();
         }
 
-        private void InitPdf()
+        private void CreateTestPdf(string filename)
         {
-            FileStream output = new FileStream(@"c:\Dumpzone\pdfgen.pdf", FileMode.Create);
+            FileStream output = new FileStream(filename, FileMode.Create);
             CatalogDict catalogDict = new CatalogDict();
             PageTreeDict pageTreeDict = new PageTreeDict();
             FontDict Courier = new FontDict();
             InfoDict infoDict = new InfoDict();
-            Courier.CreateFontDict("T1", "Courier");
+
+            Courier.CreateFont("T1", "Courier");
+
             infoDict.SetInfo("pdftest", "Rob", "3Squared");
 
             Utility pdfUtility = new Utility();
 
-            int size = 0;
-            output.Write(pdfUtility.GetHeader("1.5", out size));
+            output.Write(pdfUtility.GetHeader("1.5", out var size));
             output.Flush();
             output.Close();
 
             PageDict page = new PageDict();
             ContentDict content = new ContentDict();
-            PageSize pSize = new PageSize(612, 792);
+            PageDescription pSize = new PageDescription(612, 792);
             pSize.SetMargins(10, 10, 10, 10);
             page.CreatePage(pageTreeDict.objectNum, pSize);
             pageTreeDict.AddPage(page.objectNum);
@@ -135,7 +137,7 @@ endobj
           
             //AddRow(false, 10, "T1", align, "First Column", "Second Column");
             //textAndtable.AddRow(false, 10, "T1", align, "Second Row", "Second Row");
-            content.SetStream(TextObject(0,0,"BOLLOX",12,"left"));
+            content.SetStream(TextObject(0,0,"BOLLOX","T1",12,"left"));
 
             var file = new FileStream(@"c:\Dumpzone\pdfgen.pdf", FileMode.Append);
             file.Write(page.GetPageDict(file.Length, out size), 0, size);
@@ -154,7 +156,7 @@ endobj
 
         }
 
-        public string TextObject(double xPos, int yPos, string txt, int fontSize, string alignment)
+        public string TextObject(double xPos, int yPos, string txt,string fontName, int fontSize, string alignment)
         {
             double startX = 0;
             switch (alignment)
@@ -170,10 +172,10 @@ endobj
                     break;
             };
             return string.Format("\rBT/{0} {1} Tf\r{2} {3} Td \r({4}) Tj\rET\r",
-                "T0" /*fontName*/, fontSize, startX, (720 - yPos), txt);
+                fontName, fontSize, startX, (720 - yPos), txt);
         }
 
-        private int StrLen(string text, int fontSize)
+        private static int StrLen(string text, int fontSize)
         {
             char[] cArray = text.ToCharArray();
             int cWidth = 0;
