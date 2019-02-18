@@ -43,7 +43,7 @@ namespace DocxToPdf.Core
                 , xrefTable.XRefCount, refRoot, infoDict, objList.offset);
 
             xrefTable.offsetArray = null;
-            PdfObject.NextObjectNum = 0;
+            //PdfObject.NextObjectNum = 0;
 
             return GetUTF8Bytes(trailer, out size);
         }

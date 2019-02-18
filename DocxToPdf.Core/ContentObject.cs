@@ -1,18 +1,17 @@
 ﻿namespace DocxToPdf.Core
 {
     /// <summary>
-    ///Represents the general content stream in a Pdf Page. 
-    ///This is used only by the PageObjec 
+    /// Represents the general content stream in a Pdf Page. 
+    /// This is used only by the PageObjec 
     /// </summary>
-    public class ContentDict : PdfObject
+    public class ContentObject : PdfObject
     {
-        private string contentDict;
-        private string contentStream;
+        //private string contentStream;
 
-        public ContentDict()
+        public ContentObject()
         {
-            contentDict = null;
-            contentStream = "%stream\r";
+            //contentDict = null;
+            ObjectRepresenation = "%stream\r";
         }
 
         /// <summary>
@@ -22,7 +21,7 @@
         /// <param name="stream"></param>
         public void SetStream(string stream)
         {
-            contentStream += stream;
+            ObjectRepresenation += stream;
         }
 
         /// <summary>
@@ -33,10 +32,8 @@
         /// </summary>
         public byte[] GetContentDict(long filePos, out int size)
         {
-            contentDict = string.Format("{0} 0 obj <</Length {1}>>stream\r\n{2}\nendstream\rendobj\r",
-                this.objectNum, contentStream.Length, contentStream);
-
-            return GetUTF8Bytes(contentDict, filePos, out size);
+            ObjectRepresenation = $"{this.objectNum} 0 obj <</Length {ObjectRepresenation.Length}>>stream\r\n{ObjectRepresenation}\nendstream\rendobj\r";
+            return GetUTF8Bytes(ObjectRepresenation, filePos, out size);
         }
     }
 }

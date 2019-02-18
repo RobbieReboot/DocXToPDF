@@ -7,15 +7,15 @@
     ///Times-Italic		Helvetica-Oblique		Courier-Oblique
     ///Times-BoldItalic Helvetica-BoldOblique	Courier-BoldOblique
     /// </summary>
-    public class FontDict : PdfObject
+    public class FontObject : PdfObject
     {
-        private string fontDict;
+        //private string fontObject;
         public string font;
 
-        public FontDict()
+        public FontObject()
         {
             font = null;
-            fontDict = null;
+            //fontObject = null;
         }
 
         /// <summary>
@@ -25,7 +25,7 @@
         public void CreateFont(string fontName, string fontType)
         {
             font = fontName;
-            fontDict = string.Format(
+            ObjectRepresenation = string.Format(
                 "{0} 0 obj <</Type/Font/Name /{1}/BaseFont/{2}/Subtype/Type1/Encoding /WinAnsiEncoding>>\nendobj\n",
                 this.objectNum, fontName, fontType);
         }
@@ -37,7 +37,7 @@
         /// <returns></returns>
         public byte[] GetFontDict(long filePos, out int size)
         {
-            return this.GetUTF8Bytes(fontDict, filePos, out size);
+            return this.GetUTF8Bytes(ObjectRepresenation, filePos, out size);
         }
     }
 }

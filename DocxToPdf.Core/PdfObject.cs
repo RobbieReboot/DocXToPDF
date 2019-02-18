@@ -3,10 +3,15 @@ using System.Text;
 
 namespace DocxToPdf.Core
 {
+    /// <summary>
+    /// Root object class - responsible for assigning sequential object numbers.
+    /// </summary>
     public class PdfObject
     {
         //Incremental object number for EACH OBJECT.
-        internal static uint NextObjectNum;
+        protected static uint NextObjectNum { get; set; }
+
+        protected string ObjectRepresenation;
 
         //the Inherited object number for each derived object type.
         public uint objectNum;
@@ -19,6 +24,7 @@ namespace DocxToPdf.Core
         {
             NextObjectNum++;
             objectNum = NextObjectNum;
+            ObjectRepresenation = String.Empty;
         }
 
         ~PdfObject()
@@ -26,6 +32,14 @@ namespace DocxToPdf.Core
             objectNum = 0;
         }
 
+
+        /// <summary>
+        /// return this object
+        /// </summary>
+        /// <param name="str"></param>
+        /// <param name="filePos"></param>
+        /// <param name="size"></param>
+        /// <returns></returns>
         protected byte[] GetUTF8Bytes(string str, long filePos, out int size)
         {
             ObjectXRef obj = new ObjectXRef(objectNum, filePos);

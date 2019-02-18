@@ -5,13 +5,10 @@ namespace DocxToPdf.Core
     /// <summary>
     ///Store information about the document,Title, Author, Company, 
     /// </summary>
-    public class InfoDict : PdfObject
+    public class InfoObject : PdfObject
     {
-        private string info;
-
-        public InfoDict()
+        public InfoObject()
         {
-            info = null;
         }
 
         /// <summary>
@@ -21,7 +18,7 @@ namespace DocxToPdf.Core
         /// <param name="author"></param>
         public void SetInfo(string title, string author, string company)
         {
-            info = string.Format("{0} 0 obj <</ModDate({1}) /CreationDate({1}) /Title({2}) /Creator(3Squared) " +
+            ObjectRepresenation = string.Format("{0} 0 obj <</ModDate({1}) /CreationDate({1}) /Title({2}) /Creator(3Squared) " +
                                  "/Author({3}) /Producer(3Squared) /Company({4})>>\nendobj\n",
                 this.objectNum, GetDateTime(), title, author, company);
         }
@@ -33,7 +30,7 @@ namespace DocxToPdf.Core
         /// <returns></returns>
         public byte[] GetInfoDict(long filePos, out int size)
         {
-            return GetUTF8Bytes(info, filePos, out size);
+            return GetUTF8Bytes(ObjectRepresenation, filePos, out size);
         }
 
         /// <summary>

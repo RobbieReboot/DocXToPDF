@@ -114,10 +114,10 @@ endobj
             var pdf = new PdfDocument();
 
             FileStream output = new FileStream(filename, FileMode.Create);
-            CatalogDict catalogDict = new CatalogDict();
-            PageTreeDict pageTreeDict = new PageTreeDict();
-            FontDict Courier = new FontDict();
-            InfoDict infoDict = new InfoDict();
+            CatalogObject catalogDict = new CatalogObject();
+            PageTreeObject pageTreeDict = new PageTreeObject();
+            FontObject Courier = new FontObject();
+            InfoObject infoDict = new InfoObject();
 
             Courier.CreateFont("T1", "Courier");
 
@@ -127,12 +127,12 @@ endobj
             output.Flush();
             output.Close();
 
-            PageDict page = new PageDict();
-            ContentDict content = new ContentDict();
+            PageObject page = new PageObject();
+            ContentObject content = new ContentObject();
             PageDescription pSize = new PageDescription(612, 792);
             pSize.SetMargins(10, 10, 10, 10);
             page.CreatePage(pageTreeDict.objectNum, pSize);
-            pageTreeDict.AddPage(page.objectNum);
+            pageTreeDict.AddPage(page);
             page.AddResource(Courier, content.objectNum);
           
             //AddRow(false, 10, "T1", align, "First Column", "Second Column");

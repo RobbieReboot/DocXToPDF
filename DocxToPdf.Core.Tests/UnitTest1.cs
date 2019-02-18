@@ -15,22 +15,22 @@ namespace DocxToPdf.Core.Tests
             FileStream file = new FileStream(@"c:\Dumpzone\pdfgen.pdf", FileMode.Create);
             PdfDocument pdf = new PdfDocument();
 
-            CatalogDict catalogDict = new CatalogDict();
-            PageTreeDict pageTreeDict = new PageTreeDict();
-            FontDict Courier = new FontDict();
-            InfoDict infoDict = new InfoDict();
+            CatalogObject catalogDict = new CatalogObject();
+            PageTreeObject pageTreeDict = new PageTreeObject();
+            FontObject Courier = new FontObject();
+            InfoObject infoDict = new InfoObject();
             Courier.CreateFont("T1", "CourierNew");
             infoDict.SetInfo("pdftest", "Rob", "3Squared");
 
             int size = 0;
             file.Write(pdf.GetHeader("1.4", out size));
             file.Flush();
-            var page = new PageDict();
+            var page = new PageObject();
 
-            var body = new ContentDict();
+            var body = new ContentObject();
 
             page.CreatePage(pageTreeDict.objectNum, new PageDescription(612, 792,10,10,10,10));
-            pageTreeDict.AddPage(page.objectNum);
+            pageTreeDict.AddPage(page);
             page.AddResource(Courier, body.objectNum);
 
             //AddRow(false, 10, "T1", align, "First Column", "Second Column");
