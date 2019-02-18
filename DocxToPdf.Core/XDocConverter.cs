@@ -10,7 +10,7 @@ namespace DocxToPdf.Core
 {
     public class XDocConverter
     {
-        public string ToPdf(XDocument xdoc)
+        public PdfDocument ToPdf(XDocument xdoc)
         {
             var reader = xdoc.Root.CreateReader();
             var nsm = new XmlNamespaceManager(reader.NameTable);
@@ -106,11 +106,13 @@ endobj
             output.WriteLine(GetTrailer());
             output.Flush();
             output.Close();
-            return output.ToString();
+            return null;    //output.ToString();
         }
 
         private void CreateTestPdf(string filename)
         {
+            var pdf = new PdfDocument();
+
             FileStream output = new FileStream(filename, FileMode.Create);
             CatalogDict catalogDict = new CatalogDict();
             PageTreeDict pageTreeDict = new PageTreeDict();
@@ -121,9 +123,7 @@ endobj
 
             infoDict.SetInfo("pdftest", "Rob", "3Squared");
 
-            Utility pdfUtility = new Utility();
-
-            output.Write(pdfUtility.GetHeader("1.5", out var size));
+            output.Write(pdf.GetHeader("1.5", out var size));
             output.Flush();
             output.Close();
 
@@ -147,8 +147,8 @@ endobj
             file.Write(pageTreeDict.GetPageTree(file.Length, out size), 0, size);
             file.Write(Courier.GetFontDict(file.Length, out size), 0, size);
             file.Write(infoDict.GetInfoDict(file.Length, out size), 0, size);
-            file.Write(pdfUtility.CreateXrefTable(file.Length, out size), 0, size);
-            file.Write(pdfUtility.GetTrailer(catalogDict.objectNum,
+            file.Write(pdf.CreateXrefTable(file.Length, out size), 0, size);
+            file.Write(pdf.GetTrailer(catalogDict.objectNum,
                 infoDict.objectNum, out size), 0, size);
 
             file.Flush();
