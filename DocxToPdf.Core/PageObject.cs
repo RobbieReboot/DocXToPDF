@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace DocxToPdf.Core
 {
@@ -10,15 +12,15 @@ namespace DocxToPdf.Core
     {
         //private string page;
         private string pageSize;
-        private string fontRef;
-        private string resourceDict, contents;
-
+        private string resourceDict;
+        private List<ContentObject> contentObjects;
+        private List<FontObject> fontObjects;
         public PageObject()
         {
             resourceDict = null;
-            contents = null;
             pageSize = null;
-            fontRef = null;
+            contentObjects = new List<ContentObject>();
+            fontObjects = new List<FontObject>();
         }
 
         /// <summary>
@@ -34,29 +36,43 @@ namespace DocxToPdf.Core
                 this.objectNum, refParent, pageSize);
         }
 
-        /// <summary>
-        /// Add Resource to the pdf page
-        /// </summary>
-        /// <param name="font"></param>
-        public void AddResource(FontObject font, uint contentRef)
+        
+        public void AddFont(FontObject font) => fontObjects.Add(font);
+        public void AddContent(ContentObject content) => contentObjects.Add(content);
+
+        public byte[] RenderPageRefs(long filePos, out int size)
         {
-            fontRef += $"/{font.font} {font.objectNum} 0 R";
-            if (contentRef > 0)
+            //render resource & content refs
+            var fonts = fontObjects.Skip(1)
+                .Aggregate(fontObjects.First().IndirectRef(), (acc, i) => acc + "\n" + i.IndirectRef());
+            resourceDict = $"/Resources<</Font<<{fonts}>>/ProcSet[/PDF/Text]>>";
+
+            var contents = contentObjects.Skip(1)
+                .Aggregate(contentObjects.First().IndirectRef(), (acc, i) => acc + "\n" + i.IndirectRef());
+            
+            ObjectRepresenation += resourceDict + contents + ">>\rendobj\r";
+            
+            //render the actual page content.
+
+            return this.GetUTF8Bytes(ObjectRepresenation, filePos, out size);
+        }
+        public byte[] RenderPageContent(long filePos, out int size)
+        {
+            //var contents = contentObjects.Skip(1)
+            //    .Aggregate(contentObjects.First().GetContentDict(), (acc, i) => acc + "\n" + i.IndirectRef());
+
+            //render the actual page content.
+
+            foreach (var c in contentObjects)
             {
-                contents = string.Format("/Contents {0} 0 R", contentRef);
+                
             }
+            return contentObjects[0].GetContentDict(filePos, out size);
         }
 
-        /// <summary>
-        /// Get the Page Dictionary to be written to the file
-        /// </summary>
-        /// <param name="size"></param>
-        /// <returns></returns>
-        public byte[] GetPageDict(long filePos, out int size)
+        public byte[] RenderPageFonts(long filePos, out int size)
         {
-            resourceDict = string.Format("/Resources<</Font<<{0}>>/ProcSet[/PDF/Text]>>", fontRef);
-            ObjectRepresenation += resourceDict + contents + ">>\rendobj\r";
-            return this.GetUTF8Bytes(ObjectRepresenation, filePos, out size);
+            return fontObjects[0].RenderBytes(filePos, out size);
         }
     }
 }

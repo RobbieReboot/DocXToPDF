@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace DocxToPdf.Core
@@ -7,12 +8,28 @@ namespace DocxToPdf.Core
     public class PdfDocument
     {
         public static XRefTable xrefTable;
+
+        private CatalogObject catalogObj;
+        private PageTreeObject pageTreeObj;
+        private InfoObject infoObject;
+        private List<PageObject> pageObjects;
         public PdfDocument()
         {
             xrefTable = new XRefTable();
+            pageTreeObj = new PageTreeObject();
+            catalogObj = new CatalogObject(pageTreeObj);
+            pageObjects = new List<PageObject>();
         }
 
         public byte[] CreateXrefTable(long fileOffset, out int size) => xrefTable.CreateXrefTable(fileOffset, out size);
+        public void SetMetadata(InfoObject metadata) => infoObject = metadata;
+
+        public void AddPage(PageObject page,PageDescription pDesc)
+        {
+            page.CreatePage(pageTreeObj.objectNum, pDesc);
+            pageTreeObj.AddPage(page);
+            pageObjects.Add(page);
+        }
 
         public byte[] GetHeader(string version, out int size)
         {
@@ -65,44 +82,69 @@ namespace DocxToPdf.Core
             }
         }
 
-        private int StrLen(string text, int fontSize)
+        //private int StrLen(string text, int fontSize)
+        //{
+        //    char[] cArray = text.ToCharArray();
+        //    int cWidth = 0;
+        //    foreach (char c in cArray)
+        //    {
+        //        cWidth += 500; //(int)(fontSize*1.6)*20;	//Monospaced font width?
+        //    }
+
+        //    //div by1000??? 100 seems to work better :/
+        //    return (cWidth / 100);
+        //}
+
+        ///// <summary>
+        ///// start the Page Text element at the X Y position
+        ///// </summary>
+        ///// <returns></returns>
+        //public string AddText(uint X, uint Y, string text, int fontSize, string fontName, Justification alignment)
+        //{
+        //    long startX = 0;
+        //    switch (alignment)
+        //    {
+        //        case (Justification.Left):
+        //            startX = X;
+        //            break;
+        //        case (Justification.Center):
+        //            startX = X - (StrLen(text, fontSize)) / 2;
+        //            break;
+        //        case (Justification.Right):
+        //            startX = X - StrLen(text, fontSize);
+        //            break;
+        //    }
+
+        //    ;
+        //    return $"\rBT/{fontName} {fontSize} Tf\r{startX} {(792 - Y)} Td \r({text}) Tj\rET\r";
+        //}
+
+
+        public void Write(string fileName)
         {
-            char[] cArray = text.ToCharArray();
-            int cWidth = 0;
-            foreach (char c in cArray)
-            {
-                cWidth += 500; //(int)(fontSize*1.6)*20;	//Monospaced font width?
-            }
+            FileStream file = new FileStream(fileName, FileMode.Create);
 
-            //div by1000??? 100 seems to work better :/
-            return (cWidth / 100);
+            int size = 0;
+            file.Write(GetHeader("1.4", out size));
+            //foreach (var page in pageObjects)
+            //{
+            //    file.Write(page.RenderPageRefs(file.Length, out size), 0, size);
+            //    file.Write(page.RenderPageContent(file.Length, out size), 0, size);
+            //}
+
+            //Just do first page for now...
+            file.Write(pageObjects[0].RenderPageRefs(file.Length, out size), 0, size);
+            file.Write(pageObjects[0].RenderPageContent(file.Length, out size), 0, size);
+
+            file.Write(catalogObj.RenderBytes(file.Length, out size), 0, size);
+            file.Write(pageTreeObj.RenderBytes(file.Length, out size), 0, size);
+
+            file.Write(pageObjects[0].RenderPageFonts(file.Length,out size),0,size);
+
+            file.Write(infoObject.RenderBytes(file.Length, out size), 0, size);
+            file.Write(xrefTable.CreateXrefTable(file.Length, out size), 0, size);
+            file.Write(GetTrailer(catalogObj.objectNum, infoObject.objectNum, out size), 0, size);
+            file.Close();
         }
-
-        /// <summary>
-        /// start the Page Text element at the X Y position
-        /// </summary>
-        /// <returns></returns>
-        public string AddText(uint X, uint Y, string text, int fontSize, string fontName, Justification alignment)
-        {
-            long startX = 0;
-            switch (alignment)
-            {
-                case (Justification.Left):
-                    startX = X;
-                    break;
-                case (Justification.Center):
-                    startX = X - (StrLen(text, fontSize)) / 2;
-                    break;
-                case (Justification.Right):
-                    startX = X - StrLen(text, fontSize);
-                    break;
-            }
-
-            ;
-            return $"\rBT/{fontName} {fontSize} Tf\r{startX} {(792 - Y)} Td \r({text}) Tj\rET\r";
-        }
-
-
-
     }
 }

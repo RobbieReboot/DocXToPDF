@@ -79,7 +79,7 @@ stream");
                     //no text? skip object output!
                     if (!string.IsNullOrEmpty(textNode.Text))
                     {
-                        var run = TextObject(textNode.TabPos, yPos, textNode.Text,fontName, fontSize, textNode.Justification);
+                        var run = new TextObject(textNode.TabPos, yPos, textNode.Text,fontName, fontSize, textNode.Justification);
                         output.WriteLine(run);
                     }
                 }
@@ -112,81 +112,18 @@ endobj
         private void CreateTestPdf(string filename)
         {
             var pdf = new PdfDocument();
+            PageObject page = new PageObject();
+            pdf.AddPage(page, new PageDescription(612, 792, 10, 10, 10, 10));
 
             FileStream output = new FileStream(filename, FileMode.Create);
-            CatalogObject catalogDict = new CatalogObject();
-            PageTreeObject pageTreeDict = new PageTreeObject();
-            FontObject Courier = new FontObject();
-            InfoObject infoDict = new InfoObject();
+            FontObject Courier = new FontObject("CourierNew");
+            page.AddFont(Courier);
 
-            Courier.CreateFont("T1", "Courier");
-
-            infoDict.SetInfo("pdftest", "Rob", "3Squared");
-
-            output.Write(pdf.GetHeader("1.5", out var size));
-            output.Flush();
-            output.Close();
-
-            PageObject page = new PageObject();
-            ContentObject content = new ContentObject();
-            PageDescription pSize = new PageDescription(612, 792);
-            pSize.SetMargins(10, 10, 10, 10);
-            page.CreatePage(pageTreeDict.objectNum, pSize);
-            pageTreeDict.AddPage(page);
-            page.AddResource(Courier, content.objectNum);
-          
-            //AddRow(false, 10, "T1", align, "First Column", "Second Column");
-            //textAndtable.AddRow(false, 10, "T1", align, "Second Row", "Second Row");
-            content.SetStream(TextObject(0,0,"BOLLOX","T1",12,"left"));
-
-            var file = new FileStream(@"c:\Dumpzone\pdfgen.pdf", FileMode.Append);
-            file.Write(page.GetPageDict(file.Length, out size), 0, size);
-            file.Write(content.GetContentDict(file.Length, out size), 0, size);
-            file.Write(catalogDict.GetCatalogDict(pageTreeDict.objectNum,
-                file.Length, out size), 0, size);
-            file.Write(pageTreeDict.GetPageTree(file.Length, out size), 0, size);
-            file.Write(Courier.GetFontDict(file.Length, out size), 0, size);
-            file.Write(infoDict.GetInfoDict(file.Length, out size), 0, size);
-            file.Write(pdf.CreateXrefTable(file.Length, out size), 0, size);
-            file.Write(pdf.GetTrailer(catalogDict.objectNum,
-                infoDict.objectNum, out size), 0, size);
-
-            file.Flush();
-            file.Close();
-
+            ContentObject contentObj = new ContentObject();
+            page.AddContent(contentObj);
         }
 
-        public string TextObject(double xPos, int yPos, string txt,string fontName, int fontSize, string alignment)
-        {
-            double startX = 0;
-            switch (alignment)
-            {
-                case "left":
-                    startX = xPos;
-                    break;
-                case "center":
-                    startX = xPos - (StrLen(txt, fontSize)) / 2;
-                    break;
-                case "right":
-                    startX = xPos - StrLen(txt, fontSize) + 2;
-                    break;
-            };
-            return string.Format("\rBT/{0} {1} Tf\r{2} {3} Td \r({4}) Tj\rET\r",
-                fontName, fontSize, startX, (720 - yPos), txt);
-        }
-
-        private static int StrLen(string text, int fontSize)
-        {
-            char[] cArray = text.ToCharArray();
-            int cWidth = 0;
-            foreach (char c in cArray)
-            {
-                cWidth += 500;  //(int)(fontSize*1.6)*20;	//Monospaced font width?
-            }
-            //div by1000??? 100 seems to work better :/
-            //$"{text} - {(cWidth / 100)}".Dump("StrLen Em's");
-            return (cWidth / 100);
-        }
+        
 
         public string GetHeader()
         {

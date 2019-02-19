@@ -19,10 +19,12 @@
         /// Stream is taken from TextAndTable Objects
         /// </summary>
         /// <param name="stream"></param>
-        public void SetStream(string stream)
+        public void AddObject(IPdfRenderableObject obj)
         {
-            ObjectRepresenation += stream;
+            ObjectRepresenation += obj.Render();
         }
+
+        public string IndirectRef() => $"/Contents {objectNum} 0 R";
 
         /// <summary>
         /// Enter the text inside the table just created.

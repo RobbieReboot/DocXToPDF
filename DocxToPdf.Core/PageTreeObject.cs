@@ -6,7 +6,7 @@ namespace DocxToPdf.Core
     /// The PageTree object contains references to all the pages used within the Pdf.
     /// All individual pages are referenced through the Kids arraylist
     /// </summary>
-    public class PageTreeObject : PdfObject
+    public class PageTreeObject : PdfObject, IPdfRenderableObject
     {
         private string kids;
         private static uint MaxPages;
@@ -27,22 +27,19 @@ namespace DocxToPdf.Core
         {
             var objectNum = page.objectNum;
 
-            Exception error = new Exception("In PageTreeDict.AddPage, PageDict.ObjectNum Invalid");
-            if (objectNum > PdfObject.NextObjectNum)
-                throw error;
-
             MaxPages++;
             string refPage = objectNum + " 0 R ";
             kids = kids + refPage;
         }
         
-        /// <summary>
-        /// returns the Page Tree Dictionary
-        /// </summary>
-        /// <returns></returns>
-        public byte[] GetPageTree(long filePos, out int size)
+        public string Render()
         {
-            ObjectRepresenation = $"{this.objectNum} 0 obj <</Count {MaxPages}/Kids {kids}]>>\rendobj\r";
+            return ObjectRepresenation = $"{this.objectNum} 0 obj <</Count {MaxPages}/Kids {kids}]>>\rendobj\r";
+        }
+
+        public byte[] RenderBytes(long filePos, out int size)
+        {
+            Render();
             return this.GetUTF8Bytes(ObjectRepresenation, filePos, out size);
         }
     }

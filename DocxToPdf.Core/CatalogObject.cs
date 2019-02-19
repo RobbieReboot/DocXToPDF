@@ -6,26 +6,24 @@ namespace DocxToPdf.Core
     /// Models the Catalog dictionary within a pdf file. This is the first created object. 
     /// It contains references to all other objects within the List of Pdf Objects.
     /// </summary>
-    public class CatalogObject : PdfObject
+    public class CatalogObject : PdfObject, IPdfRenderableObject
     {
-        public CatalogObject()
+        private readonly PageTreeObject _pageTreeObj;
+
+        public CatalogObject(PageTreeObject pageTreeObj)
         {
+            _pageTreeObj = pageTreeObj;
+        }
+        
+        public string Render()
+        {
+            return ObjectRepresenation = string.Format("{0} 0 obj <</Type /Catalog /Lang(EN-US) /Pages {1} 0 R>>\rendobj\r",
+                this.objectNum, _pageTreeObj.objectNum);
         }
 
-        /// <summary>
-        /// Returns the Catalog Dictionary 
-        /// </summary>
-        /// <param name="refPageTree"></param>
-        /// <returns></returns>
-        public byte[] GetCatalogDict(uint refPageTree, long filePos, out int size)
+        public byte[] RenderBytes(long filePos, out int size)
         {
-            if (refPageTree < 1)
-            {
-                throw new Exception("GetCatalogDict - pagetree object number."); ;
-            }
-
-            ObjectRepresenation = string.Format("{0} 0 obj <</Type /Catalog /Lang(EN-US) /Pages {1} 0 R>>\rendobj\r",
-                this.objectNum, refPageTree);
+            Render();           //update representation
             return this.GetUTF8Bytes(ObjectRepresenation, filePos, out size);
         }
     }
