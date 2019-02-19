@@ -1,10 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
+using System.Xml;
+using System.Xml.Linq;
+using System.Xml.XPath;
 
 namespace DocxToPdf.Core
 {
+    /// <summary>
+    /// Information source for this from https://www.oreilly.com/library/view/developing-with-pdf/9781449327903/ch01.html
+    /// 
+    /// </summary>
     public class PdfDocument
     {
         public static XRefTableObject xrefTable;
@@ -81,6 +89,99 @@ namespace DocxToPdf.Core
                 throw error;
             }
         }
+
+        public static PdfDocument FromDocX(string xmlFile)
+        {
+            var xdoc = XDocument.Load(xmlFile);
+            return PdfDocument.FromDocX(xdoc);
+        }
+
+        public static PdfDocument FromDocX(XDocument xdoc)
+        {
+            var reader = xdoc.Root.CreateReader();
+            var nsm = new XmlNamespaceManager(reader.NameTable);
+            XNamespace w = "http://schemas.openxmlformats.org/wordprocessingml/2006/main";
+            XNamespace pt14 = "http://powertools.codeplex.com/2011";
+            //nsm.AddNamespace(w.NamespaceName, w.ToString());            // "w", "http://schemas.openxmlformats.org/wordprocessingml/2006/main");
+            //nsm.AddNamespace(pt14.NamespaceName, pt14.ToString());      //"pt14", "http://powertools.codeplex.com/2011");
+            nsm.AddNamespace("w", "http://schemas.openxmlformats.org/wordprocessingml/2006/main");
+            nsm.AddNamespace("pt14", "http://powertools.codeplex.com/2011");
+
+            //int paraNum = 0;
+            int yPos = 0;
+            int fontSize = 9;
+            double hScale = 1.1;
+            double vScale = 1.6;
+
+            var paras = xdoc.Descendants(w + "p").ToList();
+            var pdf = new PdfDocument();
+
+            // TODO: Should come from the classes in the doc but for now, its all MonoSpaced.
+            FontObject CourierNew = new FontObject("CourierNew");
+            // TODO: Should come from the Docs metadata..
+            pdf.SetMetadata(new InfoObject("XDoc2Pdf", "RobHill", "3Squared"));
+
+            // TODO: Only one page for now, but this should be in a loop. The PDF Write() needs to iterate over the object collections instead of outputting [0] 
+            var page = new PageObject();
+
+            // TODO: Point sizes from adobe for A4 - Fixed for now.
+            pdf.AddPage(page, new PageDescription(612, 792, 10, 10, 10, 10));
+            // TODO: The text object should add the font to the page IF it's not already added (Possibly). Slower than this but more convenient.
+
+            page.AddFont(CourierNew);
+
+            // TODO: SHould refactor this so the PAGE object is responsible for creation of content object so the parentRef can be set on creation.
+            var contentObj = new ContentObject();
+            page.AddContent(contentObj);
+
+            foreach (var para in paras)
+            {
+                var tabs = para.XPathSelectElements("w:pPr/w:tabs/w:tab", nsm).ToList();
+                var rNodes = para.XPathSelectElements("w:r", nsm).Skip(1);
+                var tNodes = para.XPathSelectElements("w:r/w:t", nsm);
+
+                // var anytext = tNodes.Any(tn => String.IsNullOrWhiteSpace(tn.Value));
+                // $"TabCount  = {tabs.Count}\n<r> count = {rNodes.Count()}\n<t> count = {tNodes.Count()}\n".Dump($"Paragraph {paraNum}");
+
+                var matchedTabNodes = new List<Tuple<string, double, string>>()
+                          .Select(t => new { Text = string.Empty, TabPos = double.MinValue, Justification = String.Empty }).ToList();
+                var tabNo = 0;
+                var tabCount = tabs.Count();
+                foreach (var rnode in rNodes)
+                {
+                    var newNode = new
+                    {
+                        Text = rnode.XPathSelectElement("w:t", nsm)?.Value,
+                        TabPos = (double.Parse(tabs[tabNo].Attribute(w + "pos").Value) / 20) * hScale,  //(fontSize*1.6),
+                        Justification = tabs[tabNo].Attribute(w + "val").Value
+                    };
+                    matchedTabNodes.Add(newNode);
+                    if (string.IsNullOrEmpty(newNode.Text))
+                        tabNo++;
+                    if (tabNo >= tabs.Count) break;
+                }
+                var final = matchedTabNodes.Where(n => !String.IsNullOrEmpty(n.Text)).ToList();
+                foreach (var textNode in final)
+                {
+                    //Null entry means skip a line.
+                    if (textNode == null)
+                    {
+                        yPos += (int)(fontSize * vScale);
+                        continue;
+                    }
+                    //no text? skip object output!
+                    if (!string.IsNullOrEmpty(textNode.Text))
+                    {
+                        contentObj.AddTextObject(textNode.TabPos, yPos, textNode.Text, CourierNew, fontSize, textNode.Justification);
+                    }
+                }
+                yPos += (int)(fontSize * vScale);
+            }
+
+            return pdf;
+        }
+
+
 
         public void Write(string fileName)
         {

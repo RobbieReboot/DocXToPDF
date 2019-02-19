@@ -33,7 +33,6 @@ namespace DocxToPdf.Core.Tests
             contentObj.AddTextObject(40, 40, "BOLLOX", CourierNew, 12, "left");
             contentObj.AddTextObject(50, 50, "BOLLOX", CourierNew, 12, "left");
             pdf.Write(@"C:\Dumpzone\pdfUnit1.pdf");
-
         }
 
         [Fact]
@@ -42,10 +41,12 @@ namespace DocxToPdf.Core.Tests
             var reader = XmlReader.Create(@"C:\Dumpzone\steve\file_1.xml");
             var xdoc = XDocument.Load(reader);
             var nsm = xdoc.CreateReader().NameTable;
-
-            var converted = new XDocConverter();
-
-            var pdf = converted.ToPdf(xdoc);
+            
+            //PdfDocument pdf = PdfDocument.FromDocX(xdoc);
+            //pdf.Write(@"C:\Dumpzone\steve\file_1.pdf");#
+            //OR
+            PdfDocument.FromDocX(xdoc).Write(@"C:\Dumpzone\steve\file_1.pdf");
+            xdoc.ToPdf().Write(@"C:\Dumpzone\steve\file_1a.pdf");
         }
     }
 }
