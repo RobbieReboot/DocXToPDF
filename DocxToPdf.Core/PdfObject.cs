@@ -3,16 +3,18 @@ using System.Text;
 
 namespace DocxToPdf.Core
 {
+    /// <summary>
+    /// Root object class - responsible for assigning sequential object numbers.
+    /// </summary>
     public class PdfObject
     {
         //Incremental object number for EACH OBJECT.
-        internal static uint NextObjectNum;
+        protected static uint NextObjectNum { get; set; }
+
+        protected string ObjectRepresenation;
 
         //the Inherited object number for each derived object type.
         public uint objectNum;
-
-        //private UTF8Encoding utf8;
-        private XrefEnteries Xref;
 
         /// <summary>
         /// Constructor increments the object number to 
@@ -20,10 +22,9 @@ namespace DocxToPdf.Core
         /// </summary>
         protected PdfObject()
         {
-            if (NextObjectNum == 0)
-                Xref = new XrefEnteries();
             NextObjectNum++;
             objectNum = NextObjectNum;
+            ObjectRepresenation = String.Empty;
         }
 
         ~PdfObject()
@@ -31,9 +32,17 @@ namespace DocxToPdf.Core
             objectNum = 0;
         }
 
+
+        /// <summary>
+        /// return this object
+        /// </summary>
+        /// <param name="str"></param>
+        /// <param name="filePos"></param>
+        /// <param name="size"></param>
+        /// <returns></returns>
         protected byte[] GetUTF8Bytes(string str, long filePos, out int size)
         {
-            ObjectXRef objList = new ObjectXRef(objectNum, filePos);
+            ObjectXRef obj = new ObjectXRef(objectNum, filePos);
             byte[] abuf;
             try
             {
@@ -41,7 +50,7 @@ namespace DocxToPdf.Core
                 Encoding enc = Encoding.GetEncoding("utf-8");
                 abuf = Encoding.Convert(Encoding.Unicode, enc, ubuf);
                 size = abuf.Length;
-                XrefEnteries.offsetArray.Add(objList);
+                PdfDocument.xrefTable.ObjectByteOffsets.Add(obj);
             }
             catch (Exception e)
             {
