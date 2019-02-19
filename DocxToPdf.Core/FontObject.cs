@@ -11,29 +11,32 @@
     public class FontObject : PdfObject, IPdfRenderableObject
     {
         //private string fontObject;
-        public string font;                 //the PDF object tag
+        private string fontRef;                 //the PDF object tag
         private static int fontIndex = 1;   //numerical Object tag..
+
+        public string FontRef() => fontRef;
 
         private string fontType;            //the font name, eg, bit14 fonts like CourierNew
         public FontObject(string fType)
         {
-            font = null;
-            font = $"T{fontIndex}";
+            fontRef = null;
+            fontRef = $"T{fontIndex}";
             fontType = fType;
 
             fontIndex++;
         }
 
         
-        public string IndirectRef() => $"/{font} {objectNum} 0 R";
+        public string IndirectRef() => $"/{fontRef} {objectNum} 0 R";
 
         public string Render()
         {
-            return $"{this.objectNum} 0 obj <</Type/Font/Name /{font}/BaseFont/{fontType}/Subtype/Type1/Encoding /WinAnsiEncoding>>\nendobj\n";
+            return ObjectRepresenation = $"{this.objectNum} 0 obj <</Type/Font/Name /{fontRef}/BaseFont/{fontType}/Subtype/Type1/Encoding /WinAnsiEncoding>>\nendobj\n";
         }
 
         public byte[] RenderBytes(long filePos, out int size)
         {
+            Render();
             return this.GetUTF8Bytes(ObjectRepresenation, filePos, out size);
         }
     }

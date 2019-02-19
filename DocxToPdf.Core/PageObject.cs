@@ -67,7 +67,7 @@ namespace DocxToPdf.Core
             {
                 
             }
-            return contentObjects[0].GetContentDict(filePos, out size);
+            return contentObjects[0].RenderBytes(filePos, out size);
         }
 
         public byte[] RenderPageFonts(long filePos, out int size)

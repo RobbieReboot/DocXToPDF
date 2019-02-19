@@ -54,12 +54,12 @@ namespace DocxToPdf.Core
             }
 
             //The sorted array will be already sorted to contain the file offset at the zeroth position
-            ObjectXRef objList = xrefTable.offsetArray[0];
+            ObjectXRef objList = xrefTable.ObjectByteOffsets[0];
             trailer = string.Format("trailer\n<</Size {0}/Root {1} 0 R {2}/ID[<5181383ede94727bcb32ac27ded71c68>" +
                                     "<5181383ede94727bcb32ac27ded71c68>]>>\r\nstartxref\r\n{3}\r\n%%EOF\r\n"
                 , xrefTable.XRefCount, refRoot, infoDict, objList.offset);
 
-            xrefTable.offsetArray = null;
+            xrefTable.ObjectByteOffsets = null;
             //PdfObject.NextObjectNum = 0;
 
             return GetUTF8Bytes(trailer, out size);
@@ -126,11 +126,6 @@ namespace DocxToPdf.Core
 
             int size = 0;
             file.Write(GetHeader("1.4", out size));
-            //foreach (var page in pageObjects)
-            //{
-            //    file.Write(page.RenderPageRefs(file.Length, out size), 0, size);
-            //    file.Write(page.RenderPageContent(file.Length, out size), 0, size);
-            //}
 
             //Just do first page for now...
             file.Write(pageObjects[0].RenderPageRefs(file.Length, out size), 0, size);

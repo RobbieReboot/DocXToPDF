@@ -50,7 +50,7 @@ namespace DocxToPdf.Core
                 Encoding enc = Encoding.GetEncoding("utf-8");
                 abuf = Encoding.Convert(Encoding.Unicode, enc, ubuf);
                 size = abuf.Length;
-                PdfDocument.xrefTable.offsetArray.Add(obj);
+                PdfDocument.xrefTable.ObjectByteOffsets.Add(obj);
             }
             catch (Exception e)
             {

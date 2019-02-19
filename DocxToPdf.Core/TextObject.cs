@@ -9,16 +9,16 @@ namespace DocxToPdf.Core
         private readonly double _xPos;
         private readonly int _yPos;
         private readonly string _txt;
-        private readonly string _fontName;
+        private readonly FontObject _font;
         private readonly int _fontSize;
         private readonly string _alignment;
 
-        public TextObject(double xPos, int yPos, string txt, string fontName, int fontSize, string alignment)
+        public TextObject(double xPos, int yPos, string txt, FontObject font, int fontSize, string alignment)
         {
             _xPos = xPos;
             _yPos = yPos;
             _txt = txt;
-            _fontName = fontName;
+            _font = font;
             _fontSize = fontSize;
             _alignment = alignment;
         }
@@ -34,11 +34,11 @@ namespace DocxToPdf.Core
                     startX = _xPos - (StrLen(_txt, _fontSize)) / 2;
                     break;
                 case "right":
-                    startX = _xPos - StrLen(_txt, _fontSize) + 2;
+                    startX = _xPos - StrLen(_txt, _fontSize) + 2;           //+2 gives a little breathing space...
                     break;
             };
             return string.Format("\rBT/{0} {1} Tf\r{2} {3} Td \r({4}) Tj\rET\r",
-                _fontName, _fontSize, startX, (720 - _yPos), _txt);
+                _font.FontRef(), _fontSize, startX, (720 - _yPos), _txt);
         }
 
         public byte[] RenderBytes(long offset, out int size)

@@ -7,11 +7,17 @@
     public class ContentObject : PdfObject
     {
         //private string contentStream;
+        private readonly PageObject _parentPage;
+        public PageObject ParentPage() => _parentPage;
 
         public ContentObject()
         {
             //contentDict = null;
             ObjectRepresenation = "%stream\r";
+        }
+        public ContentObject(PageObject parent) : this()
+        {
+            _parentPage = parent;
         }
 
         /// <summary>
@@ -32,7 +38,7 @@
         /// <summary>
         /// Get the Content Dictionary
         /// </summary>
-        public byte[] GetContentDict(long filePos, out int size)
+        public byte[] RenderBytes(long filePos, out int size)
         {
             ObjectRepresenation = $"{this.objectNum} 0 obj <</Length {ObjectRepresenation.Length}>>stream\r\n{ObjectRepresenation}\nendstream\rendobj\r";
             return GetUTF8Bytes(ObjectRepresenation, filePos, out size);

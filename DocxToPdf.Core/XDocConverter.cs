@@ -79,8 +79,8 @@ stream");
                     //no text? skip object output!
                     if (!string.IsNullOrEmpty(textNode.Text))
                     {
-                        var run = new TextObject(textNode.TabPos, yPos, textNode.Text,fontName, fontSize, textNode.Justification);
-                        output.WriteLine(run);
+                        //var run = new TextObject(textNode.TabPos, yPos, textNode.Text,Courier, fontSize, textNode.Justification);
+                        //output.WriteLine(run);
                     }
                 }
 

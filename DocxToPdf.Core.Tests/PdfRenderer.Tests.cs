@@ -13,25 +13,27 @@ namespace DocxToPdf.Core.Tests
         {
             var converter = new XDocConverter();
             PdfDocument pdf = new PdfDocument();
-            FontObject Courier= new FontObject("CourierNew");
+            FontObject CourierNew = new FontObject("CourierNew");
 
             pdf.SetMetadata(new InfoObject("pdftest", "Rob", "3Squared"));
 
             var page = new PageObject();
+
+            pdf.AddPage(page, new PageDescription(612, 792, 10, 10, 10, 10));
+            page.AddFont(CourierNew);
+
             var contentObj = new ContentObject();
             page.AddContent(contentObj);
 
-            pdf.AddPage(page, new PageDescription(612, 792, 10, 10, 10, 10));
-            page.AddFont(Courier);
-
-            contentObj.AddObject(new TextObject(0, 0, "BOLLOX", "T1", 12, "left"));
-            contentObj.AddObject(new TextObject(10, 10, "BOLLOX", "T1", 12, "left"));
-            contentObj.AddObject(new TextObject(20, 20, "BOLLOX", "T1", 12, "left"));
-            contentObj.AddObject(new TextObject(30, 30, "BOLLOX", "T1", 12, "left"));
-            contentObj.AddObject(new TextObject(40, 40, "BOLLOX", "T1", 12, "left"));
-            contentObj.AddObject(new TextObject(50, 50, "BOLLOX", "T1", 12, "left"));
-
+            contentObj.AddTextObject(0, 0, "BOLLOX", CourierNew, 12, "left");
+            contentObj.AddTextObject(0, 0, "BOLLOX", CourierNew, 12, "left");
+            contentObj.AddTextObject(10, 10, "BOLLOX", CourierNew, 12, "left");
+            contentObj.AddTextObject(20, 20, "BOLLOX", CourierNew, 12, "left");
+            contentObj.AddTextObject(30, 30, "BOLLOX", CourierNew, 12, "left");
+            contentObj.AddTextObject(40, 40, "BOLLOX", CourierNew, 12, "left");
+            contentObj.AddTextObject(50, 50, "BOLLOX", CourierNew, 12, "left");
             pdf.Write(@"C:\Dumpzone\pdfUnit1.pdf");
+
         }
 
         [Fact]
