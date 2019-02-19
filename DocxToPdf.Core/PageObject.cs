@@ -15,30 +15,25 @@ namespace DocxToPdf.Core
         private string resourceDict;
         private List<ContentObject> contentObjects;
         private List<FontObject> fontObjects;
-        public PageObject()
+        public PageExtents PageDescription;
+        private readonly uint _pageTreeObjectNum;
+
+        public PageObject(PdfDocument pdfDocument, PageExtents pageDescription, uint pageTreeObjectNum) : base(pdfDocument)
         {
+            PageDescription = pageDescription;
+            _pageTreeObjectNum = pageTreeObjectNum;
             resourceDict = null;
             pageSize = null;
             contentObjects = new List<ContentObject>();
             fontObjects = new List<FontObject>();
-        }
 
-        /// <summary>
-        /// Create The Pdf page
-        /// </summary>
-        /// <param name="refParent"></param>
-        /// <param name="width"></param>
-        /// <param name="height"></param>
-        public void CreatePage(uint refParent, PageDescription pSize)
-        {
-            pageSize = $"[0 0 {pSize.xWidth} {pSize.yHeight}]";
+            pageSize = $"[0 0 {pageDescription.xWidth} {pageDescription.yHeight}]";
             ObjectRepresenation = string.Format("{0} 0 obj <</Type /Page/Parent {1} 0 R/Rotate 0/MediaBox {2}/CropBox {2}",
-                this.objectNum, refParent, pageSize);
+                this.PdfObjectId, _pageTreeObjectNum, pageSize);
         }
 
         
         public void AddFont(FontObject font) => fontObjects.Add(font);
-        public void AddContent(ContentObject content) => contentObjects.Add(content);
 
         public byte[] RenderPageRefs(long filePos, out int size)
         {
@@ -56,6 +51,14 @@ namespace DocxToPdf.Core
 
             return this.GetUTF8Bytes(ObjectRepresenation, filePos, out size);
         }
+
+        public ContentObject AddContentObject()
+        {
+            var contentObj = new ContentObject(parentDocument,this);
+            contentObjects.Add(contentObj);
+            return contentObj;
+        }
+
         public byte[] RenderPageContent(long filePos, out int size)
         {
             //var contents = contentObjects.Skip(1)

@@ -8,28 +8,31 @@ namespace DocxToPdf.Core
     /// </summary>
     public class PdfObject
     {
+        protected PdfDocument parentDocument;
+
         //Incremental object number for EACH OBJECT.
-        protected static uint NextObjectNum { get; set; }
 
         protected string ObjectRepresenation;
 
         //the Inherited object number for each derived object type.
-        public uint objectNum;
+        public uint PdfObjectId;
 
         /// <summary>
         /// Constructor increments the object number to 
         /// reflect the currently used object number
         /// </summary>
-        protected PdfObject()
+        protected PdfObject(PdfDocument parent)
         {
-            NextObjectNum++;
-            objectNum = NextObjectNum;
+            parentDocument = parent;
+
+            parentDocument.NextObjectNum++;
+            PdfObjectId = parentDocument.NextObjectNum;
             ObjectRepresenation = String.Empty;
         }
 
         ~PdfObject()
         {
-            objectNum = 0;
+            PdfObjectId = 0;
         }
 
 
@@ -42,7 +45,7 @@ namespace DocxToPdf.Core
         /// <returns></returns>
         protected byte[] GetUTF8Bytes(string str, long filePos, out int size)
         {
-            ObjectXRef obj = new ObjectXRef(objectNum, filePos);
+            ObjectXRef obj = new ObjectXRef(PdfObjectId, filePos);
             byte[] abuf;
             try
             {
@@ -50,11 +53,11 @@ namespace DocxToPdf.Core
                 Encoding enc = Encoding.GetEncoding("utf-8");
                 abuf = Encoding.Convert(Encoding.Unicode, enc, ubuf);
                 size = abuf.Length;
-                PdfDocument.xrefTable.ObjectByteOffsets.Add(obj);
+                parentDocument.xrefTable.ObjectByteOffsets.Add(obj);
             }
             catch (Exception e)
             {
-                string str1 = $"{objectNum},In PdfObjects.GetBytes()";
+                string str1 = $"{PdfObjectId},In PdfObjects.GetBytes()";
                 Exception error = new Exception(e.Message + str1);
                 throw error;
             }
