@@ -181,14 +181,33 @@ namespace DocxToPdf.Core
             return pdf;
         }
 
+        public byte[] GetBytes(MemoryStream ms)
+        {
+            int size = 0;
+            ms.Write(RenderHeader("1.4", out size), 0, size);
 
+            //Just do first page for now...
+            ms.Write(pageObjects[0].RenderPageRefs(ms.Length, out size), 0, size);
+            ms.Write(pageObjects[0].RenderPageContent(ms.Length, out size), 0, size);
+
+            ms.Write(catalogObj.RenderBytes(ms.Length, out size), 0, size);
+            ms.Write(pageTreeObj.RenderBytes(ms.Length, out size), 0, size);
+
+            ms.Write(pageObjects[0].RenderPageFonts(ms.Length, out size), 0, size);
+
+            ms.Write(infoObject.RenderBytes(ms.Length, out size), 0, size);
+            ms.Write(xrefTable.RenderBytes(ms.Length, out size), 0, size);
+            ms.Write(RenderTrailer(catalogObj.objectNum, infoObject.objectNum, out size), 0, size);
+            ms.Close();
+            return ms.GetBuffer();
+        }
 
         public void Write(string fileName)
         {
             FileStream file = new FileStream(fileName, FileMode.Create);
 
             int size = 0;
-            file.Write(RenderHeader("1.4", out size));
+            file.Write(RenderHeader("1.4", out size),0,size);
 
             //Just do first page for now...
             file.Write(pageObjects[0].RenderPageRefs(file.Length, out size), 0, size);
