@@ -6,17 +6,18 @@ using System.Text;
 
 namespace DocxToPdf.Core
 {
-    public class XRefTable
+    public class XRefTableObject
     {
         public List<ObjectXRef> ObjectByteOffsets;
         public int XRefCount => ObjectByteOffsets.Count;
+        public long FirstByteOffset => ObjectByteOffsets[0].offset;
 
-        public XRefTable()
+        public XRefTableObject()
         {
             ObjectByteOffsets = new List<ObjectXRef>();
         }
 
-        public byte[] CreateXrefTable(long fileOffset, out int size)
+        public byte[] RenderBytes(long fileOffset, out int size)
         {
             //Store the Offset of the Xref table for startxRef
             ObjectXRef objList = new ObjectXRef(0, fileOffset);

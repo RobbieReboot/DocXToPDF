@@ -7,7 +7,7 @@ namespace DocxToPdf.Core
 {
     public class PdfDocument
     {
-        public static XRefTable xrefTable;
+        public static XRefTableObject xrefTable;
 
         private CatalogObject catalogObj;
         private PageTreeObject pageTreeObj;
@@ -15,13 +15,13 @@ namespace DocxToPdf.Core
         private List<PageObject> pageObjects;
         public PdfDocument()
         {
-            xrefTable = new XRefTable();
+            xrefTable = new XRefTableObject();
             pageTreeObj = new PageTreeObject();
             catalogObj = new CatalogObject(pageTreeObj);
             pageObjects = new List<PageObject>();
         }
 
-        public byte[] CreateXrefTable(long fileOffset, out int size) => xrefTable.CreateXrefTable(fileOffset, out size);
+        public byte[] CreateXrefTable(long fileOffset, out int size) => xrefTable.RenderBytes(fileOffset, out size);
         public void SetMetadata(InfoObject metadata) => infoObject = metadata;
 
         public void AddPage(PageObject page,PageDescription pDesc)
@@ -31,7 +31,7 @@ namespace DocxToPdf.Core
             pageObjects.Add(page);
         }
 
-        public byte[] GetHeader(string version, out int size)
+        public byte[] RenderHeader(string version, out int size)
         {
             //            var headerCode = 0xe2e3cfd3;
             //            string header = $"%PDF-{version}\r%{headerCode}\r\n";
@@ -43,7 +43,7 @@ namespace DocxToPdf.Core
         /// </summary>
         /// <param name="size"></param>
         /// <returns></returns>
-        public byte[] GetTrailer(uint refRoot, uint refInfo, out int size)
+        public byte[] RenderTrailer(uint refRoot, uint refInfo, out int size)
         {
             string trailer = null;
             string infoDict = String.Empty;
@@ -57,9 +57,9 @@ namespace DocxToPdf.Core
             ObjectXRef objList = xrefTable.ObjectByteOffsets[0];
             trailer = string.Format("trailer\n<</Size {0}/Root {1} 0 R {2}/ID[<5181383ede94727bcb32ac27ded71c68>" +
                                     "<5181383ede94727bcb32ac27ded71c68>]>>\r\nstartxref\r\n{3}\r\n%%EOF\r\n"
-                , xrefTable.XRefCount, refRoot, infoDict, objList.offset);
+                , xrefTable.XRefCount, refRoot, infoDict, xrefTable.FirstByteOffset);
 
-            xrefTable.ObjectByteOffsets = null;
+            //xrefTable.ObjectByteOffsets = null;
             //PdfObject.NextObjectNum = 0;
 
             return GetUTF8Bytes(trailer, out size);
@@ -82,50 +82,12 @@ namespace DocxToPdf.Core
             }
         }
 
-        //private int StrLen(string text, int fontSize)
-        //{
-        //    char[] cArray = text.ToCharArray();
-        //    int cWidth = 0;
-        //    foreach (char c in cArray)
-        //    {
-        //        cWidth += 500; //(int)(fontSize*1.6)*20;	//Monospaced font width?
-        //    }
-
-        //    //div by1000??? 100 seems to work better :/
-        //    return (cWidth / 100);
-        //}
-
-        ///// <summary>
-        ///// start the Page Text element at the X Y position
-        ///// </summary>
-        ///// <returns></returns>
-        //public string AddText(uint X, uint Y, string text, int fontSize, string fontName, Justification alignment)
-        //{
-        //    long startX = 0;
-        //    switch (alignment)
-        //    {
-        //        case (Justification.Left):
-        //            startX = X;
-        //            break;
-        //        case (Justification.Center):
-        //            startX = X - (StrLen(text, fontSize)) / 2;
-        //            break;
-        //        case (Justification.Right):
-        //            startX = X - StrLen(text, fontSize);
-        //            break;
-        //    }
-
-        //    ;
-        //    return $"\rBT/{fontName} {fontSize} Tf\r{startX} {(792 - Y)} Td \r({text}) Tj\rET\r";
-        //}
-
-
         public void Write(string fileName)
         {
             FileStream file = new FileStream(fileName, FileMode.Create);
 
             int size = 0;
-            file.Write(GetHeader("1.4", out size));
+            file.Write(RenderHeader("1.4", out size));
 
             //Just do first page for now...
             file.Write(pageObjects[0].RenderPageRefs(file.Length, out size), 0, size);
@@ -137,8 +99,8 @@ namespace DocxToPdf.Core
             file.Write(pageObjects[0].RenderPageFonts(file.Length,out size),0,size);
 
             file.Write(infoObject.RenderBytes(file.Length, out size), 0, size);
-            file.Write(xrefTable.CreateXrefTable(file.Length, out size), 0, size);
-            file.Write(GetTrailer(catalogObj.objectNum, infoObject.objectNum, out size), 0, size);
+            file.Write(xrefTable.RenderBytes(file.Length, out size), 0, size);
+            file.Write(RenderTrailer(catalogObj.objectNum, infoObject.objectNum, out size), 0, size);
             file.Close();
         }
     }

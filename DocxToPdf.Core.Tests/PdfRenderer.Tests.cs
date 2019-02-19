@@ -39,7 +39,7 @@ namespace DocxToPdf.Core.Tests
         [Fact]
         public void PdfConvertConvertsDocXWhenDocXIsValid()
         {
-            var reader = XmlReader.Create(@"C:\Dumpzone\steve\file_4.xml");
+            var reader = XmlReader.Create(@"C:\Dumpzone\steve\file_1.xml");
             var xdoc = XDocument.Load(reader);
             var nsm = xdoc.CreateReader().NameTable;
 
