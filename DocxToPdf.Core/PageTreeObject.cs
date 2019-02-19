@@ -9,9 +9,9 @@ namespace DocxToPdf.Core
     public class PageTreeObject : PdfObject, IPdfRenderableObject
     {
         private string kids;
-        private static uint MaxPages;
+        private uint MaxPages;
 
-        public PageTreeObject()
+        public PageTreeObject(PdfDocument pdfDocument) : base(pdfDocument)
         {
             kids = "[ ";
             MaxPages = 0;
@@ -25,7 +25,7 @@ namespace DocxToPdf.Core
         /// <param name="pageNum"></param>
         public void AddPage(PageObject page)
         {
-            var objectNum = page.objectNum;
+            var objectNum = page.PdfObjectId;
 
             MaxPages++;
             string refPage = objectNum + " 0 R ";
@@ -34,7 +34,7 @@ namespace DocxToPdf.Core
         
         public string Render()
         {
-            return ObjectRepresenation = $"{this.objectNum} 0 obj <</Count {MaxPages}/Kids {kids}]>>\rendobj\r";
+            return ObjectRepresenation = $"{this.PdfObjectId} 0 obj <</Count {MaxPages}/Kids {kids}]>>\rendobj\r";
         }
 
         public byte[] RenderBytes(long filePos, out int size)

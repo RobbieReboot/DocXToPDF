@@ -12,8 +12,11 @@ namespace DocxToPdf.Core
         private readonly FontObject _font;
         private readonly int _fontSize;
         private readonly string _alignment;
+        private readonly PageExtents _extents;
 
-        public TextObject(double xPos, int yPos, string txt, FontObject font, int fontSize, string alignment)
+
+        public TextObject(double xPos, int yPos, string txt, FontObject font, int fontSize, string alignment,
+            ContentObject contentObj)
         {
             _xPos = xPos;
             _yPos = yPos;
@@ -21,6 +24,7 @@ namespace DocxToPdf.Core
             _font = font;
             _fontSize = fontSize;
             _alignment = alignment;
+            _extents = contentObj.ParentPage.PageDescription;
         }
         public string Render()
         {
@@ -28,13 +32,13 @@ namespace DocxToPdf.Core
             switch (_alignment)
             {
                 case "left":
-                    startX = _xPos;
+                    startX = _xPos + _extents.leftMargin;
                     break;
                 case "center":
-                    startX = _xPos - (StrLen(_txt, _fontSize)) / 2;
+                    startX = _xPos + _extents.leftMargin - (StrLen(_txt, _fontSize)) / 2;
                     break;
                 case "right":
-                    startX = _xPos - StrLen(_txt, _fontSize) + 2;           //+2 gives a little breathing space...
+                    startX = _xPos + _extents.leftMargin - StrLen(_txt, _fontSize) + 2;           //+2 gives a little breathing space...
                     break;
             };
             return string.Format("\rBT/{0} {1} Tf\r{2} {3} Td \r({4}) Tj\rET\r",
@@ -47,7 +51,7 @@ namespace DocxToPdf.Core
             return new byte[size];
         }
 
-        private static int StrLen(string text, int fontSize)
+        private int StrLen(string text, int fontSize)
         {
             char[] cArray = text.ToCharArray();
             int cWidth = 0;

@@ -12,7 +12,8 @@ namespace DocxToPdf.Core
         public static void AddTextObject(this ContentObject contentObj, double xPos, int yPos, string txt, FontObject font, int fontSize,
             string alignment)
         {
-            contentObj.AddObject(new TextObject(xPos, yPos, txt, font, fontSize, alignment));
+            //Passes content object for parent page's pageDescription for margins.
+            contentObj.AddObject(new TextObject(xPos, yPos, txt, font, fontSize, alignment,contentObj));
         }
     }
 }
