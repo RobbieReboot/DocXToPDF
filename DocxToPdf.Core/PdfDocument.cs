@@ -117,7 +117,7 @@ namespace DocxToPdf.Core
             var pdf = new PdfDocument();
 
             // TODO: Should come from the classes in the doc but for now, its all MonoSpaced.
-            FontObject CourierNew = new FontObject("CourierNew");
+            FontObject CourierNew = new FontObject("Courier");
             // TODO: Should come from the Docs metadata..
             pdf.SetMetadata(new InfoObject("XDoc2Pdf", "RobHill", "3Squared"));
 

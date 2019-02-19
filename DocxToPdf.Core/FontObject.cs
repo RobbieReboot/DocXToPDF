@@ -1,13 +1,15 @@
 ﻿namespace DocxToPdf.Core
 {
     ///<summary>
-    /// Represents the font dictionary used in a pdf page
-    /// Times-Roman		Helvetica				CourierNew
-    /// Times-Bold		Helvetica-Bold			Courier-Bold
-    /// Times-Italic		Helvetica-Oblique		Courier-Oblique
-    /// Times-BoldItalic Helvetica-BoldOblique	Courier-BoldOblique
+    /// All the Base14 font names from the Acrobat spec in the ISO PDF Standard, ISO 32000-1:2008(E),
+    /// the Base 14 Fonts are referred to as the “Standard 14 Fonts”; and are defined in Section 9.6.2.2
+    ///
+    /// Courier, Courier Bold, Courier Oblique, Courier Bold-Oblique
+    /// Helvetica, Helvetica Bold, Helvetica Oblique, Helvetica Bold-Oblique
+    /// Times Roman, Times Bold, Times Italic, Times Bold-Italic
+    /// Symbol
+    /// Zapf Dingbats
     ///</summary>
-    
     public class FontObject : PdfObject, IPdfRenderableObject
     {
         //private string fontObject;
