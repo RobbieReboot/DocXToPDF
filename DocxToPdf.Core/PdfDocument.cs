@@ -136,11 +136,11 @@ namespace DocxToPdf.Core
             var pdf = new PdfDocument();
 
             // TODO: Should come from the classes in the doc but for now, its all MonoSpaced.
-            FontObject CourierNew = new FontObject("Courier");
+            FontObject CourierNew = new FontObject("Courier",pdf);
             // TODO: Should come from the Docs metadata..
             pdf.AddInfoObject("XDoc2Pdf", "RobHill","3Squared");
 
-            // TODO: Point sizes from adobe for A4 - Fixed for now.
+            // TODO: Point sizes from adobe for A4 - Fixed for now. Margins fixed for now.
             var page = pdf.AddPage(new PageExtents(612, 792, 32, 10, 32, 10));
             // TODO: The text object should add the font to the page IF it's not already added (Possibly). Slower than this but more convenient.
 
@@ -214,7 +214,7 @@ namespace DocxToPdf.Core
 
             ms.Write(infoObject.RenderBytes(ms.Length, out size), 0, size);
             ms.Write(xrefTable.RenderBytes(ms.Length, out size), 0, size);
-            ms.Write(RenderTrailer(catalogObj.objectNum, infoObject.objectNum, out size), 0, size);
+            ms.Write(RenderTrailer(catalogObj.PdfObjectId, infoObject.PdfObjectId, out size), 0, size);
             ms.Close();
             return ms.GetBuffer();
         }
