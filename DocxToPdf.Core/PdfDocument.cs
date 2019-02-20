@@ -136,12 +136,11 @@ namespace DocxToPdf.Core
             var pdf = new PdfDocument();
 
             // TODO: Should come from the classes in the doc but for now, its all MonoSpaced.
-            FontObject CourierNew = pdf.AddFont("CourierNew");
-
+            FontObject CourierNew = new FontObject("Courier",pdf);
             // TODO: Should come from the Docs metadata..
             pdf.AddInfoObject("XDoc2Pdf", "RobHill","3Squared");
 
-            // TODO: Point sizes from adobe for A4 - Fixed for now.
+            // TODO: Point sizes from adobe for A4 - Fixed for now. Margins fixed for now.
             var page = pdf.AddPage(new PageExtents(612, 792, 32, 10, 32, 10));
             // TODO: The text object should add the font to the page IF it's not already added (Possibly). Slower than this but more convenient.
 
@@ -199,12 +198,34 @@ namespace DocxToPdf.Core
             return pdf;
         }
 
+        public byte[] GetBytes(MemoryStream ms)
+        {
+            int size = 0;
+            ms.Write(RenderHeader("1.4", out size), 0, size);
+
+            //Just do first page for now...
+            ms.Write(pageObjects[0].RenderPageRefs(ms.Length, out size), 0, size);
+            ms.Write(pageObjects[0].RenderPageContent(ms.Length, out size), 0, size);
+
+            ms.Write(catalogObj.RenderBytes(ms.Length, out size), 0, size);
+            ms.Write(pageTreeObj.RenderBytes(ms.Length, out size), 0, size);
+
+            ms.Write(pageObjects[0].RenderPageFonts(ms.Length, out size), 0, size);
+
+            ms.Write(infoObject.RenderBytes(ms.Length, out size), 0, size);
+            ms.Write(xrefTable.RenderBytes(ms.Length, out size), 0, size);
+            ms.Write(RenderTrailer(catalogObj.PdfObjectId, infoObject.PdfObjectId, out size), 0, size);
+            ms.Close();
+            return ms.GetBuffer();
+        }
+
         public void Write(string fileName)
         {
             FileStream file = new FileStream(fileName, FileMode.Create);
 
             int size = 0;
-            file.Write(RenderHeader("1.4", out size));
+            file.Write(RenderHeader("1.4", out size),0,size);
+
             //Just do first page for now...
             file.Write(pageObjects[0].RenderPageRefs(file.Length, out size), 0, size);
             file.Write(pageObjects[0].RenderPageContent(file.Length, out size), 0, size);
