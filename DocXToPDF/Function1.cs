@@ -16,7 +16,7 @@ namespace DocXToPDF
     public static class Function1
     {
         [FunctionName("docx2pdf")]
-        public static IActionResult Run([HttpTrigger(AuthorizationLevel.Anonymous,"get", "post", Route = null)]HttpRequest req, TraceWriter log)
+        public static IActionResult Run([HttpTrigger(AuthorizationLevel.Anonymous,"get", "post", Route = null)]HttpRequest req, TraceWriter log, ExecutionContext context)
         {
             log.Info("DocX2Pdf function request.");
             Stopwatch sw = new Stopwatch();
@@ -26,6 +26,7 @@ namespace DocXToPDF
             XDocument xdoc = null;
             if (string.IsNullOrEmpty(requestBody))
             {
+                string htmlFilePath = Path.Combine(context.FunctionAppDirectory, "Data", "test.html");
                 xdoc = XDocument.Load(@"file_1.xml");
                 fileName = "SampleViaHttpGet.pdf";
             }

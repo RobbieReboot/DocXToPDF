@@ -1,0 +1,3512 @@
+<w:document 
+xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" 
+xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+xmlns:o="urn:schemas-microsoft-com:office:office" 
+xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" 
+xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" 
+xmlns:v="urn:schemas-microsoft-com:vml" 
+xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" 
+xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" 
+xmlns:w10="urn:schemas-microsoft-com:office:word" 
+xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" 
+xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" 
+xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" 
+xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" 
+xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" 
+xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" 
+xmlns:pt14="http://powertools.codeplex.com/2011" 
+mc:Ignorable="w14 wp14 pt14">
+	<w:body>
+		<w:p pt14:StyleName="CQPNR02" pt14:FontName="Courier New" pt14:LanguageType="western">
+			<w:pPr>
+				<w:pStyle w:val="CQPNR02"/>
+				<w:keepNext/>
+				<w:keepLines/>
+				<w:spacing w:after="0" w:line="276" w:lineRule="auto"/>
+				<w:tabs>
+					<w:tab w:val="left" w:pos="6"/>
+					<w:tab w:val="left" w:pos="1843"/>
+					<w:tab w:val="left" w:pos="2551"/>
+					<w:tab w:val="left" w:pos="3118"/>
+					<w:tab w:val="left" w:pos="6094"/>
+					<w:tab w:val="left" w:pos="6945"/>
+					<w:tab w:val="left" w:pos="7654"/>
+					<w:tab w:val="left" w:pos="8220"/>
+				</w:tabs>
+				<w:rPr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.004"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">Turn No</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="1.276"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">Loco/</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.492"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">Act</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.394"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">Location</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="2.067"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">Arr</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.591"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">Dep</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.492"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">Train</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.393"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">Cross</w:t>
+			</w:r>
+		</w:p>
+		<w:p pt14:StyleName="CQPNR03" pt14:FontName="Courier New" pt14:LanguageType="western">
+			<w:pPr>
+				<w:pStyle w:val="CQPNR03"/>
+				<w:keepNext/>
+				<w:keepLines/>
+				<w:spacing w:after="0" w:line="276" w:lineRule="auto"/>
+				<w:tabs>
+					<w:tab w:val="left" w:pos="1843"/>
+					<w:tab w:val="left" w:pos="6094"/>
+					<w:tab w:val="left" w:pos="6945"/>
+					<w:tab w:val="left" w:pos="8787"/>
+					<w:tab w:val="left" w:pos="9638"/>
+				</w:tabs>
+				<w:rPr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="1.280"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">Unit</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="2.952"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">Time</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.591"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">Time</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="1.279"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">Refs</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.591"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">Days</w:t>
+			</w:r>
+		</w:p>
+		<w:p pt14:StyleName="CQPNR01" pt14:FontName="Courier New" pt14:LanguageType="western">
+			<w:pPr>
+				<w:pStyle w:val="CQPNR01"/>
+				<w:keepNext/>
+				<w:keepLines/>
+				<w:spacing w:after="0" w:line="276" w:lineRule="auto"/>
+				<w:tabs>
+					<w:tab w:val="left" w:pos="6"/>
+				</w:tabs>
+				<w:rPr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.004"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">
+----------------------------------------------------------------------------------------------------
+				</w:t>
+			</w:r>
+		</w:p>
+		<w:p pt14:StyleName="CQPNR01" pt14:FontName="Courier New" pt14:LanguageType="western">
+			<w:pPr>
+				<w:pStyle w:val="CQPNR01"/>
+				<w:keepNext/>
+				<w:keepLines/>
+				<w:spacing w:after="0" w:line="276" w:lineRule="auto"/>
+				<w:tabs>
+					<w:tab w:val="left" w:pos="6"/>
+				</w:tabs>
+				<w:rPr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.004"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">Freightliner Limited</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.496"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.500"/>
+			</w:r>
+		</w:p>
+		<w:p pt14:StyleName="CQPNR04" pt14:FontName="Courier New" pt14:LanguageType="western">
+			<w:pPr>
+				<w:pStyle w:val="CQPNR04"/>
+				<w:keepNext/>
+				<w:keepLines/>
+				<w:spacing w:after="0" w:line="276" w:lineRule="auto"/>
+				<w:tabs>
+					<w:tab w:val="left" w:pos="6"/>
+					<w:tab w:val="right" w:pos="1417"/>
+					<w:tab w:val="right" w:pos="2409"/>
+					<w:tab w:val="left" w:pos="2551"/>
+					<w:tab w:val="left" w:pos="3260"/>
+					<w:tab w:val="right" w:pos="6661"/>
+					<w:tab w:val="right" w:pos="7512"/>
+					<w:tab w:val="left" w:pos="7654"/>
+					<w:tab w:val="left" w:pos="8220"/>
+					<w:tab w:val="left" w:pos="8787"/>
+					<w:tab w:val="left" w:pos="9638"/>
+				</w:tabs>
+				<w:rPr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.004"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">STP DR 6005</w:t>
+			</w:r>
+		</w:p>
+		<w:p pt14:StyleName="CQPNR04" pt14:FontName="Courier New" pt14:LanguageType="western">
+			<w:pPr>
+				<w:pStyle w:val="CQPNR04"/>
+				<w:keepNext/>
+				<w:keepLines/>
+				<w:spacing w:after="0" w:line="276" w:lineRule="auto"/>
+				<w:tabs>
+					<w:tab w:val="left" w:pos="6"/>
+					<w:tab w:val="right" w:pos="1417"/>
+					<w:tab w:val="right" w:pos="2409"/>
+					<w:tab w:val="left" w:pos="2551"/>
+					<w:tab w:val="left" w:pos="3260"/>
+					<w:tab w:val="center" w:pos="5442"/>
+					<w:tab w:val="right" w:pos="6661"/>
+					<w:tab w:val="right" w:pos="7512"/>
+					<w:tab w:val="left" w:pos="7654"/>
+					<w:tab w:val="left" w:pos="8220"/>
+					<w:tab w:val="left" w:pos="8787"/>
+					<w:tab w:val="left" w:pos="9638"/>
+				</w:tabs>
+				<w:rPr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t xml:space="preserve" pt14:TabWidth="0.000"> </w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.004"/>
+			</w:r>
+		</w:p>
+		<w:p pt14:StyleName="CQPNR10" pt14:FontName="Courier New" pt14:LanguageType="western">
+			<w:pPr>
+				<w:pStyle w:val="CQPNR10"/>
+				<w:keepNext/>
+				<w:keepLines/>
+				<w:spacing w:after="0" w:line="276" w:lineRule="auto"/>
+				<w:tabs>
+					<w:tab w:val="left" w:pos="6"/>
+					<w:tab w:val="right" w:pos="1417"/>
+					<w:tab w:val="right" w:pos="2409"/>
+					<w:tab w:val="left" w:pos="2551"/>
+					<w:tab w:val="left" w:pos="3260"/>
+					<w:tab w:val="left" w:pos="8220"/>
+					<w:tab w:val="left" w:pos="8787"/>
+					<w:tab w:val="left" w:pos="9638"/>
+				</w:tabs>
+				<w:rPr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.004"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t xml:space="preserve" pt14:TabWidth="0.000">DVR </w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.906"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.615"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.492"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="3.444"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.394"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.591"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">ThO</w:t>
+			</w:r>
+		</w:p>
+		<w:p pt14:StyleName="CQPNR11" pt14:FontName="Courier New" pt14:LanguageType="western">
+			<w:pPr>
+				<w:pStyle w:val="CQPNR11"/>
+				<w:keepNext/>
+				<w:keepLines/>
+				<w:spacing w:after="0" w:line="276" w:lineRule="auto"/>
+				<w:tabs>
+					<w:tab w:val="left" w:pos="6"/>
+					<w:tab w:val="right" w:pos="1417"/>
+					<w:tab w:val="left" w:pos="1559"/>
+					<w:tab w:val="right" w:pos="2409"/>
+					<w:tab w:val="left" w:pos="2551"/>
+					<w:tab w:val="left" w:pos="3260"/>
+					<w:tab w:val="right" w:pos="6661"/>
+					<w:tab w:val="right" w:pos="7512"/>
+					<w:tab w:val="left" w:pos="7654"/>
+					<w:tab w:val="left" w:pos="8220"/>
+					<w:tab w:val="left" w:pos="8787"/>
+					<w:tab w:val="left" w:pos="9638"/>
+				</w:tabs>
+				<w:rPr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.004"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">On</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.540"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t>22.04</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.517"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">PASS</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.492"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">Doncaster Ept (F'liners)</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="2.288"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.151"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t>22.19</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">TAXI</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.393"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.394"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.591"/>
+			</w:r>
+		</w:p>
+		<w:p pt14:StyleName="CQPNR11" pt14:FontName="Courier New" pt14:LanguageType="western">
+			<w:pPr>
+				<w:pStyle w:val="CQPNR11"/>
+				<w:keepNext/>
+				<w:keepLines/>
+				<w:spacing w:after="0" w:line="276" w:lineRule="auto"/>
+				<w:tabs>
+					<w:tab w:val="left" w:pos="6"/>
+					<w:tab w:val="right" w:pos="1417"/>
+					<w:tab w:val="left" w:pos="1559"/>
+					<w:tab w:val="right" w:pos="2409"/>
+					<w:tab w:val="left" w:pos="2551"/>
+					<w:tab w:val="left" w:pos="3260"/>
+					<w:tab w:val="right" w:pos="6661"/>
+					<w:tab w:val="right" w:pos="7512"/>
+					<w:tab w:val="left" w:pos="7654"/>
+					<w:tab w:val="left" w:pos="8220"/>
+					<w:tab w:val="left" w:pos="8787"/>
+					<w:tab w:val="left" w:pos="9638"/>
+				</w:tabs>
+				<w:rPr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.004"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">Off</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.540"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t>08.41</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.517"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">PASS</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.492"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">Doncaster</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="1.922"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t>22.39</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.151"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t>22.44</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">1E29</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.393"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.394"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.591"/>
+			</w:r>
+		</w:p>
+		<w:p pt14:StyleName="CQPNR11" pt14:FontName="Courier New" pt14:LanguageType="western">
+			<w:pPr>
+				<w:pStyle w:val="CQPNR11"/>
+				<w:keepNext/>
+				<w:keepLines/>
+				<w:spacing w:after="0" w:line="276" w:lineRule="auto"/>
+				<w:tabs>
+					<w:tab w:val="left" w:pos="6"/>
+					<w:tab w:val="right" w:pos="1417"/>
+					<w:tab w:val="left" w:pos="1559"/>
+					<w:tab w:val="right" w:pos="2409"/>
+					<w:tab w:val="left" w:pos="2551"/>
+					<w:tab w:val="left" w:pos="3260"/>
+					<w:tab w:val="right" w:pos="6661"/>
+					<w:tab w:val="right" w:pos="7512"/>
+					<w:tab w:val="left" w:pos="7654"/>
+					<w:tab w:val="left" w:pos="8220"/>
+					<w:tab w:val="left" w:pos="8787"/>
+					<w:tab w:val="left" w:pos="9638"/>
+				</w:tabs>
+				<w:rPr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.004"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">Hrs</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.540"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t>10:37</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.517"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.492"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">Peterborough</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="1.922"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t>23.46</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.517"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.393"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.394"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.591"/>
+			</w:r>
+		</w:p>
+		<w:p pt14:StyleName="CQPNR11" pt14:FontName="Courier New" pt14:LanguageType="western">
+			<w:pPr>
+				<w:pStyle w:val="CQPNR11"/>
+				<w:keepNext/>
+				<w:keepLines/>
+				<w:spacing w:after="0" w:line="276" w:lineRule="auto"/>
+				<w:tabs>
+					<w:tab w:val="left" w:pos="6"/>
+					<w:tab w:val="right" w:pos="1417"/>
+					<w:tab w:val="left" w:pos="1559"/>
+					<w:tab w:val="right" w:pos="2409"/>
+					<w:tab w:val="left" w:pos="2551"/>
+					<w:tab w:val="left" w:pos="3260"/>
+					<w:tab w:val="right" w:pos="6661"/>
+					<w:tab w:val="right" w:pos="7512"/>
+					<w:tab w:val="left" w:pos="7654"/>
+					<w:tab w:val="left" w:pos="8220"/>
+					<w:tab w:val="left" w:pos="8787"/>
+					<w:tab w:val="left" w:pos="9638"/>
+				</w:tabs>
+				<w:rPr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.004"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">Days</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.687"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t>ThO</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.517"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">PNB</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.492"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="2.288"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.517"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.393"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.394"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.591"/>
+			</w:r>
+		</w:p>
+		<w:p pt14:StyleName="CQPNR04" pt14:FontName="Courier New" pt14:LanguageType="western">
+			<w:pPr>
+				<w:pStyle w:val="CQPNR04"/>
+				<w:keepNext/>
+				<w:keepLines/>
+				<w:spacing w:after="0" w:line="276" w:lineRule="auto"/>
+				<w:tabs>
+					<w:tab w:val="left" w:pos="6"/>
+					<w:tab w:val="right" w:pos="1417"/>
+					<w:tab w:val="right" w:pos="2409"/>
+					<w:tab w:val="left" w:pos="2551"/>
+					<w:tab w:val="left" w:pos="3260"/>
+					<w:tab w:val="right" w:pos="6661"/>
+					<w:tab w:val="right" w:pos="7512"/>
+					<w:tab w:val="left" w:pos="7654"/>
+					<w:tab w:val="left" w:pos="8220"/>
+					<w:tab w:val="left" w:pos="8787"/>
+					<w:tab w:val="left" w:pos="9638"/>
+				</w:tabs>
+				<w:rPr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.004"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">From</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.172"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t>10/01/2019</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.469"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t>66</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">REL</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.492"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">TY 6051 at 03.28 MSX</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="2.288"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.517"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.393"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.394"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.591"/>
+			</w:r>
+		</w:p>
+		<w:p pt14:StyleName="CQPNR11" pt14:FontName="Courier New" pt14:LanguageType="western">
+			<w:pPr>
+				<w:pStyle w:val="CQPNR11"/>
+				<w:keepNext/>
+				<w:keepLines/>
+				<w:spacing w:after="0" w:line="276" w:lineRule="auto"/>
+				<w:tabs>
+					<w:tab w:val="left" w:pos="6"/>
+					<w:tab w:val="right" w:pos="1417"/>
+					<w:tab w:val="left" w:pos="1559"/>
+					<w:tab w:val="right" w:pos="2409"/>
+					<w:tab w:val="left" w:pos="2551"/>
+					<w:tab w:val="left" w:pos="3260"/>
+					<w:tab w:val="right" w:pos="6661"/>
+					<w:tab w:val="right" w:pos="7512"/>
+					<w:tab w:val="left" w:pos="7654"/>
+					<w:tab w:val="left" w:pos="8220"/>
+					<w:tab w:val="left" w:pos="8787"/>
+					<w:tab w:val="left" w:pos="9638"/>
+				</w:tabs>
+				<w:rPr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.004"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">To</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.172"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t>10/01/2019</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.517"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.492"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">Peterborough</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="1.922"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t>03.28</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.151"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t>03.30</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">4E51</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.393"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.394"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.591"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">FO</w:t>
+			</w:r>
+		</w:p>
+		<w:p pt14:StyleName="CQPNR10" pt14:FontName="Courier New" pt14:LanguageType="western">
+			<w:pPr>
+				<w:pStyle w:val="CQPNR10"/>
+				<w:keepNext/>
+				<w:keepLines/>
+				<w:spacing w:after="0" w:line="276" w:lineRule="auto"/>
+				<w:tabs>
+					<w:tab w:val="left" w:pos="6"/>
+					<w:tab w:val="right" w:pos="1417"/>
+					<w:tab w:val="right" w:pos="2409"/>
+					<w:tab w:val="left" w:pos="2551"/>
+					<w:tab w:val="left" w:pos="3260"/>
+					<w:tab w:val="left" w:pos="8220"/>
+					<w:tab w:val="left" w:pos="8787"/>
+					<w:tab w:val="left" w:pos="9638"/>
+				</w:tabs>
+				<w:rPr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.004"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t xml:space="preserve" pt14:TabWidth="0.000"> </w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.833"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t xml:space="preserve"> </w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.615"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.492"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">(23.30 from Southampton)</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="3.444"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.394"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.591"/>
+			</w:r>
+		</w:p>
+		<w:p pt14:StyleName="CQPNR10" pt14:FontName="Courier New" pt14:LanguageType="western">
+			<w:pPr>
+				<w:pStyle w:val="CQPNR10"/>
+				<w:keepNext/>
+				<w:keepLines/>
+				<w:spacing w:after="0" w:line="276" w:lineRule="auto"/>
+				<w:tabs>
+					<w:tab w:val="left" w:pos="6"/>
+					<w:tab w:val="right" w:pos="1417"/>
+					<w:tab w:val="right" w:pos="2409"/>
+					<w:tab w:val="left" w:pos="2551"/>
+					<w:tab w:val="left" w:pos="3260"/>
+					<w:tab w:val="left" w:pos="8220"/>
+					<w:tab w:val="left" w:pos="8787"/>
+					<w:tab w:val="left" w:pos="9638"/>
+				</w:tabs>
+				<w:rPr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.004"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t xml:space="preserve" pt14:TabWidth="0.000"> </w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.833"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t xml:space="preserve"> </w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.615"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.492"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">(via Spalding, Lincoln &amp; Gainsborough)</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="3.444"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.394"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.591"/>
+			</w:r>
+		</w:p>
+		<w:p pt14:StyleName="CQPNR11" pt14:FontName="Courier New" pt14:LanguageType="western">
+			<w:pPr>
+				<w:pStyle w:val="CQPNR11"/>
+				<w:keepNext/>
+				<w:keepLines/>
+				<w:spacing w:after="0" w:line="276" w:lineRule="auto"/>
+				<w:tabs>
+					<w:tab w:val="left" w:pos="6"/>
+					<w:tab w:val="right" w:pos="1417"/>
+					<w:tab w:val="left" w:pos="1559"/>
+					<w:tab w:val="right" w:pos="2409"/>
+					<w:tab w:val="left" w:pos="2551"/>
+					<w:tab w:val="left" w:pos="3260"/>
+					<w:tab w:val="right" w:pos="6661"/>
+					<w:tab w:val="right" w:pos="7512"/>
+					<w:tab w:val="left" w:pos="7654"/>
+					<w:tab w:val="left" w:pos="8220"/>
+					<w:tab w:val="left" w:pos="8787"/>
+					<w:tab w:val="left" w:pos="9638"/>
+				</w:tabs>
+				<w:rPr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.004"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t xml:space="preserve" pt14:TabWidth="0.000"> </w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.833"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t xml:space="preserve"> </w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.517"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.492"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">Doncaster Sig D249</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="1.922"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t>05.44</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.151"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t>06.15</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">4E51</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.393"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.394"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.591"/>
+			</w:r>
+		</w:p>
+		<w:p pt14:StyleName="CQPNR11" pt14:FontName="Courier New" pt14:LanguageType="western">
+			<w:pPr>
+				<w:pStyle w:val="CQPNR11"/>
+				<w:keepNext/>
+				<w:keepLines/>
+				<w:spacing w:after="0" w:line="276" w:lineRule="auto"/>
+				<w:tabs>
+					<w:tab w:val="left" w:pos="6"/>
+					<w:tab w:val="right" w:pos="1417"/>
+					<w:tab w:val="left" w:pos="1559"/>
+					<w:tab w:val="right" w:pos="2409"/>
+					<w:tab w:val="left" w:pos="2551"/>
+					<w:tab w:val="left" w:pos="3260"/>
+					<w:tab w:val="right" w:pos="6661"/>
+					<w:tab w:val="right" w:pos="7512"/>
+					<w:tab w:val="left" w:pos="7654"/>
+					<w:tab w:val="left" w:pos="8220"/>
+					<w:tab w:val="left" w:pos="8787"/>
+					<w:tab w:val="left" w:pos="9638"/>
+				</w:tabs>
+				<w:rPr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.004"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t xml:space="preserve" pt14:TabWidth="0.000"> </w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.833"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t xml:space="preserve"> </w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.517"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.492"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">Leeds F.L.T.</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="1.922"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t>07.07</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.517"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.393"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.394"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.591"/>
+			</w:r>
+		</w:p>
+		<w:p pt14:StyleName="CQPNR04" pt14:FontName="Courier New" pt14:LanguageType="western">
+			<w:pPr>
+				<w:pStyle w:val="CQPNR04"/>
+				<w:keepNext/>
+				<w:keepLines/>
+				<w:spacing w:after="0" w:line="276" w:lineRule="auto"/>
+				<w:tabs>
+					<w:tab w:val="left" w:pos="6"/>
+					<w:tab w:val="right" w:pos="1417"/>
+					<w:tab w:val="right" w:pos="2409"/>
+					<w:tab w:val="left" w:pos="2551"/>
+					<w:tab w:val="left" w:pos="3260"/>
+					<w:tab w:val="right" w:pos="6661"/>
+					<w:tab w:val="right" w:pos="7512"/>
+					<w:tab w:val="left" w:pos="7654"/>
+					<w:tab w:val="left" w:pos="8220"/>
+					<w:tab w:val="left" w:pos="8787"/>
+					<w:tab w:val="left" w:pos="9638"/>
+				</w:tabs>
+				<w:rPr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.004"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t xml:space="preserve" pt14:TabWidth="0.000"> </w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.833"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t xml:space="preserve"> </w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.615"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">RELD</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.492"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">by LD 10 at 07.07 MSX</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="2.288"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.517"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.393"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.394"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.591"/>
+			</w:r>
+		</w:p>
+		<w:p pt14:StyleName="CQPNR11" pt14:FontName="Courier New" pt14:LanguageType="western">
+			<w:pPr>
+				<w:pStyle w:val="CQPNR11"/>
+				<w:keepNext/>
+				<w:keepLines/>
+				<w:spacing w:after="0" w:line="276" w:lineRule="auto"/>
+				<w:tabs>
+					<w:tab w:val="left" w:pos="6"/>
+					<w:tab w:val="right" w:pos="1417"/>
+					<w:tab w:val="left" w:pos="1559"/>
+					<w:tab w:val="right" w:pos="2409"/>
+					<w:tab w:val="left" w:pos="2551"/>
+					<w:tab w:val="left" w:pos="3260"/>
+					<w:tab w:val="right" w:pos="6661"/>
+					<w:tab w:val="right" w:pos="7512"/>
+					<w:tab w:val="left" w:pos="7654"/>
+					<w:tab w:val="left" w:pos="8220"/>
+					<w:tab w:val="left" w:pos="8787"/>
+					<w:tab w:val="left" w:pos="9638"/>
+				</w:tabs>
+				<w:rPr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.004"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t xml:space="preserve" pt14:TabWidth="0.000"> </w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.833"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t xml:space="preserve"> </w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.517"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">PASS</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.492"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">Leeds F.L.T.</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="2.288"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.151"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t>07.17</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">TAXI</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.393"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.394"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.591"/>
+			</w:r>
+		</w:p>
+		<w:p pt14:StyleName="CQPNR11" pt14:FontName="Courier New" pt14:LanguageType="western">
+			<w:pPr>
+				<w:pStyle w:val="CQPNR11"/>
+				<w:keepNext/>
+				<w:keepLines/>
+				<w:spacing w:after="0" w:line="276" w:lineRule="auto"/>
+				<w:tabs>
+					<w:tab w:val="left" w:pos="6"/>
+					<w:tab w:val="right" w:pos="1417"/>
+					<w:tab w:val="left" w:pos="1559"/>
+					<w:tab w:val="right" w:pos="2409"/>
+					<w:tab w:val="left" w:pos="2551"/>
+					<w:tab w:val="left" w:pos="3260"/>
+					<w:tab w:val="right" w:pos="6661"/>
+					<w:tab w:val="right" w:pos="7512"/>
+					<w:tab w:val="left" w:pos="7654"/>
+					<w:tab w:val="left" w:pos="8220"/>
+					<w:tab w:val="left" w:pos="8787"/>
+					<w:tab w:val="left" w:pos="9638"/>
+				</w:tabs>
+				<w:rPr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.004"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t xml:space="preserve" pt14:TabWidth="0.000"> </w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.833"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t xml:space="preserve"> </w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.517"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">PASS</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.492"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">Wakefield Westgate</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="1.922"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t>07.47</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.151"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t>07.53</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">1A13</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.393"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.394"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.591"/>
+			</w:r>
+		</w:p>
+		<w:p pt14:StyleName="CQPNR11" pt14:FontName="Courier New" pt14:LanguageType="western">
+			<w:pPr>
+				<w:pStyle w:val="CQPNR11"/>
+				<w:keepNext/>
+				<w:keepLines/>
+				<w:spacing w:after="0" w:line="276" w:lineRule="auto"/>
+				<w:tabs>
+					<w:tab w:val="left" w:pos="6"/>
+					<w:tab w:val="right" w:pos="1417"/>
+					<w:tab w:val="left" w:pos="1559"/>
+					<w:tab w:val="right" w:pos="2409"/>
+					<w:tab w:val="left" w:pos="2551"/>
+					<w:tab w:val="left" w:pos="3260"/>
+					<w:tab w:val="right" w:pos="6661"/>
+					<w:tab w:val="right" w:pos="7512"/>
+					<w:tab w:val="left" w:pos="7654"/>
+					<w:tab w:val="left" w:pos="8220"/>
+					<w:tab w:val="left" w:pos="8787"/>
+					<w:tab w:val="left" w:pos="9638"/>
+				</w:tabs>
+				<w:rPr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.004"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t xml:space="preserve" pt14:TabWidth="0.000"> </w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.833"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t xml:space="preserve"> </w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.517"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">PASS</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.492"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">Doncaster</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="1.922"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t>08.11</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.151"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t>08.16</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">TAXI</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.393"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.394"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.591"/>
+			</w:r>
+		</w:p>
+		<w:p pt14:StyleName="CQPNR11" pt14:FontName="Courier New" pt14:LanguageType="western">
+			<w:pPr>
+				<w:pStyle w:val="CQPNR11"/>
+				<w:keepNext/>
+				<w:keepLines/>
+				<w:spacing w:after="0" w:line="276" w:lineRule="auto"/>
+				<w:tabs>
+					<w:tab w:val="left" w:pos="6"/>
+					<w:tab w:val="right" w:pos="1417"/>
+					<w:tab w:val="left" w:pos="1559"/>
+					<w:tab w:val="right" w:pos="2409"/>
+					<w:tab w:val="left" w:pos="2551"/>
+					<w:tab w:val="left" w:pos="3260"/>
+					<w:tab w:val="right" w:pos="6661"/>
+					<w:tab w:val="right" w:pos="7512"/>
+					<w:tab w:val="left" w:pos="7654"/>
+					<w:tab w:val="left" w:pos="8220"/>
+					<w:tab w:val="left" w:pos="8787"/>
+					<w:tab w:val="left" w:pos="9638"/>
+				</w:tabs>
+				<w:rPr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.004"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t xml:space="preserve" pt14:TabWidth="0.000"> </w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.833"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t xml:space="preserve"> </w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.517"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.492"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">Doncaster Ept (F'liners)</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="1.922"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t>08.36</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.517"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.393"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.394"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.591"/>
+			</w:r>
+		</w:p>
+		<w:p pt14:StyleName="CQPNR10" pt14:FontName="Courier New" pt14:LanguageType="western">
+			<w:pPr>
+				<w:pStyle w:val="CQPNR10"/>
+				<w:keepNext/>
+				<w:keepLines/>
+				<w:spacing w:after="0" w:line="276" w:lineRule="auto"/>
+				<w:tabs>
+					<w:tab w:val="left" w:pos="6"/>
+					<w:tab w:val="right" w:pos="1417"/>
+					<w:tab w:val="right" w:pos="2409"/>
+					<w:tab w:val="left" w:pos="2551"/>
+					<w:tab w:val="left" w:pos="3260"/>
+					<w:tab w:val="left" w:pos="8220"/>
+					<w:tab w:val="left" w:pos="8787"/>
+					<w:tab w:val="left" w:pos="9638"/>
+				</w:tabs>
+				<w:rPr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.004"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t xml:space="preserve" pt14:TabWidth="0.000"> </w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.833"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t xml:space="preserve"> </w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.615"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.492"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="3.444"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.394"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.591"/>
+			</w:r>
+		</w:p>
+		<w:p pt14:StyleName="CQPNR10" pt14:FontName="Courier New" pt14:LanguageType="western">
+			<w:pPr>
+				<w:pStyle w:val="CQPNR10"/>
+				<w:keepNext/>
+				<w:keepLines/>
+				<w:spacing w:after="0" w:line="276" w:lineRule="auto"/>
+				<w:tabs>
+					<w:tab w:val="left" w:pos="6"/>
+					<w:tab w:val="right" w:pos="1417"/>
+					<w:tab w:val="right" w:pos="2409"/>
+					<w:tab w:val="left" w:pos="2551"/>
+					<w:tab w:val="left" w:pos="3260"/>
+					<w:tab w:val="left" w:pos="8220"/>
+					<w:tab w:val="left" w:pos="8787"/>
+					<w:tab w:val="left" w:pos="9638"/>
+				</w:tabs>
+				<w:rPr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.004"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t xml:space="preserve" pt14:TabWidth="0.000"> </w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.833"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t xml:space="preserve"> </w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.615"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.099"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.492"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t pt14:TabWidth="0.000">RFA: 4E51 Runs Vice 4E48</w:t>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="3.444"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.394"/>
+			</w:r>
+			<w:r pt14:StyleName="DefaultParagraphFont">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:tab pt14:TabWidth="0.591"/>
+			</w:r>
+		</w:p>
+		<w:p pt14:StyleName="CQPNR01" pt14:FontName="Courier New" pt14:LanguageType="western">
+			<w:pPr>
+				<w:pStyle w:val="CQPNR01"/>
+				<w:keepNext/>
+				<w:keepLines/>
+				<w:spacing w:after="0" w:line="276" w:lineRule="auto"/>
+				<w:tabs>
+					<w:tab w:val="left" w:pos="6"/>
+				</w:tabs>
+				<w:rPr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="18"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t xml:space="preserve"> </w:t>
+			</w:r>
+		</w:p>
+		<w:p pt14:StyleName="VPDummyLineStyle" pt14:FontName="Courier New" pt14:LanguageType="western">
+			<w:pPr>
+				<w:pStyle w:val="VPDummyLineStyle"/>
+				<w:spacing w:after="0" w:line="276" w:lineRule="auto"/>
+				<w:pBdr>
+					<w:top w:val="single" w:color="auto" w:sz="4" w:space="1"/>
+				</w:pBdr>
+				<w:rPr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+					<w:sz w:val="2"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r pt14:StyleName="DefaultParagraphFont" pt14:FontName="Courier New" pt14:LanguageType="western">
+				<w:rPr>
+					<w:sz w:val="2"/>
+					<w:szCs w:val="22"/>
+					<w:lang w:val="en-GB" w:eastAsia="en-US" w:bidi="ar-SA"/>
+					<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New" w:eastAsia="Calibri" w:cs="Courier New" w:eastAsiaTheme="minorHAnsi"/>
+				</w:rPr>
+				<w:t xml:space="preserve"> </w:t>
+			</w:r>
+		</w:p>
+		<w:sectPr>
+			<w:pgSz w:w="11906" w:h="16838"/>
+			<w:pgMar w:top="1440" w:right="454" w:bottom="1440" w:left="567" w:header="708" w:footer="708" w:gutter="0"/>
+			<w:cols w:space="708"/>
+			<w:docGrid w:linePitch="360"/>
+		</w:sectPr>
+	</w:body>
+</w:document>
