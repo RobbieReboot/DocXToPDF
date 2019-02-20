@@ -31,15 +31,25 @@ namespace DocxToPdf.Core.Tests
             pdf.Write(@"C:\Dumpzone\pdfUnit1.pdf");
         }
 
-        [Fact]
-        public void PdfConvertConvertsDocXWhenDocXIsValid()
+        [Theory]
+        [InlineData(@"Data\file_3.xml")]
+        public void PdfConvertConvertsDocXWhenDocXIsValid(string fileName)
         {
-            var reader = XmlReader.Create(@"C:\Dumpzone\steve\file_4.xml");
+            var reader = XmlReader.Create(fileName);
             var xdoc = XDocument.Load(reader);
-            var nsm = xdoc.CreateReader().NameTable;
-            
-            PdfDocument.FromDocX(xdoc).Write(@"C:\Dumpzone\steve\file_1.pdf");
-            xdoc.ToPdf().Write(@"C:\Dumpzone\steve\file_1a.pdf");
+            var p = Directory.GetCurrentDirectory();
+//            PdfDocument.FromDocX(xdoc).Write(@"C:\Dumpzone\steve\file_1.pdf");
+            xdoc.ToPdf().Write($@"C:\Dumpzone\steve\{Path.GetFileName(fileName)}.pdf");
+        }
+
+        [Theory]
+        [InlineData(@"(", @"\(")]
+        [InlineData(@")", @"\)")]
+        [InlineData(@"\", @"\\")]
+        public void PdfSanitizerCheckShouldSanitizeStrings(string input,string sanitized)
+        {
+            var result = PdfDocument.SanitizePdfCharacters(input);
+            Assert.Equal(sanitized,result);
         }
     }
 }

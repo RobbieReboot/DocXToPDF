@@ -166,7 +166,7 @@ namespace DocxToPdf.Core
                 {
                     var newNode = new
                     {
-                        Text = rnode.XPathSelectElement("w:t", nsm)?.Value,
+                        Text = SanitizePdfCharacters(rnode.XPathSelectElement("w:t", nsm)?.Value),
                         TabPos = (double.Parse(tabs[tabNo].Attribute(w + "pos").Value) / 20) * hScale,  //(fontSize*1.6),
                         Justification = tabs[tabNo].Attribute(w + "val").Value
                     };
@@ -196,6 +196,17 @@ namespace DocxToPdf.Core
             //var previousTab = textNodes[1].XPathEvaluate("string(preceding-sibling::*[1]/w:tab/@pt14:TabWidth)",nsm).Dump("Previous Run TabWidth") ;
             //var tabPos = double.Parse(textNodes[1].PreviousNode.XPathSelectElement("w:tab",nsm).Attribute(pt14 + "TabWidth")?.Value) / 20;
             return pdf;
+        }
+
+        public static string SanitizePdfCharacters(string value)
+        {
+            if (String.IsNullOrEmpty(value))
+                return String.Empty;
+
+            var result = value.Replace(@"\", @"\\");    //MUST do the single slash first to avoid replacing the slashed in the FOLLOWING replacements!
+            result = result.Replace(")", @"\)");
+            result = result.Replace("(", @"\(");
+            return result;
         }
 
         public byte[] GetBytes(MemoryStream ms)

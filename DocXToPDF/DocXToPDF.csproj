@@ -16,7 +16,7 @@
     <ProjectReference Include="..\DocxToPdf.Core\DocxToPdf.Core.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <None Update="file_1.xml">
+    <None Update="data\file_1.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="host.json">
