@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Rob Hill</Authors>
+    <Company>3Squared</Company>
+    <RepositoryUrl>git@gitlab.3squared.com:RobHill/docxtopdf.git</RepositoryUrl>
+    <PackageProjectUrl>https://gitlab.3squared.com/RobHill/docxtopdf</PackageProjectUrl>
+    <PackageTags>V1.0.0</PackageTags>
+    <PackageReleaseNotes>Version specific to ORS.</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
 </Project>
