@@ -7,17 +7,13 @@
     public class ContentObject : PdfObject
     {
         //private string contentStream;
-        private readonly PageObject _parentPage;
-        public PageObject ParentPage() => _parentPage;
+        public PageObject ParentPage { get; }
 
-        public ContentObject()
+        public ContentObject(PdfDocument pdfDocument,PageObject parent) : base (pdfDocument)
         {
             //contentDict = null;
             ObjectRepresenation = "%stream\r";
-        }
-        public ContentObject(PageObject parent) : this()
-        {
-            _parentPage = parent;
+            ParentPage = parent;
         }
 
         /// <summary>
@@ -30,7 +26,7 @@
             ObjectRepresenation += obj.Render();
         }
 
-        public string IndirectRef() => $"/Contents {objectNum} 0 R";
+        public string IndirectRef() => $"/Contents {PdfObjectId} 0 R";
 
         /// <summary>
         /// Enter the text inside the table just created.
@@ -40,7 +36,7 @@
         /// </summary>
         public byte[] RenderBytes(long filePos, out int size)
         {
-            ObjectRepresenation = $"{this.objectNum} 0 obj <</Length {ObjectRepresenation.Length}>>stream\r\n{ObjectRepresenation}\nendstream\rendobj\r";
+            ObjectRepresenation = $"{this.PdfObjectId} 0 obj <</Length {ObjectRepresenation.Length}>>stream\r\n{ObjectRepresenation}\nendstream\rendobj\r";
             return GetUTF8Bytes(ObjectRepresenation, filePos, out size);
         }
     }

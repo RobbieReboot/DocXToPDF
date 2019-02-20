@@ -1,4 +1,12 @@
-﻿using System;
+﻿//
+// Rob Hill rob.hill@3Squared.com
+//
+// Pdf stuff gleaned from:
+// http://preserve.mactech.com/articles/mactech/Vol.15/15.09/PDFIntro/index.html
+//
+// 
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -15,28 +23,42 @@ namespace DocxToPdf.Core
     /// </summary>
     public class PdfDocument
     {
-        public static XRefTableObject xrefTable;
+        public XRefTableObject xrefTable;
+        public uint NextObjectNum { get; set; }
+        public int fontIndex = 1;   //numerical Object tag..
 
         private CatalogObject catalogObj;
         private PageTreeObject pageTreeObj;
         private InfoObject infoObject;
         private List<PageObject> pageObjects;
+
         public PdfDocument()
         {
             xrefTable = new XRefTableObject();
-            pageTreeObj = new PageTreeObject();
-            catalogObj = new CatalogObject(pageTreeObj);
+            pageTreeObj = new PageTreeObject(this);
+            catalogObj = new CatalogObject(pageTreeObj,this);
             pageObjects = new List<PageObject>();
         }
 
         public byte[] CreateXrefTable(long fileOffset, out int size) => xrefTable.RenderBytes(fileOffset, out size);
         public void SetMetadata(InfoObject metadata) => infoObject = metadata;
 
-        public void AddPage(PageObject page,PageDescription pDesc)
+        public PageObject AddPage(PageExtents pDesc)
         {
-            page.CreatePage(pageTreeObj.objectNum, pDesc);
+            var page = new PageObject(this,pDesc, pageTreeObj.PdfObjectId);
             pageTreeObj.AddPage(page);
             pageObjects.Add(page);
+            return page;
+        }
+
+        public FontObject AddFont(string fontName)
+        {
+            return new FontObject(fontName,this);
+        }
+
+        public InfoObject AddInfoObject(string title, string author, string company)
+        {
+            return infoObject = new InfoObject(title,author,company,this);
         }
 
         public byte[] RenderHeader(string version, out int size)
@@ -102,12 +124,9 @@ namespace DocxToPdf.Core
             var nsm = new XmlNamespaceManager(reader.NameTable);
             XNamespace w = "http://schemas.openxmlformats.org/wordprocessingml/2006/main";
             XNamespace pt14 = "http://powertools.codeplex.com/2011";
-            //nsm.AddNamespace(w.NamespaceName, w.ToString());            // "w", "http://schemas.openxmlformats.org/wordprocessingml/2006/main");
-            //nsm.AddNamespace(pt14.NamespaceName, pt14.ToString());      //"pt14", "http://powertools.codeplex.com/2011");
             nsm.AddNamespace("w", "http://schemas.openxmlformats.org/wordprocessingml/2006/main");
             nsm.AddNamespace("pt14", "http://powertools.codeplex.com/2011");
 
-            //int paraNum = 0;
             int yPos = 0;
             int fontSize = 9;
             double hScale = 1.1;
@@ -119,20 +138,16 @@ namespace DocxToPdf.Core
             // TODO: Should come from the classes in the doc but for now, its all MonoSpaced.
             FontObject CourierNew = new FontObject("Courier");
             // TODO: Should come from the Docs metadata..
-            pdf.SetMetadata(new InfoObject("XDoc2Pdf", "RobHill", "3Squared"));
-
-            // TODO: Only one page for now, but this should be in a loop. The PDF Write() needs to iterate over the object collections instead of outputting [0] 
-            var page = new PageObject();
+            pdf.AddInfoObject("XDoc2Pdf", "RobHill","3Squared");
 
             // TODO: Point sizes from adobe for A4 - Fixed for now.
-            pdf.AddPage(page, new PageDescription(612, 792, 10, 10, 10, 10));
+            var page = pdf.AddPage(new PageExtents(612, 792, 32, 10, 32, 10));
             // TODO: The text object should add the font to the page IF it's not already added (Possibly). Slower than this but more convenient.
 
             page.AddFont(CourierNew);
 
             // TODO: SHould refactor this so the PAGE object is responsible for creation of content object so the parentRef can be set on creation.
-            var contentObj = new ContentObject();
-            page.AddContent(contentObj);
+            var contentObj = page.AddContentObject();
 
             foreach (var para in paras)
             {
@@ -177,7 +192,9 @@ namespace DocxToPdf.Core
                 }
                 yPos += (int)(fontSize * vScale);
             }
-
+            //NOT USED ANYMORE - Get previous TAB value
+            //var previousTab = textNodes[1].XPathEvaluate("string(preceding-sibling::*[1]/w:tab/@pt14:TabWidth)",nsm).Dump("Previous Run TabWidth") ;
+            //var tabPos = double.Parse(textNodes[1].PreviousNode.XPathSelectElement("w:tab",nsm).Attribute(pt14 + "TabWidth")?.Value) / 20;
             return pdf;
         }
 
@@ -220,7 +237,7 @@ namespace DocxToPdf.Core
 
             file.Write(infoObject.RenderBytes(file.Length, out size), 0, size);
             file.Write(xrefTable.RenderBytes(file.Length, out size), 0, size);
-            file.Write(RenderTrailer(catalogObj.objectNum, infoObject.objectNum, out size), 0, size);
+            file.Write(RenderTrailer(catalogObj.PdfObjectId, infoObject.PdfObjectId, out size), 0, size);
             file.Close();
         }
     }

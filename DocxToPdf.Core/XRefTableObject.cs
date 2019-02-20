@@ -7,11 +7,11 @@ namespace DocxToPdf.Core
 {
     public class XRefTableObject
     {
-        public List<ObjectXRef> ObjectByteOffsets;
+        public readonly List<ObjectXRef> ObjectByteOffsets;
         public int XRefCount => ObjectByteOffsets.Count;
         public long FirstByteOffset => ObjectByteOffsets[0].offset;
 
-        public XRefTableObject()
+        public XRefTableObject() 
         {
             ObjectByteOffsets = new List<ObjectXRef>();
         }

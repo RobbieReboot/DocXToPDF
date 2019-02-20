@@ -14,26 +14,27 @@
     {
         //private string fontObject;
         private string fontRef;                 //the PDF object tag
-        private static int fontIndex = 1;   //numerical Object tag..
-
         public string FontRef() => fontRef;
-
+        
         private string fontType;            //the font name, eg, bit14 fonts like CourierNew
-        public FontObject(string fType)
+        private readonly PdfDocument _pdfDocument;
+
+        public FontObject(string fType,PdfDocument pdfDocument) : base(pdfDocument)
         {
+            _pdfDocument = pdfDocument;
             fontRef = null;
-            fontRef = $"T{fontIndex}";
+            fontRef = $"T{_pdfDocument.fontIndex}";
             fontType = fType;
 
-            fontIndex++;
+            _pdfDocument.fontIndex++;
         }
 
         
-        public string IndirectRef() => $"/{fontRef} {objectNum} 0 R";
+        public string IndirectRef() => $"/{fontRef} {PdfObjectId} 0 R";
 
         public string Render()
         {
-            return ObjectRepresenation = $"{this.objectNum} 0 obj <</Type/Font/Name /{fontRef}/BaseFont/{fontType}/Subtype/Type1/Encoding /WinAnsiEncoding>>\nendobj\n";
+            return ObjectRepresenation = $"{this.PdfObjectId} 0 obj <</Type/Font/Name /{fontRef}/BaseFont/{fontType}/Subtype/Type1/Encoding /WinAnsiEncoding>>\nendobj\n";
         }
 
         public byte[] RenderBytes(long filePos, out int size)

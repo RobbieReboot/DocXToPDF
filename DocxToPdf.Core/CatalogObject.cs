@@ -10,7 +10,7 @@ namespace DocxToPdf.Core
     {
         private readonly PageTreeObject _pageTreeObj;
 
-        public CatalogObject(PageTreeObject pageTreeObj)
+        public CatalogObject(PageTreeObject pageTreeObj, PdfDocument pdfDocument) : base(pdfDocument)
         {
             _pageTreeObj = pageTreeObj;
         }
@@ -18,7 +18,7 @@ namespace DocxToPdf.Core
         public string Render()
         {
             return ObjectRepresenation = string.Format("{0} 0 obj <</Type /Catalog /Lang(EN-US) /Pages {1} 0 R>>\rendobj\r",
-                this.objectNum, _pageTreeObj.objectNum);
+                this.PdfObjectId, _pageTreeObj.PdfObjectId);
         }
 
         public byte[] RenderBytes(long filePos, out int size)
