@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
 using Xunit;
@@ -28,19 +30,32 @@ namespace DocxToPdf.Core.Tests
             contentObj.AddTextObject(30, 30, "BOLLOX", courierNew, 12, "left");
             contentObj.AddTextObject(40, 40, "BOLLOX", courierNew, 12, "left");
             contentObj.AddTextObject(50, 50, "BOLLOX", courierNew, 12, "left");
-            pdf.Write(@"C:\Dumpzone\pdfUnit1.pdf");
+            pdf.Write(@"output\pdfUnit1.pdf");
         }
 
         [Theory]
-        [InlineData(@"c:\dumpzone\steve\Leg Diagrams\file_1.xml", @"c:\dumpzone\steve\Leg Diagrams\file_1.pdf")]
-        [InlineData(@"c:\dumpzone\steve\Leg Diagrams\file_2.xml", @"c:\dumpzone\steve\Leg Diagrams\file_2.pdf")]
-        [InlineData(@"c:\dumpzone\steve\Leg Diagrams\file_3.xml", @"c:\dumpzone\steve\Leg Diagrams\file_3.pdf")]
-        [InlineData(@"c:\dumpzone\steve\Leg Diagrams\file_4.xml", @"c:\dumpzone\steve\Leg Diagrams\file_4.pdf")]
-        public void PdfConvertConvertsDocXWhenDocXIsValid(string fileName,string outputFile)
+        [InlineData("validXml")]
+        [InlineData("invalidXml")]
+
+        public void PdfConvertConvertsDocXShouldThrowNoExceptionsWhenDocXIsValid(string folder)
         {
-            var reader = XmlReader.Create(fileName);
-            var xdoc = XDocument.Load(reader);
-            xdoc.ToPdf().Write(outputFile);
+            //process all input folders to the output folder.
+
+            var filter = "*.xml";
+            IEnumerable<string> GetFilesFromDir(string dir) =>
+                Directory.EnumerateFiles(dir, filter).Concat(
+                    Directory.EnumerateDirectories(dir)
+                        .SelectMany(subdir => GetFilesFromDir(subdir)));
+
+            var validXml = GetFilesFromDir(folder);
+
+            foreach (var xmlFile in validXml)
+            {
+                var reader = XmlReader.Create(xmlFile);
+                var xdoc = XDocument.Load(reader);
+                var outFile = Path.Combine("output", Path.ChangeExtension(Path.GetFileName(xmlFile), "pdf"));
+                xdoc.ToPdf().Write(outFile);
+            }
         }
 
         [Theory]
