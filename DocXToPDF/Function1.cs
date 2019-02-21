@@ -19,10 +19,10 @@ namespace DocXToPDF
         public static IActionResult Run([HttpTrigger(AuthorizationLevel.Anonymous,"get", "post", Route = null)]HttpRequest req, TraceWriter log, ExecutionContext context)
         {
             log.Info("DocX2Pdf function request.");
-            Stopwatch sw = new Stopwatch();
+            //Stopwatch sw = new Stopwatch();
             string fileName = req.Query["name"];
             string requestBody = new StreamReader(req.Body).ReadToEnd();
-            sw.Start();
+            //sw.Start();
             XDocument xdoc = null;
             if (string.IsNullOrEmpty(requestBody))
             {
@@ -40,8 +40,8 @@ namespace DocXToPDF
             if (!string.IsNullOrEmpty(fileName))
                 fileName = Path.ChangeExtension(fileName, "pdf");
             result.FileDownloadName = fileName ?? "download.pdf";
-            sw.Stop();
-            log.Info($"Word DocX to Pdf convertion time : {sw.ElapsedMilliseconds}ms");
+            //sw.Stop();
+            //log.Info($"Word DocX to Pdf convertion time : {sw.ElapsedMilliseconds}ms");
             return result;
         }
     }

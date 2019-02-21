@@ -152,7 +152,7 @@ namespace DocxToPdf.Core
             foreach (var para in paras)
             {
                 var tabs = para.XPathSelectElements("w:pPr/w:tabs/w:tab", nsm).ToList();
-                var rNodes = para.XPathSelectElements("w:r", nsm).Skip(1);
+                var rNodes = para.XPathSelectElements("w:r", nsm).ToList();
                 var tNodes = para.XPathSelectElements("w:r/w:t", nsm);
 
                 // var anytext = tNodes.Any(tn => String.IsNullOrWhiteSpace(tn.Value));
@@ -164,15 +164,25 @@ namespace DocxToPdf.Core
                 var tabCount = tabs.Count();
                 foreach (var rnode in rNodes)
                 {
+                    double tabStop = 0;
+                    string justification = "left";
+
+                    //Only create a tabstop IF we have tabs.
+                    if (tabNo < tabs.Count)
+                    {
+                        tabStop = (double.Parse(tabs[tabNo].Attribute(w + "pos").Value) / 20) * hScale;
+                        justification = tabs[tabNo].Attribute(w + "val").Value;
+                    }
+
                     var newNode = new
                     {
                         Text = SanitizePdfCharacters(rnode.XPathSelectElement("w:t", nsm)?.Value),
-                        TabPos = (double.Parse(tabs[tabNo].Attribute(w + "pos").Value) / 20) * hScale,  //(fontSize*1.6),
-                        Justification = tabs[tabNo].Attribute(w + "val").Value
+                        TabPos = tabStop,  //(fontSize*1.6),
+                        Justification = justification
                     };
                     matchedTabNodes.Add(newNode);
-                    if (string.IsNullOrEmpty(newNode.Text))
-                        tabNo++;
+                        //if (!string.IsNullOrEmpty(newNode.Text))
+                    tabNo++;
                     if (tabNo >= tabs.Count) break;
                 }
                 var final = matchedTabNodes.Where(n => !String.IsNullOrEmpty(n.Text)).ToList();

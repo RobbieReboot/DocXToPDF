@@ -29,8 +29,11 @@ namespace DocxToPdf.Core
         public string Render()
         {
             double startX = 0;
-            switch (_alignment)
+            switch (_alignment.ToLower())
             {
+                case "clear":
+                    startX = _xPos + _extents.leftMargin;
+                    break;
                 case "left":
                     startX = _xPos + _extents.leftMargin;
                     break;
