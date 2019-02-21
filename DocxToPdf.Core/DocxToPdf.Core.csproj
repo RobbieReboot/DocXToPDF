@@ -8,7 +8,8 @@
     <PackageProjectUrl>https://gitlab.3squared.com/RobHill/docxtopdf</PackageProjectUrl>
     <PackageTags>V1.0.0</PackageTags>
     <PackageReleaseNotes>Version specific to ORS.</PackageReleaseNotes>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Version>1.0.2.0</Version>
   </PropertyGroup>
 
 </Project>

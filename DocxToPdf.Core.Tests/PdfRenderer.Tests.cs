@@ -32,14 +32,15 @@ namespace DocxToPdf.Core.Tests
         }
 
         [Theory]
-        [InlineData(@"Data\file_3.xml")]
-        public void PdfConvertConvertsDocXWhenDocXIsValid(string fileName)
+        [InlineData(@"c:\dumpzone\steve\Leg Diagrams\file_1.xml", @"c:\dumpzone\steve\Leg Diagrams\file_1.pdf")]
+        [InlineData(@"c:\dumpzone\steve\Leg Diagrams\file_2.xml", @"c:\dumpzone\steve\Leg Diagrams\file_2.pdf")]
+        [InlineData(@"c:\dumpzone\steve\Leg Diagrams\file_3.xml", @"c:\dumpzone\steve\Leg Diagrams\file_3.pdf")]
+        [InlineData(@"c:\dumpzone\steve\Leg Diagrams\file_4.xml", @"c:\dumpzone\steve\Leg Diagrams\file_4.pdf")]
+        public void PdfConvertConvertsDocXWhenDocXIsValid(string fileName,string outputFile)
         {
             var reader = XmlReader.Create(fileName);
             var xdoc = XDocument.Load(reader);
-            var p = Directory.GetCurrentDirectory();
-//            PdfDocument.FromDocX(xdoc).Write(@"C:\Dumpzone\steve\file_1.pdf");
-            xdoc.ToPdf().Write($@"C:\Dumpzone\steve\{Path.GetFileName(fileName)}.pdf");
+            xdoc.ToPdf().Write(outputFile);
         }
 
         [Theory]
