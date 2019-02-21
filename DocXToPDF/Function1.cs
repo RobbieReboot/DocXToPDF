@@ -26,8 +26,8 @@ namespace DocXToPDF
             XDocument xdoc = null;
             if (string.IsNullOrEmpty(requestBody))
             {
-                string htmlFilePath = Path.Combine(context.FunctionAppDirectory, "Data", "test.html");
-                xdoc = XDocument.Load(@"file_1.xml");
+                string samplFileName = Path.Combine(context.FunctionAppDirectory, "Data", "file_1.xml");
+                xdoc = XDocument.Load(samplFileName);
                 fileName = "SampleViaHttpGet.pdf";
             }
             else
