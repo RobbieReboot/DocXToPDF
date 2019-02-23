@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>$id$</id>
+    <id>%system.teamcity.projectName%</id>
     <version>$version$</version>
     <title>DocXToPdf</title>
     <authors>Rob Hill</authors>
