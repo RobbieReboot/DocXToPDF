@@ -13,7 +13,7 @@ using Newtonsoft.Json;
 //using DocxToPdf.Core;
 namespace DocXToPDF
 {
-    public static class Function1
+    public static class DocXtoPdfAzureFunction
     {
         [FunctionName("docx2pdf")]
         public static IActionResult Run([HttpTrigger(AuthorizationLevel.Anonymous,"get", "post", Route = null)]HttpRequest req, TraceWriter log, ExecutionContext context)

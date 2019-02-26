@@ -50,4 +50,5 @@ xdoc.ToPdf().Write(@"output.pdf");
 
 [WordProcessigML Spec (Paragraphs etc)](http://officeopenxml.com/WPparagraphProperties.php)
 
+[Portable Document Format: An Introduction for Programmers](http://preserve.mactech.com/articles/mactech/Vol.15/15.09/PDFIntro/index.html)
 
