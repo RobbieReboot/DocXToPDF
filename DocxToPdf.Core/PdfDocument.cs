@@ -9,6 +9,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Text;
 using System.Xml;
@@ -118,8 +119,149 @@ namespace DocxToPdf.Core
             return PdfDocument.FromDocX(xdoc);
         }
 
+
+        /*
+
+public static void FromFullDocX(string filename)
+{
+
+	XDocument docx = null;
+	XDocument styles = null;
+
+	using (ZipArchive zip = ZipFile.Open(filename, ZipArchiveMode.Read))
+	{
+		var zdoc = zip.Entries.SingleOrDefault(n => n.FullName == @"word/document.xml");
+		using (StreamReader s = new StreamReader(zdoc.Open()))
+			docx = XDocument.Load(s);
+		var zstyles = zip.Entries.SingleOrDefault(n => n.FullName == @"word/styles.xml");
+		using (StreamReader s = new StreamReader(zstyles.Open()))
+			styles = XDocument.Load(s);
+	}
+	var reader = docx.Root.CreateReader();
+	var nsm = new XmlNamespaceManager(reader.NameTable);
+	XNamespace w = "http://schemas.openxmlformats.org/wordprocessingml/2006/main";
+	XNamespace pt14 = "http://powertools.codeplex.com/2011";
+	nsm.AddNamespace("w", "http://schemas.openxmlformats.org/wordprocessingml/2006/main");
+	nsm.AddNamespace("pt14", "http://powertools.codeplex.com/2011");
+
+	var stylesWithTabs = styles.Descendants(w + "style")
+		.Where(xe => xe.Attribute(w + "type")?.Value == "paragraph" &&
+					 xe.Elements(w + "pPr").Elements(w + "tabs").Any())
+		.ToDictionary(xe => xe.Attribute(w + "styleId").Value, xe => xe.Element(w + "pPr").Element(w + "tabs"));
+
+	var paras = docx.Descendants(w + "p").ToList();
+	var paraNum = 0;
+	foreach (var para in paras)
+	{
+		$"Para({paraNum})".Dump();
+
+		//Get the TABS table.
+		//                var tabs = para.XPathSelectElements("w:pPr/w:tabs/w:tab", nsm).ToList();
+		var rNodes = para.XPathSelectElements("w:r", nsm).ToList();
+		var paraStyleName = para.Attributes(pt14 + "StyleName").FirstOrDefault()?.Value;
+		var paraTabs = stylesWithTabs.FirstOrDefault(n => n.Key == paraStyleName);
+		var tabTable = paraTabs.Value.Descendants(w + "tab").Select(t => new
+		{
+			Justification = t.Attribute(w + "val").Value,
+			Position = t.Attribute(w + "pos").Value
+		})
+		.ToList();
+		var currentTabInTable = 0;
+		string textAccumulator = String.Empty;
+		
+		int nodeNum = 0;
+		
+		while (nodeNum < rNodes.Count())
+		{
+			bool consumeTab = false;
+			string currentTab = String.Empty;
+			//if the node has a <w:tab> USE the NEXT tab
+			//if the node has text, accumulate this node (+ future nodes with <w:t> UNLESS another <w:tab> is present.
+			if (rNodes[nodeNum].Descendants(w + "tab").Any())
+			{
+				if (currentTabInTable < tabTable.Count())
+				{
+					//break; //?
+					currentTab = tabTable[currentTabInTable].Position;
+					currentTabInTable++;
+				}
+				nodeNum++;          //Consume the tab.
+				if (nodeNum >= rNodes.Count())
+					break;
+			}
+			while (rNodes[nodeNum].Descendants(w+"t").Any())
+			{
+				textAccumulator += rNodes[nodeNum].Value;
+				nodeNum++;
+				if (nodeNum>=rNodes.Count())
+					break;
+			}
+			$"{nodeNum} : {currentTab} : {textAccumulator}".Dump();
+				textAccumulator = String.Empty;
+		}
+
+
+paraNum++;
+
+	}
+	return;
+}
+
+         
+         */
+
+        public static PdfDocument FromFullDocX(string filename)
+        {
+
+            XDocument docx = null;
+            XDocument styles = null;
+
+            using (ZipArchive zip = ZipFile.Open(filename, ZipArchiveMode.Read))
+            {
+                var zdoc = zip.Entries.SingleOrDefault(n => n.FullName == @"word/document.xml");
+                using (StreamReader s = new StreamReader(zdoc.Open()))
+                    docx = XDocument.Load(s);
+                var zstyles = zip.Entries.SingleOrDefault(n => n.FullName == @"word/styles.xml");
+                using (StreamReader s = new StreamReader(zstyles.Open()))
+                    styles = XDocument.Load(s);
+            }
+            var reader = docx.Root.CreateReader();
+            var nsm = new XmlNamespaceManager(reader.NameTable);
+            XNamespace w = "http://schemas.openxmlformats.org/wordprocessingml/2006/main";
+            XNamespace pt14 = "http://powertools.codeplex.com/2011";
+            nsm.AddNamespace("w", "http://schemas.openxmlformats.org/wordprocessingml/2006/main");
+            nsm.AddNamespace("pt14", "http://powertools.codeplex.com/2011");
+
+            var stylesWithTabs = styles.Descendants(w + "style")
+                .Where(xe => xe.Attribute(w + "type")?.Value == "paragraph" &&
+                             xe.Elements(w + "pPr").Elements(w + "tabs").Any())
+                .ToDictionary(xe => xe.Attribute(w + "styleId").Value, xe => xe.Element(w + "pPr").Element(w + "tabs"));
+
+            var paras = docx.Descendants(w + "p").ToList();
+            foreach (var para in paras)
+            {
+                //Get the TABS table.
+//                var tabs = para.XPathSelectElements("w:pPr/w:tabs/w:tab", nsm).ToList();
+                var rNodes = para.XPathSelectElements("w:r", nsm).ToList();
+                var paraStyleName = para.Attributes(pt14 + "StyleName").FirstOrDefault()?.Value;
+                var paraTabs  = stylesWithTabs.FirstOrDefault(n => n.Key==paraStyleName);
+
+                foreach (var rNode in rNodes)
+                {
+                    //if the node 
+                }
+
+
+
+
+            }
+
+            return null;
+        }
+
         public static PdfDocument FromDocX(XDocument xdoc)
         {
+
             var reader = xdoc.Root.CreateReader();
             var nsm = new XmlNamespaceManager(reader.NameTable);
             XNamespace w = "http://schemas.openxmlformats.org/wordprocessingml/2006/main";
@@ -151,6 +293,8 @@ namespace DocxToPdf.Core
 
             foreach (var para in paras)
             {
+                //Get the TABS table.
+
                 var tabs = para.XPathSelectElements("w:pPr/w:tabs/w:tab", nsm).ToList();
                 var rNodes = para.XPathSelectElements("w:r", nsm).ToList();
                 var tNodes = para.XPathSelectElements("w:r/w:t", nsm);

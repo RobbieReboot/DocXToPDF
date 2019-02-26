@@ -67,6 +67,16 @@ namespace DocxToPdf.Core.Tests
             var result = PdfDocument.SanitizePdfCharacters(input);
             Assert.Equal(sanitized,result);
         }
+
+        [Theory]
+        [InlineData(@"C:\Dumpzone\steve\file_7.docx")]
+
+        public void ShouldCreateValidPdfFromConsecutiveRunsWithTabs(string input)
+        {
+
+            var pdf = PdfDocument.FromFullDocX(input);
+
+        }
     }
 }
 
