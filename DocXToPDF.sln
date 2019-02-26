@@ -12,6 +12,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "powershell", "powershell", "{2C5DF22E-1A11-4E1D-BCB8-EB01FF66950F}"
 	ProjectSection(SolutionItems) = preProject
 		powershell\packandpush.ps1 = powershell\packandpush.ps1
+		powershell\SetTeamCityVersionFromNuSpec.ps1 = powershell\SetTeamCityVersionFromNuSpec.ps1
 	EndProjectSection
 EndProject
 Global
