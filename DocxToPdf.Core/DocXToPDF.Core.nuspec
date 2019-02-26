@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>DocXToPdf</id>
+    <id>DocXToPdf.Core</id>
     <title>DocXToPdf.Core</title>
     <authors>Rob Hill</authors>
     <owners>Rob Hill</owners>
