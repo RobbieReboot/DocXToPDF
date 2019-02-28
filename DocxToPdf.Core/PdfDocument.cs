@@ -116,7 +116,7 @@ namespace DocxToPdf.Core
         public static PdfDocument FromDocX(string xmlFile)
         {
             var xdoc = XDocument.Load(xmlFile);
-            return PdfDocument.FromDocX(xdoc);
+            return PdfDocument.FromDocXXml(xdoc);
         }
 
 
@@ -212,7 +212,26 @@ paraNum++;
 
         public static PdfDocument FromFullDocX(string filename)
         {
+            int yPos = 0;
+            int fontSize = 9;
+            double hScale = 1.1;
+            double vScale = 1.5;
 
+            var pdf = new PdfDocument();
+
+            // TODO: Should come from the classes in the doc but for now, its all MonoSpaced.
+            FontObject CourierNew = new FontObject("Courier", pdf);
+            // TODO: Should come from the Docs metadata..
+            pdf.AddInfoObject("XDoc2Pdf", "RobHill", "3Squared");
+
+            // TODO: Point sizes from adobe for A4 - Fixed for now. Margins fixed for now.
+            var page = pdf.AddPage(new PageExtents(612, 792, 32, 10, 32, 10));
+            // TODO: The text object should add the font to the page IF it's not already added (Possibly). Slower than this but more convenient.
+
+            page.AddFont(CourierNew);
+
+            // TODO: SHould refactor this so the PAGE object is responsible for creation of content object so the parentRef can be set on creation.
+            var contentObj = page.AddContentObject();
             XDocument docx = null;
             XDocument styles = null;
 
@@ -238,28 +257,107 @@ paraNum++;
                 .ToDictionary(xe => xe.Attribute(w + "styleId").Value, xe => xe.Element(w + "pPr").Element(w + "tabs"));
 
             var paras = docx.Descendants(w + "p").ToList();
+            var paraNum = 0;
+            var newParas = new List<List<Tuple<string, double, string>>>();
             foreach (var para in paras)
             {
+                Console.WriteLine($"Para({paraNum})");
+
                 //Get the TABS table.
-//                var tabs = para.XPathSelectElements("w:pPr/w:tabs/w:tab", nsm).ToList();
+                //                var tabs = para.XPathSelectElements("w:pPr/w:tabs/w:tab", nsm).ToList();
                 var rNodes = para.XPathSelectElements("w:r", nsm).ToList();
                 var paraStyleName = para.Attributes(pt14 + "StyleName").FirstOrDefault()?.Value;
-                var paraTabs  = stylesWithTabs.FirstOrDefault(n => n.Key==paraStyleName);
-
-                foreach (var rNode in rNodes)
+                if (string.IsNullOrEmpty(paraStyleName))
                 {
-                    //if the node 
+                    //possibly name held in the pPr node?
+                    paraStyleName = para.XPathSelectElement("w:pPr/w:pStyle", nsm).Attribute(w + "val").Value;
                 }
+                var paraTabs = stylesWithTabs.FirstOrDefault(n => n.Key == paraStyleName);
+                if (paraTabs.Key == null)
+                {
+                    //empty paragraph = new empty para in newParas.
+                    var emptyPara = new List<Tuple<string, double, string>>()
+                        {new Tuple<string, double, string>(String.Empty, 0, String.Empty)};
+                    newParas.Add(emptyPara);
+                    paraNum++;
+                    continue;
+                }
+                var tabTable = paraTabs.Value.Descendants(w + "tab").Select(t => new
+                    {
+                        Justification = t.Attribute(w + "val").Value,
+                        Position = (double.Parse(t.Attribute(w + "pos").Value) / 20) * hScale 
+                })
+                    .ToList();
+                var currentTabInTable = 0;
+                string textAccumulator = String.Empty;
 
+                int nodeNum = 0;
+                var runs = new List<Tuple<string, double, string>>();
+                while (nodeNum < rNodes.Count())
+                {
+                    bool consumeTab = false;
+                    var currentTab = new
+                    {
+                        Justification = "left",
+                        Position = 0.0
+                    };
+                    //if the node has a <w:tab> USE the NEXT tab
+                    //if the node has text, accumulate this node (+ future nodes with <w:t> UNLESS another <w:tab> is present.
+                    if (rNodes[nodeNum].Descendants(w + "tab").Any())
+                    {
+                        if (currentTabInTable < tabTable.Count())
+                        {
+                            //break; //?
+                            currentTab = tabTable[currentTabInTable];   //.Position;
+                            currentTabInTable++;
+                        }
+                        nodeNum++;          //Consume the tab.
+                        if (nodeNum >= rNodes.Count())
+                            break;
+                    }
+                    while (rNodes[nodeNum].Descendants(w + "t").Any())
+                    {
+                        textAccumulator += SanitizePdfCharacters(rNodes[nodeNum].Value);
+                        nodeNum++;
+                        if (nodeNum >= rNodes.Count())
+                            break;
+                        if (rNodes[nodeNum].Descendants(w + "tab").Any())
+                            break;
+                    }
 
-
+                    Console.WriteLine($"{nodeNum} : {currentTab.Position} : {textAccumulator}");
+                    //if (!string.IsNullOrEmpty(textAccumulator) )    //&& !string.IsNullOrWhiteSpace(textAccumulator))
+                        runs.Add(new Tuple<string, double, string>(textAccumulator,currentTab.Position,currentTab.Justification));
+                    textAccumulator = String.Empty;
+                }
+                paraNum++;
+                newParas.Add(runs);
 
             }
+            foreach (var para in newParas)
+            {
+                //Null entry means skip a line.
+                if (para.Count == 0)
+                {
+                    yPos += (int)(fontSize * vScale);
+                    continue;
+                }
 
-            return null;
+                foreach (var run in para)
+                {
+                    //no text? skip object output!
+                    if (para.Count != 0)
+                    {
+                        contentObj.AddTextObject(run.Item2, yPos, run.Item1, CourierNew, fontSize, run.Item3);
+                    }
+
+                }
+                yPos += (int)(fontSize * vScale);
+            }
+            return pdf;
         }
 
-        public static PdfDocument FromDocX(XDocument xdoc)
+        public static PdfDocument FromDocXXml(XDocument xdoc)
         {
 
             var reader = xdoc.Root.CreateReader();

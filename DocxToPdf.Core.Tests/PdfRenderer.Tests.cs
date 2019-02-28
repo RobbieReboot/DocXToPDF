@@ -69,13 +69,24 @@ namespace DocxToPdf.Core.Tests
         }
 
         [Theory]
-        [InlineData(@"C:\Dumpzone\steve\file_7.docx")]
+        [InlineData("validDocX")]
 
-        public void ShouldCreateValidPdfFromConsecutiveRunsWithTabs(string input)
+        public void ShouldCreateValidPdfFromConsecutiveRunsWithTabs(string folder)
         {
+            var filter = "*.docx";
+            IEnumerable<string> GetFilesFromDir(string dir) =>
+                Directory.EnumerateFiles(dir, filter).Concat(
+                    Directory.EnumerateDirectories(dir)
+                        .SelectMany(subdir => GetFilesFromDir(subdir)));
 
-            var pdf = PdfDocument.FromFullDocX(input);
+            var validDocs = GetFilesFromDir(folder);
 
+            foreach (var docx in validDocs)
+            {
+                var pdf = PdfDocument.FromFullDocX(docx);
+                var outputName = Path.ChangeExtension(docx, "pdf");
+                pdf.Write(outputName);
+            }
         }
     }
 }
