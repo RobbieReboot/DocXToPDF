@@ -38,14 +38,14 @@ namespace DocxToPdf.Core
                     startX = _xPos + _extents.leftMargin;
                     break;
                 case "center":
-                    startX = _xPos + _extents.leftMargin - (StrLen(_txt, _fontSize)) / 2;
+                    startX = _xPos + _extents.leftMargin - (MonofontStrLen(_txt, _fontSize)) / 2;
                     break;
                 case "right":
-                    startX = _xPos + _extents.leftMargin - StrLen(_txt, _fontSize) + 2;           //+2 gives a little breathing space...
+                    startX = _xPos + _extents.leftMargin - (MonofontStrLen(_txt, _fontSize)); 
                     break;
             };
             return string.Format("\rBT/{0} {1} Tf\r{2} {3} Td \r({4}) Tj\rET\r",
-                _font.FontRef(), _fontSize, startX, (720 - _yPos), _txt);
+                _font.FontRef(), _fontSize,(int) startX, (720 - _yPos), _txt);
         }
 
         public byte[] RenderBytes(long offset, out int size)
@@ -54,7 +54,7 @@ namespace DocxToPdf.Core
             return new byte[size];
         }
 
-        private int StrLen(string text, int fontSize)
+        private int MonofontStrLen(string text, int fontSize)
         {
             char[] cArray = text.ToCharArray();
             int cWidth = 0;

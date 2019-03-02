@@ -210,6 +210,14 @@ paraNum++;
          
          */
 
+        public class InternalTab
+        {
+            public string Justification;
+            public string Position;
+            public string NextPos;
+            public int     Index;
+        }
+
         public static PdfDocument FromFullDocX(string filename)
         {
             int yPos = 0;
@@ -258,7 +266,9 @@ paraNum++;
 
             var paras = docx.Descendants(w + "p").ToList();
             var paraNum = 0;
-            var newParas = new List<List<Tuple<string, double, string>>>();
+            var newParas = new List<Dictionary<int,StringBuilder>>();
+            var paraTabTables = new List<List<InternalTab>>();
+
             foreach (var para in paras)
             {
                 Console.WriteLine($"Para({paraNum})");
@@ -275,69 +285,62 @@ paraNum++;
                 var paraTabs = stylesWithTabs.FirstOrDefault(n => n.Key == paraStyleName);
                 if (paraTabs.Key == null)
                 {
-                    //empty paragraph = new empty para in newParas.
-                    var emptyPara = new List<Tuple<string, double, string>>()
-                        {new Tuple<string, double, string>(String.Empty, 0, String.Empty)};
-                    newParas.Add(emptyPara);
+                    newParas.Add(null);
+                    paraTabTables.Add(null);
                     paraNum++;
                     continue;
                 }
-                var tabTable = paraTabs.Value.Descendants(w + "tab").Select(t => new
+                //create the REAL tabs table for this paragraph.
+                var tabTable = paraTabs.Value.Descendants(w + "tab").Select((t,i) => new InternalTab()
                     {
                         Justification = t.Attribute(w + "val").Value,
-                        Position = (double.Parse(t.Attribute(w + "pos").Value) / 20) * hScale 
-                })
+                        Position = t.Attribute(w + "pos").Value,
+                        NextPos = ((t.NextNode as XElement)!=null) ? 
+                            ((XElement)t.NextNode).Attribute(w + "pos").Value  :
+                                       t.Attribute(w + "pos").Value,
+                        Index = (int)i
+                    })
                     .ToList();
-                var currentTabInTable = 0;
-                string textAccumulator = String.Empty;
+                paraTabTables.Add(tabTable);
 
+                var currentTab = 0;
+                var currentTabKey = 0;
+                var textAccumulator = new Dictionary<int, StringBuilder>() {{0,new StringBuilder()}};
                 int nodeNum = 0;
-                var runs = new List<Tuple<string, double, string>>();
+
+                //process all the runs in a paragraph <w:p>
+
                 while (nodeNum < rNodes.Count())
                 {
-                    bool consumeTab = false;
-                    var currentTab = new
-                    {
-                        Justification = "left",
-                        Position = 0.0
-                    };
-                    //if the node has a <w:tab> USE the NEXT tab
-                    //if the node has text, accumulate this node (+ future nodes with <w:t> UNLESS another <w:tab> is present.
                     if (rNodes[nodeNum].Descendants(w + "tab").Any())
                     {
-                        if (currentTabInTable < tabTable.Count())
-                        {
-                            //break; //?
-                            currentTab = tabTable[currentTabInTable];   //.Position;
-                            currentTabInTable++;
-                        }
-                        nodeNum++;          //Consume the tab.
-                        if (nodeNum >= rNodes.Count())
-                            break;
+                        currentTabKey = currentTab++;
+                        textAccumulator[currentTabKey] = new StringBuilder();
                     }
-                    while (rNodes[nodeNum].Descendants(w + "t").Any())
+
+                    if (rNodes[nodeNum].Descendants(w + "t").Any())
                     {
-                        textAccumulator += SanitizePdfCharacters(rNodes[nodeNum].Value);
-                        nodeNum++;
-                        if (nodeNum >= rNodes.Count())
-                            break;
-                        if (rNodes[nodeNum].Descendants(w + "tab").Any())
-                            break;
+                        textAccumulator[currentTabKey].Append(SanitizePdfCharacters(rNodes[nodeNum].Value));
                     }
 
-                    Console.WriteLine($"{nodeNum} : {currentTab.Position} : {textAccumulator}");
-                    //if (!string.IsNullOrEmpty(textAccumulator) )    //&& !string.IsNullOrWhiteSpace(textAccumulator))
-                        runs.Add(new Tuple<string, double, string>(textAccumulator,currentTab.Position,currentTab.Justification));
-                    textAccumulator = String.Empty;
-                }
-                paraNum++;
-                newParas.Add(runs);
+                    nodeNum++;
 
+                    //if (currentTab.Justification == "right" )
+                    //    runs.Add(new Tuple<string, double, string,string,int>(textAccumulator, currentTab.NextPos, currentTab.Justification,currentTab.actual,currentTab.idx));
+                    //else
+                    //{
+                    //    runs.Add(new Tuple<string, double, string,string,int>(textAccumulator, currentTab.Position, currentTab.Justification, currentTab.actual, currentTab.idx));
+                    //}
+                }
+                newParas.Add(textAccumulator);
+                paraNum++;
             }
+
+            int paragraphTableIdx = 0;
             foreach (var para in newParas)
             {
                 //Null entry means skip a line.
-                if (para.Count == 0)
+                if (para==null)
                 {
                     yPos += (int)(fontSize * vScale);
                     continue;
@@ -346,13 +349,29 @@ paraNum++;
                 foreach (var run in para)
                 {
                     //no text? skip object output!
-                    if (para.Count != 0)
-                    {
-                        contentObj.AddTextObject(run.Item2, yPos, run.Item1, CourierNew, fontSize, run.Item3);
-                    }
+                    //get the associated TAB from the tabs table according to the KEY of the dictionary.
+                    //if the tabs justification is RIGHT - use the NEXT tabs position. The text renderer will subtract the string length.
 
+                    var tabs = paraTabTables[paragraphTableIdx];
+                    if (tabs == null)
+                        break;          //New Line!
+                    if (run.Key >= tabs.Count)
+                        break;
+                    //get the tab positions inc justifications
+                    var LPos = (double.Parse(tabs[run.Key].Position) / 20) * hScale;
+                    var RPos = (double.Parse(tabs[run.Key].NextPos) / 20) * hScale;
+                    var justification = tabs[run.Key].Justification;
+                    if (justification == "left")
+                    {
+                        contentObj.AddTextObject(LPos, yPos,run.Value.ToString(), CourierNew, fontSize,justification);
+                    }
+                    else
+                    {
+                        contentObj.AddTextObject(LPos, yPos, run.Value.ToString(), CourierNew, fontSize, justification);
+                    }
                 }
                 yPos += (int)(fontSize * vScale);
+                paragraphTableIdx++;
             }
             return pdf;
         }
@@ -505,3 +524,4 @@ paraNum++;
         }
     }
 }
+//(double.Parse(t.Attribute(w + "pos").Value) / 20) * hScale

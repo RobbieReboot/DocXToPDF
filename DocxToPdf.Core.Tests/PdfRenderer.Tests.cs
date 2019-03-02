@@ -70,7 +70,6 @@ namespace DocxToPdf.Core.Tests
 
         [Theory]
         [InlineData("validDocX")]
-
         public void ShouldCreateValidPdfFromConsecutiveRunsWithTabs(string folder)
         {
             var filter = "*.docx";
@@ -88,6 +87,15 @@ namespace DocxToPdf.Core.Tests
                 pdf.Write(outputName);
             }
         }
+        [Theory]
+        [InlineData(@"validDocX\file_2.docx")]
+        public void File3ShouldRenderProperly(string file)
+        {
+            var pdf = PdfDocument.FromFullDocX(file);
+            var outputName = Path.ChangeExtension(file, "pdf");
+            pdf.Write(outputName);
+        }
+
     }
 }
 
