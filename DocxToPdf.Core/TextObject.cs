@@ -53,18 +53,19 @@ namespace DocxToPdf.Core
             size = 0;
             return new byte[size];
         }
-
+        //remember fontsize is in "half points" so should be doubles for each character.
         private int MonofontStrLen(string text, int fontSize)
         {
             char[] cArray = text.ToCharArray();
             int cWidth = 0;
             foreach (char c in cArray)
             {
-                cWidth += 500;  //(int)(fontSize*1.6)*20;	//Monospaced font width?
+//                cWidth += 360;  // 9 *2 * 20 = 360 (int)(fontSize*2)*20;	//Monospaced font width?
+                cWidth += (int)(fontSize*2)*20;	//Monospaced font width?
             }
-            //div by1000??? 100 seems to work better :/
             //$"{text} - {(cWidth / 100)}".Dump("StrLen Em's");
-            return (cWidth / 100);
+            //divided by 72dpi to get to inches for Postscript.
+            return (cWidth / 72);
         }
     }
 }

@@ -82,16 +82,16 @@ namespace DocxToPdf.Core.Tests
 
             foreach (var docx in validDocs)
             {
-                var pdf = PdfDocument.FromFullDocX(docx);
+                var pdf = PdfDocument.FromDocX(docx);
                 var outputName = Path.ChangeExtension(docx, "pdf");
                 pdf.Write(outputName);
             }
         }
         [Theory]
-        [InlineData(@"validDocX\file_2.docx")]
+        [InlineData(@"validDocX\file_3.docx")]
         public void File3ShouldRenderProperly(string file)
         {
-            var pdf = PdfDocument.FromFullDocX(file);
+            var pdf = PdfDocument.FromDocX(file);
             var outputName = Path.ChangeExtension(file, "pdf");
             pdf.Write(outputName);
         }

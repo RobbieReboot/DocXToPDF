@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Xml;
 using System.Xml.Linq;
@@ -24,6 +25,9 @@ namespace DocxToPdf.Core
     /// </summary>
     public class PdfDocument
     {
+        static readonly XNamespace w = "http://schemas.openxmlformats.org/wordprocessingml/2006/main";
+        static readonly XNamespace pt14 = "http://powertools.codeplex.com/2011";
+
         public XRefTableObject xrefTable;
         public uint NextObjectNum { get; set; }
         public int fontIndex = 1;   //numerical Object tag..
@@ -113,104 +117,14 @@ namespace DocxToPdf.Core
             }
         }
 
-        public static PdfDocument FromDocX(string xmlFile)
+        public static PdfDocument FromPartialDocX(string xmlFile)
         {
             var xdoc = XDocument.Load(xmlFile);
-            return PdfDocument.FromDocXXml(xdoc);
+            return PdfDocument.FromPartialDocX(xdoc);
         }
 
 
-        /*
-
-public static void FromFullDocX(string filename)
-{
-
-	XDocument docx = null;
-	XDocument styles = null;
-
-	using (ZipArchive zip = ZipFile.Open(filename, ZipArchiveMode.Read))
-	{
-		var zdoc = zip.Entries.SingleOrDefault(n => n.FullName == @"word/document.xml");
-		using (StreamReader s = new StreamReader(zdoc.Open()))
-			docx = XDocument.Load(s);
-		var zstyles = zip.Entries.SingleOrDefault(n => n.FullName == @"word/styles.xml");
-		using (StreamReader s = new StreamReader(zstyles.Open()))
-			styles = XDocument.Load(s);
-	}
-	var reader = docx.Root.CreateReader();
-	var nsm = new XmlNamespaceManager(reader.NameTable);
-	XNamespace w = "http://schemas.openxmlformats.org/wordprocessingml/2006/main";
-	XNamespace pt14 = "http://powertools.codeplex.com/2011";
-	nsm.AddNamespace("w", "http://schemas.openxmlformats.org/wordprocessingml/2006/main");
-	nsm.AddNamespace("pt14", "http://powertools.codeplex.com/2011");
-
-	var stylesWithTabs = styles.Descendants(w + "style")
-		.Where(xe => xe.Attribute(w + "type")?.Value == "paragraph" &&
-					 xe.Elements(w + "pPr").Elements(w + "tabs").Any())
-		.ToDictionary(xe => xe.Attribute(w + "styleId").Value, xe => xe.Element(w + "pPr").Element(w + "tabs"));
-
-	var paras = docx.Descendants(w + "p").ToList();
-	var paraNum = 0;
-	foreach (var para in paras)
-	{
-		$"Para({paraNum})".Dump();
-
-		//Get the TABS table.
-		//                var tabs = para.XPathSelectElements("w:pPr/w:tabs/w:tab", nsm).ToList();
-		var rNodes = para.XPathSelectElements("w:r", nsm).ToList();
-		var paraStyleName = para.Attributes(pt14 + "StyleName").FirstOrDefault()?.Value;
-		var paraTabs = stylesWithTabs.FirstOrDefault(n => n.Key == paraStyleName);
-		var tabTable = paraTabs.Value.Descendants(w + "tab").Select(t => new
-		{
-			Justification = t.Attribute(w + "val").Value,
-			Position = t.Attribute(w + "pos").Value
-		})
-		.ToList();
-		var currentTabInTable = 0;
-		string textAccumulator = String.Empty;
-		
-		int nodeNum = 0;
-		
-		while (nodeNum < rNodes.Count())
-		{
-			bool consumeTab = false;
-			string currentTab = String.Empty;
-			//if the node has a <w:tab> USE the NEXT tab
-			//if the node has text, accumulate this node (+ future nodes with <w:t> UNLESS another <w:tab> is present.
-			if (rNodes[nodeNum].Descendants(w + "tab").Any())
-			{
-				if (currentTabInTable < tabTable.Count())
-				{
-					//break; //?
-					currentTab = tabTable[currentTabInTable].Position;
-					currentTabInTable++;
-				}
-				nodeNum++;          //Consume the tab.
-				if (nodeNum >= rNodes.Count())
-					break;
-			}
-			while (rNodes[nodeNum].Descendants(w+"t").Any())
-			{
-				textAccumulator += rNodes[nodeNum].Value;
-				nodeNum++;
-				if (nodeNum>=rNodes.Count())
-					break;
-			}
-			$"{nodeNum} : {currentTab} : {textAccumulator}".Dump();
-				textAccumulator = String.Empty;
-		}
-
-
-paraNum++;
-
-	}
-	return;
-}
-
-         
-         */
-
-        public class InternalTab
+        private class InternalTab
         {
             public string Justification;
             public string Position;
@@ -218,12 +132,18 @@ paraNum++;
             public int     Index;
         }
 
-        public static PdfDocument FromFullDocX(string filename)
+        Dictionary<string,XElement> CollectStylesWithTabs(XDocument styleDoc) => styleDoc.Descendants(w + "style")
+            .Where(xe => xe.Attribute(w + "type")?.Value == "paragraph" &&
+                         xe.Elements(w + "pPr").Elements(w + "tabs").Any())
+            .ToDictionary(xe => xe.Attribute(w + "styleId").Value, xe => xe.Element(w + "pPr").Element(w + "tabs"));
+
+
+        public static PdfDocument FromDocX(string filename)
         {
             int yPos = 0;
             int fontSize = 9;
             double hScale = 1.1;
-            double vScale = 1.5;
+            double vScale = 1.5;        //BODGY sizes, this just makes it fit via trial and error! :/
 
             var pdf = new PdfDocument();
 
@@ -232,37 +152,22 @@ paraNum++;
             // TODO: Should come from the Docs metadata..
             pdf.AddInfoObject("XDoc2Pdf", "RobHill", "3Squared");
 
-            // TODO: Point sizes from adobe for A4 - Fixed for now. Margins fixed for now.
-            var page = pdf.AddPage(new PageExtents(612, 792, 32, 10, 32, 10));
-            // TODO: The text object should add the font to the page IF it's not already added (Possibly). Slower than this but more convenient.
-
-            page.AddFont(CourierNew);
-
-            // TODO: SHould refactor this so the PAGE object is responsible for creation of content object so the parentRef can be set on creation.
-            var contentObj = page.AddContentObject();
             XDocument docx = null;
             XDocument styles = null;
 
-            using (ZipArchive zip = ZipFile.Open(filename, ZipArchiveMode.Read))
-            {
-                var zdoc = zip.Entries.SingleOrDefault(n => n.FullName == @"word/document.xml");
-                using (StreamReader s = new StreamReader(zdoc.Open()))
-                    docx = XDocument.Load(s);
-                var zstyles = zip.Entries.SingleOrDefault(n => n.FullName == @"word/styles.xml");
-                using (StreamReader s = new StreamReader(zstyles.Open()))
-                    styles = XDocument.Load(s);
-            }
-            var reader = docx.Root.CreateReader();
-            var nsm = new XmlNamespaceManager(reader.NameTable);
-            XNamespace w = "http://schemas.openxmlformats.org/wordprocessingml/2006/main";
-            XNamespace pt14 = "http://powertools.codeplex.com/2011";
-            nsm.AddNamespace("w", "http://schemas.openxmlformats.org/wordprocessingml/2006/main");
-            nsm.AddNamespace("pt14", "http://powertools.codeplex.com/2011");
+            docx = GetDocPart(filename, "document");
+            styles = GetDocPart(filename, "styles");
+
+            
+
+            var nsm = CreateNameSpaceManager(docx, new Dictionary<string, XNamespace>() { { "w", w },{"pt14",pt14 }});
+            
 
             var stylesWithTabs = styles.Descendants(w + "style")
                 .Where(xe => xe.Attribute(w + "type")?.Value == "paragraph" &&
                              xe.Elements(w + "pPr").Elements(w + "tabs").Any())
                 .ToDictionary(xe => xe.Attribute(w + "styleId").Value, xe => xe.Element(w + "pPr").Element(w + "tabs"));
+
 
             var paras = docx.Descendants(w + "p").ToList();
             var paraNum = 0;
@@ -279,9 +184,10 @@ paraNum++;
                 var paraStyleName = para.Attributes(pt14 + "StyleName").FirstOrDefault()?.Value;
                 if (string.IsNullOrEmpty(paraStyleName))
                 {
-                    //possibly name held in the pPr node?
-                    paraStyleName = para.XPathSelectElement("w:pPr/w:pStyle", nsm).Attribute(w + "val").Value;
+                    //name held in the pPr node?
+                    paraStyleName = para.XPathSelectElement("w:pPr/w:pStyle", nsm)?.Attribute(w + "val").Value;
                 }
+                //get the tabs for this paragraph style name..
                 var paraTabs = stylesWithTabs.FirstOrDefault(n => n.Key == paraStyleName);
                 if (paraTabs.Key == null)
                 {
@@ -324,19 +230,20 @@ paraNum++;
                     }
 
                     nodeNum++;
-
-                    //if (currentTab.Justification == "right" )
-                    //    runs.Add(new Tuple<string, double, string,string,int>(textAccumulator, currentTab.NextPos, currentTab.Justification,currentTab.actual,currentTab.idx));
-                    //else
-                    //{
-                    //    runs.Add(new Tuple<string, double, string,string,int>(textAccumulator, currentTab.Position, currentTab.Justification, currentTab.actual, currentTab.idx));
-                    //}
                 }
                 newParas.Add(textAccumulator);
                 paraNum++;
             }
 
+            // TODO: Point sizes from adobe for A4 - Fixed for now. Margins fixed for now.
+            //this comes from each pages's <w:p/w:pPr/w:sectPr/(w:pgSz|w:pgMar>
+            //OR this default to make the Train Docs fit properly...
+            var page = pdf.AddPage(new PageExtents(612, 792, 32, 10, 32, 10));
+
+            page.AddFont(CourierNew);
+            var contentObj = page.AddContentObject();
             int paragraphTableIdx = 0;
+
             foreach (var para in newParas)
             {
                 //Null entry means skip a line.
@@ -376,7 +283,33 @@ paraNum++;
             return pdf;
         }
 
-        public static PdfDocument FromDocXXml(XDocument xdoc)
+        private static XmlNamespaceManager CreateNameSpaceManager(XDocument docx, Dictionary<string, XNamespace> dictionary)
+        {
+            var reader = docx.Root.CreateReader();
+            var nsm = new XmlNamespaceManager(reader.NameTable);
+            foreach (var xns in dictionary)
+            {
+                nsm.AddNamespace(xns.Key, xns.Value.NamespaceName);
+            }
+
+            return nsm;
+        }
+
+        private static XDocument GetDocPart(string fileName,string partName)
+        {
+            XDocument docx = null;
+            using (ZipArchive zip = ZipFile.Open(fileName, ZipArchiveMode.Read))
+            {
+                var zdoc = zip.Entries.SingleOrDefault(n => n.FullName == $@"word/{partName}.xml");
+                using (StreamReader s = new StreamReader(zdoc.Open()))
+                    docx = XDocument.Load(s);
+            }
+            return docx;
+        }
+
+
+       
+        public static PdfDocument FromPartialDocX(XDocument xdoc)
         {
 
             var reader = xdoc.Root.CreateReader();
