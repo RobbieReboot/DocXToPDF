@@ -67,6 +67,35 @@ namespace DocxToPdf.Core.Tests
             var result = PdfDocument.SanitizePdfCharacters(input);
             Assert.Equal(sanitized,result);
         }
+
+        [Theory]
+        [InlineData("validDocX")]
+        public void ShouldCreateValidPdfFromConsecutiveRunsWithTabs(string folder)
+        {
+            var filter = "*.docx";
+            IEnumerable<string> GetFilesFromDir(string dir) =>
+                Directory.EnumerateFiles(dir, filter).Concat(
+                    Directory.EnumerateDirectories(dir)
+                        .SelectMany(subdir => GetFilesFromDir(subdir)));
+
+            var validDocs = GetFilesFromDir(folder);
+
+            foreach (var docx in validDocs)
+            {
+                var pdf = PdfDocument.FromFullDocX(docx);
+                var outputName = Path.ChangeExtension(docx, "pdf");
+                pdf.Write(outputName);
+            }
+        }
+        [Theory]
+        [InlineData(@"validDocX\file_2.docx")]
+        public void File3ShouldRenderProperly(string file)
+        {
+            var pdf = PdfDocument.FromFullDocX(file);
+            var outputName = Path.ChangeExtension(file, "pdf");
+            pdf.Write(outputName);
+        }
+
     }
 }
 

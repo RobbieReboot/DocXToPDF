@@ -9,6 +9,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Text;
 using System.Xml;
@@ -115,11 +116,269 @@ namespace DocxToPdf.Core
         public static PdfDocument FromDocX(string xmlFile)
         {
             var xdoc = XDocument.Load(xmlFile);
-            return PdfDocument.FromDocX(xdoc);
+            return PdfDocument.FromDocXXml(xdoc);
         }
 
-        public static PdfDocument FromDocX(XDocument xdoc)
+
+        /*
+
+public static void FromFullDocX(string filename)
+{
+
+	XDocument docx = null;
+	XDocument styles = null;
+
+	using (ZipArchive zip = ZipFile.Open(filename, ZipArchiveMode.Read))
+	{
+		var zdoc = zip.Entries.SingleOrDefault(n => n.FullName == @"word/document.xml");
+		using (StreamReader s = new StreamReader(zdoc.Open()))
+			docx = XDocument.Load(s);
+		var zstyles = zip.Entries.SingleOrDefault(n => n.FullName == @"word/styles.xml");
+		using (StreamReader s = new StreamReader(zstyles.Open()))
+			styles = XDocument.Load(s);
+	}
+	var reader = docx.Root.CreateReader();
+	var nsm = new XmlNamespaceManager(reader.NameTable);
+	XNamespace w = "http://schemas.openxmlformats.org/wordprocessingml/2006/main";
+	XNamespace pt14 = "http://powertools.codeplex.com/2011";
+	nsm.AddNamespace("w", "http://schemas.openxmlformats.org/wordprocessingml/2006/main");
+	nsm.AddNamespace("pt14", "http://powertools.codeplex.com/2011");
+
+	var stylesWithTabs = styles.Descendants(w + "style")
+		.Where(xe => xe.Attribute(w + "type")?.Value == "paragraph" &&
+					 xe.Elements(w + "pPr").Elements(w + "tabs").Any())
+		.ToDictionary(xe => xe.Attribute(w + "styleId").Value, xe => xe.Element(w + "pPr").Element(w + "tabs"));
+
+	var paras = docx.Descendants(w + "p").ToList();
+	var paraNum = 0;
+	foreach (var para in paras)
+	{
+		$"Para({paraNum})".Dump();
+
+		//Get the TABS table.
+		//                var tabs = para.XPathSelectElements("w:pPr/w:tabs/w:tab", nsm).ToList();
+		var rNodes = para.XPathSelectElements("w:r", nsm).ToList();
+		var paraStyleName = para.Attributes(pt14 + "StyleName").FirstOrDefault()?.Value;
+		var paraTabs = stylesWithTabs.FirstOrDefault(n => n.Key == paraStyleName);
+		var tabTable = paraTabs.Value.Descendants(w + "tab").Select(t => new
+		{
+			Justification = t.Attribute(w + "val").Value,
+			Position = t.Attribute(w + "pos").Value
+		})
+		.ToList();
+		var currentTabInTable = 0;
+		string textAccumulator = String.Empty;
+		
+		int nodeNum = 0;
+		
+		while (nodeNum < rNodes.Count())
+		{
+			bool consumeTab = false;
+			string currentTab = String.Empty;
+			//if the node has a <w:tab> USE the NEXT tab
+			//if the node has text, accumulate this node (+ future nodes with <w:t> UNLESS another <w:tab> is present.
+			if (rNodes[nodeNum].Descendants(w + "tab").Any())
+			{
+				if (currentTabInTable < tabTable.Count())
+				{
+					//break; //?
+					currentTab = tabTable[currentTabInTable].Position;
+					currentTabInTable++;
+				}
+				nodeNum++;          //Consume the tab.
+				if (nodeNum >= rNodes.Count())
+					break;
+			}
+			while (rNodes[nodeNum].Descendants(w+"t").Any())
+			{
+				textAccumulator += rNodes[nodeNum].Value;
+				nodeNum++;
+				if (nodeNum>=rNodes.Count())
+					break;
+			}
+			$"{nodeNum} : {currentTab} : {textAccumulator}".Dump();
+				textAccumulator = String.Empty;
+		}
+
+
+paraNum++;
+
+	}
+	return;
+}
+
+         
+         */
+
+        public class InternalTab
         {
+            public string Justification;
+            public string Position;
+            public string NextPos;
+            public int     Index;
+        }
+
+        public static PdfDocument FromFullDocX(string filename)
+        {
+            int yPos = 0;
+            int fontSize = 9;
+            double hScale = 1.1;
+            double vScale = 1.5;
+
+            var pdf = new PdfDocument();
+
+            // TODO: Should come from the classes in the doc but for now, its all MonoSpaced.
+            FontObject CourierNew = new FontObject("Courier", pdf);
+            // TODO: Should come from the Docs metadata..
+            pdf.AddInfoObject("XDoc2Pdf", "RobHill", "3Squared");
+
+            // TODO: Point sizes from adobe for A4 - Fixed for now. Margins fixed for now.
+            var page = pdf.AddPage(new PageExtents(612, 792, 32, 10, 32, 10));
+            // TODO: The text object should add the font to the page IF it's not already added (Possibly). Slower than this but more convenient.
+
+            page.AddFont(CourierNew);
+
+            // TODO: SHould refactor this so the PAGE object is responsible for creation of content object so the parentRef can be set on creation.
+            var contentObj = page.AddContentObject();
+            XDocument docx = null;
+            XDocument styles = null;
+
+            using (ZipArchive zip = ZipFile.Open(filename, ZipArchiveMode.Read))
+            {
+                var zdoc = zip.Entries.SingleOrDefault(n => n.FullName == @"word/document.xml");
+                using (StreamReader s = new StreamReader(zdoc.Open()))
+                    docx = XDocument.Load(s);
+                var zstyles = zip.Entries.SingleOrDefault(n => n.FullName == @"word/styles.xml");
+                using (StreamReader s = new StreamReader(zstyles.Open()))
+                    styles = XDocument.Load(s);
+            }
+            var reader = docx.Root.CreateReader();
+            var nsm = new XmlNamespaceManager(reader.NameTable);
+            XNamespace w = "http://schemas.openxmlformats.org/wordprocessingml/2006/main";
+            XNamespace pt14 = "http://powertools.codeplex.com/2011";
+            nsm.AddNamespace("w", "http://schemas.openxmlformats.org/wordprocessingml/2006/main");
+            nsm.AddNamespace("pt14", "http://powertools.codeplex.com/2011");
+
+            var stylesWithTabs = styles.Descendants(w + "style")
+                .Where(xe => xe.Attribute(w + "type")?.Value == "paragraph" &&
+                             xe.Elements(w + "pPr").Elements(w + "tabs").Any())
+                .ToDictionary(xe => xe.Attribute(w + "styleId").Value, xe => xe.Element(w + "pPr").Element(w + "tabs"));
+
+            var paras = docx.Descendants(w + "p").ToList();
+            var paraNum = 0;
+            var newParas = new List<Dictionary<int,StringBuilder>>();
+            var paraTabTables = new List<List<InternalTab>>();
+
+            foreach (var para in paras)
+            {
+                Console.WriteLine($"Para({paraNum})");
+
+                //Get the TABS table.
+                //                var tabs = para.XPathSelectElements("w:pPr/w:tabs/w:tab", nsm).ToList();
+                var rNodes = para.XPathSelectElements("w:r", nsm).ToList();
+                var paraStyleName = para.Attributes(pt14 + "StyleName").FirstOrDefault()?.Value;
+                if (string.IsNullOrEmpty(paraStyleName))
+                {
+                    //possibly name held in the pPr node?
+                    paraStyleName = para.XPathSelectElement("w:pPr/w:pStyle", nsm).Attribute(w + "val").Value;
+                }
+                var paraTabs = stylesWithTabs.FirstOrDefault(n => n.Key == paraStyleName);
+                if (paraTabs.Key == null)
+                {
+                    newParas.Add(null);
+                    paraTabTables.Add(null);
+                    paraNum++;
+                    continue;
+                }
+                //create the REAL tabs table for this paragraph.
+                var tabTable = paraTabs.Value.Descendants(w + "tab").Select((t,i) => new InternalTab()
+                    {
+                        Justification = t.Attribute(w + "val").Value,
+                        Position = t.Attribute(w + "pos").Value,
+                        NextPos = ((t.NextNode as XElement)!=null) ? 
+                            ((XElement)t.NextNode).Attribute(w + "pos").Value  :
+                                       t.Attribute(w + "pos").Value,
+                        Index = (int)i
+                    })
+                    .ToList();
+                paraTabTables.Add(tabTable);
+
+                var currentTab = 0;
+                var currentTabKey = 0;
+                var textAccumulator = new Dictionary<int, StringBuilder>() {{0,new StringBuilder()}};
+                int nodeNum = 0;
+
+                //process all the runs in a paragraph <w:p>
+
+                while (nodeNum < rNodes.Count())
+                {
+                    if (rNodes[nodeNum].Descendants(w + "tab").Any())
+                    {
+                        currentTabKey = currentTab++;
+                        textAccumulator[currentTabKey] = new StringBuilder();
+                    }
+
+                    if (rNodes[nodeNum].Descendants(w + "t").Any())
+                    {
+                        textAccumulator[currentTabKey].Append(SanitizePdfCharacters(rNodes[nodeNum].Value));
+                    }
+
+                    nodeNum++;
+
+                    //if (currentTab.Justification == "right" )
+                    //    runs.Add(new Tuple<string, double, string,string,int>(textAccumulator, currentTab.NextPos, currentTab.Justification,currentTab.actual,currentTab.idx));
+                    //else
+                    //{
+                    //    runs.Add(new Tuple<string, double, string,string,int>(textAccumulator, currentTab.Position, currentTab.Justification, currentTab.actual, currentTab.idx));
+                    //}
+                }
+                newParas.Add(textAccumulator);
+                paraNum++;
+            }
+
+            int paragraphTableIdx = 0;
+            foreach (var para in newParas)
+            {
+                //Null entry means skip a line.
+                if (para==null)
+                {
+                    yPos += (int)(fontSize * vScale);
+                    continue;
+                }
+
+                foreach (var run in para)
+                {
+                    //no text? skip object output!
+                    //get the associated TAB from the tabs table according to the KEY of the dictionary.
+                    //if the tabs justification is RIGHT - use the NEXT tabs position. The text renderer will subtract the string length.
+
+                    var tabs = paraTabTables[paragraphTableIdx];
+                    if (tabs == null)
+                        break;          //New Line!
+                    if (run.Key >= tabs.Count)
+                        break;
+                    //get the tab positions inc justifications
+                    var LPos = (double.Parse(tabs[run.Key].Position) / 20) * hScale;
+                    var RPos = (double.Parse(tabs[run.Key].NextPos) / 20) * hScale;
+                    var justification = tabs[run.Key].Justification;
+                    if (justification == "left")
+                    {
+                        contentObj.AddTextObject(LPos, yPos,run.Value.ToString(), CourierNew, fontSize,justification);
+                    }
+                    else
+                    {
+                        contentObj.AddTextObject(LPos, yPos, run.Value.ToString(), CourierNew, fontSize, justification);
+                    }
+                }
+                yPos += (int)(fontSize * vScale);
+                paragraphTableIdx++;
+            }
+            return pdf;
+        }
+
+        public static PdfDocument FromDocXXml(XDocument xdoc)
+        {
+
             var reader = xdoc.Root.CreateReader();
             var nsm = new XmlNamespaceManager(reader.NameTable);
             XNamespace w = "http://schemas.openxmlformats.org/wordprocessingml/2006/main";
@@ -151,6 +410,8 @@ namespace DocxToPdf.Core
 
             foreach (var para in paras)
             {
+                //Get the TABS table.
+
                 var tabs = para.XPathSelectElements("w:pPr/w:tabs/w:tab", nsm).ToList();
                 var rNodes = para.XPathSelectElements("w:r", nsm).ToList();
                 var tNodes = para.XPathSelectElements("w:r/w:t", nsm);
@@ -263,3 +524,4 @@ namespace DocxToPdf.Core
         }
     }
 }
+//(double.Parse(t.Attribute(w + "pos").Value) / 20) * hScale

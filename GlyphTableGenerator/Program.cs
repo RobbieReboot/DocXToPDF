@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 using System.Windows.Media;
 using FontFamily = System.Drawing.FontFamily;
 
+//https://docs.microsoft.com/en-us/dotnet/framework/winforms/advanced/how-to-obtain-font-metrics
+//https://docs.microsoft.com/en-us/windows/desktop/gdi/character-widths
+
+
 namespace GlyphTableGenerator
 {
     class Program

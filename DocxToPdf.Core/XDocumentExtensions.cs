@@ -12,7 +12,7 @@ namespace DocxToPdf.Core
     {
         public static PdfDocument ToPdf(this XDocument xdoc)
         {
-            return PdfDocument.FromDocX(xdoc);
+            return PdfDocument.FromDocXXml(xdoc);
         }
     }
 }

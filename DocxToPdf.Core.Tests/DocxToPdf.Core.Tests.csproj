@@ -26,6 +26,27 @@
     <None Update="Output\dummy.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="validDocX\file_1.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="validDocX\file_2.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="validDocX\file_3.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="validDocX\file_4.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="validDocX\file_5.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="validDocX\file_6.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="validDocX\file_7.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="validXml\dummy.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -92,6 +113,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="validDocX\" />
     <Folder Include="Output\" />
   </ItemGroup>
 
