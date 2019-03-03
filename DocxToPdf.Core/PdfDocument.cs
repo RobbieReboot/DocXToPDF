@@ -12,6 +12,7 @@ using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography;
 using System.Text;
 using System.Xml;
 using System.Xml.Linq;
@@ -131,31 +132,58 @@ namespace DocxToPdf.Core
                          xe.Elements(DocXNs.w + "pPr").Elements(DocXNs.w + "tabs").Any())
             .ToDictionary(xe => xe.Attribute(DocXNs.w + "styleId").Value, xe => xe.Element(DocXNs.w + "pPr").Element(DocXNs.w + "tabs"));
 
+        public static PdfDocument FromDocX(MemoryStream documentXmlMs,MemoryStream stylesMs)
+        {
+            XDocument docx = null;
+            XDocument styles = null;
+
+            using (var sr = new StreamReader(documentXmlMs))
+            {
+                docx = XDocument.Parse(sr.ReadToEnd());
+            }
+            using (var sr = new StreamReader(stylesMs))
+            {
+                styles = XDocument.Parse(sr.ReadToEnd());
+            }
+            return createPdf(docx, styles);
+        }
+
+        //zip file as memory stream
+        public static PdfDocument FromDocX(MemoryStream docxMs)
+        {
+            XDocument docx = null;
+            XDocument styles = null;
+            docx = GetDocPart(docxMs, "document");
+            styles = GetDocPart(docxMs, "styles");
+            return createPdf(docx, styles);
+        }
 
         public static PdfDocument FromDocX(string filename)
+        {
+            XDocument docx = null;
+            XDocument styles = null;
+            docx = GetDocPart(filename, "document");
+            styles = GetDocPart(filename, "styles");
+            return createPdf(docx, styles);
+        }
+
+        private static PdfDocument createPdf(XDocument docx, XDocument styles)
         {
             int yPos = 0;
             int fontSize = 9;
             double hScale = 1.1;
             double vScale = 1.5;        //BODGY sizes, this just makes it fit via trial and error! :/
 
-           
-            XDocument docx = null;
-            XDocument styles = null;
-
-            docx = GetDocPart(filename, "document");
-            styles = GetDocPart(filename, "styles");
-
             var pdf = new PdfDocument();
 
             // TODO: Should come from the classes in the doc but for now, its all MonoSpaced.
             FontObject CourierNew = new FontObject("Courier", pdf);
+
             // TODO: Should come from the Docs metadata..
             pdf.AddInfoObject("XDoc2Pdf", "RobHill", "3Squared");
 
             var nsm = CreateNameSpaceManager(docx, new Dictionary<string, XNamespace>() { { "w", w },{"pt14",pt14 }});
             
-
             var stylesWithTabs = styles.Descendants(DocXNs.w + "style")
                 .Where(xe => xe.Attribute(DocXNs.w + "type")?.Value == "paragraph" &&
                              xe.Elements(DocXNs.w + "pPr").Elements(DocXNs.w + "tabs").Any())
@@ -254,7 +282,7 @@ namespace DocxToPdf.Core
 
                     var tabs = paraTabTables[paragraphTableIdx];
                     if (tabs == null)
-                        break;          //New Line!
+                        break;          //New Line - should never happen, no tabs just means the default LEFT tab with pos=0 was added.!
                     if (run.Key >= tabs.Count)
                         break;
                     //get the tab positions inc justifications
@@ -311,9 +339,16 @@ namespace DocxToPdf.Core
             }
             return docx;
         }
+        private static XDocument GetDocPart(MemoryStream stream, string partName)
+        {
+            XDocument docx = null;
+            ZipArchive zip = new ZipArchive(stream,ZipArchiveMode.Read,true);
+            var zdoc = zip.Entries.SingleOrDefault(n => n.FullName == $@"word/{partName}.xml");
+            using (StreamReader s = new StreamReader(zdoc.Open()))
+                docx = XDocument.Load(s);
+            return docx;
+        }
 
-
-       
         public static string SanitizePdfCharacters(string value)
         {
             if (String.IsNullOrEmpty(value))

@@ -96,6 +96,18 @@ namespace DocxToPdf.Core.Tests
             pdf.Write(outputName);
         }
 
+        [Theory]
+        [InlineData(@"validDocX\file_3.docx")]
+        public void File3AsMemoryStream(string fileName)
+        {
+            using (var memoryStream = new MemoryStream(File.ReadAllBytes(fileName)))
+            {
+                var pdf = PdfDocument.FromDocX(memoryStream);
+                var outputName = Path.ChangeExtension(fileName, "pdf");
+                pdf.Write(outputName);
+            }
+            
+        }
     }
 }
 
