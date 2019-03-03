@@ -36,7 +36,6 @@ namespace DocxToPdf.Core.Tests
         [Theory]
         [InlineData("validXml")]
         [InlineData("invalidXml")]
-
         public void PdfConvertConvertsDocXShouldThrowNoExceptionsWhenDocXIsValid(string folder)
         {
             //process all input folders to the output folder.
@@ -51,10 +50,11 @@ namespace DocxToPdf.Core.Tests
 
             foreach (var xmlFile in validXml)
             {
-                var reader = XmlReader.Create(xmlFile);
-                var xdoc = XDocument.Load(reader);
+                var pdf = PdfDocument.FromDocX(xmlFile);
+                //var reader = XmlReader.Create(xmlFile);
+                //var xdoc = XDocument.Load(reader);
                 var outFile = Path.Combine("output", Path.ChangeExtension(Path.GetFileName(xmlFile), "pdf"));
-                xdoc.ToPdf().Write(outFile);
+                pdf.Write(outFile);
             }
         }
 

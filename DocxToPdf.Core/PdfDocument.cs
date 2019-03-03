@@ -117,13 +117,7 @@ namespace DocxToPdf.Core
             }
         }
 
-        public static PdfDocument FromPartialDocX(string xmlFile)
-        {
-            var xdoc = XDocument.Load(xmlFile);
-            return PdfDocument.FromPartialDocX(xdoc);
-        }
-
-
+       
         private class InternalTab
         {
             public string Justification;
@@ -132,10 +126,10 @@ namespace DocxToPdf.Core
             public int     Index;
         }
 
-        Dictionary<string,XElement> CollectStylesWithTabs(XDocument styleDoc) => styleDoc.Descendants(w + "style")
-            .Where(xe => xe.Attribute(w + "type")?.Value == "paragraph" &&
-                         xe.Elements(w + "pPr").Elements(w + "tabs").Any())
-            .ToDictionary(xe => xe.Attribute(w + "styleId").Value, xe => xe.Element(w + "pPr").Element(w + "tabs"));
+        Dictionary<string,XElement> CollectStylesWithTabs(XDocument styleDoc) => styleDoc.Descendants(DocXNs.w + "style")
+            .Where(xe => xe.Attribute(DocXNs.w + "type")?.Value == "paragraph" &&
+                         xe.Elements(DocXNs.w + "pPr").Elements(DocXNs.w + "tabs").Any())
+            .ToDictionary(xe => xe.Attribute(DocXNs.w + "styleId").Value, xe => xe.Element(DocXNs.w + "pPr").Element(DocXNs.w + "tabs"));
 
 
         public static PdfDocument FromDocX(string filename)
@@ -145,6 +139,13 @@ namespace DocxToPdf.Core
             double hScale = 1.1;
             double vScale = 1.5;        //BODGY sizes, this just makes it fit via trial and error! :/
 
+           
+            XDocument docx = null;
+            XDocument styles = null;
+
+            docx = GetDocPart(filename, "document");
+            styles = GetDocPart(filename, "styles");
+
             var pdf = new PdfDocument();
 
             // TODO: Should come from the classes in the doc but for now, its all MonoSpaced.
@@ -152,61 +153,54 @@ namespace DocxToPdf.Core
             // TODO: Should come from the Docs metadata..
             pdf.AddInfoObject("XDoc2Pdf", "RobHill", "3Squared");
 
-            XDocument docx = null;
-            XDocument styles = null;
-
-            docx = GetDocPart(filename, "document");
-            styles = GetDocPart(filename, "styles");
-
-            
-
             var nsm = CreateNameSpaceManager(docx, new Dictionary<string, XNamespace>() { { "w", w },{"pt14",pt14 }});
             
 
-            var stylesWithTabs = styles.Descendants(w + "style")
-                .Where(xe => xe.Attribute(w + "type")?.Value == "paragraph" &&
-                             xe.Elements(w + "pPr").Elements(w + "tabs").Any())
-                .ToDictionary(xe => xe.Attribute(w + "styleId").Value, xe => xe.Element(w + "pPr").Element(w + "tabs"));
+            var stylesWithTabs = styles.Descendants(DocXNs.w + "style")
+                .Where(xe => xe.Attribute(DocXNs.w + "type")?.Value == "paragraph" &&
+                             xe.Elements(DocXNs.w + "pPr").Elements(DocXNs.w + "tabs").Any())
+                .ToDictionary(xe => xe.Attribute(DocXNs.w + "styleId").Value, xe => xe.Element(DocXNs.w + "pPr").Element(DocXNs.w + "tabs"));
 
 
-            var paras = docx.Descendants(w + "p").ToList();
+            var paras = docx.Descendants(DocXNs.w + "p").ToList();
             var paraNum = 0;
-            var newParas = new List<Dictionary<int,StringBuilder>>();
+            var runsWithTabIndexes = new List<Dictionary<int,StringBuilder>>();
             var paraTabTables = new List<List<InternalTab>>();
 
             foreach (var para in paras)
             {
+                bool paraHasTabs = false;
                 Console.WriteLine($"Para({paraNum})");
 
-                //Get the TABS table.
-                //                var tabs = para.XPathSelectElements("w:pPr/w:tabs/w:tab", nsm).ToList();
+                //Get the runs
                 var rNodes = para.XPathSelectElements("w:r", nsm).ToList();
-                var paraStyleName = para.Attributes(pt14 + "StyleName").FirstOrDefault()?.Value;
-                if (string.IsNullOrEmpty(paraStyleName))
-                {
-                    //name held in the pPr node?
-                    paraStyleName = para.XPathSelectElement("w:pPr/w:pStyle", nsm)?.Attribute(w + "val").Value;
-                }
+                //Get paragraph Style name.
+                var paraStyleName = GetParagraphStyleId(para, nsm);
                 //get the tabs for this paragraph style name..
                 var paraTabs = stylesWithTabs.FirstOrDefault(n => n.Key == paraStyleName);
-                if (paraTabs.Key == null)
-                {
-                    newParas.Add(null);
-                    paraTabTables.Add(null);
-                    paraNum++;
-                    continue;
-                }
+                paraHasTabs = paraTabs.Key != null;
+
+                var tabTable = new List<InternalTab>();
+
                 //create the REAL tabs table for this paragraph.
-                var tabTable = paraTabs.Value.Descendants(w + "tab").Select((t,i) => new InternalTab()
-                    {
-                        Justification = t.Attribute(w + "val").Value,
-                        Position = t.Attribute(w + "pos").Value,
-                        NextPos = ((t.NextNode as XElement)!=null) ? 
-                            ((XElement)t.NextNode).Attribute(w + "pos").Value  :
-                                       t.Attribute(w + "pos").Value,
-                        Index = (int)i
-                    })
-                    .ToList();
+                if (paraHasTabs)
+                {
+                    tabTable = paraTabs.Value.Descendants(DocXNs.w + "tab").Select((t, i) => new InternalTab()
+                        {
+                            Justification = t.Attribute(DocXNs.w + "val").Value,
+                            Position = t.Attribute(DocXNs.w + "pos").Value,
+                            NextPos = ((t.NextNode as XElement) != null) ?
+                                ((XElement)t.NextNode).Attribute(DocXNs.w + "pos").Value :
+                                t.Attribute(DocXNs.w + "pos").Value,
+                            Index = (int)i
+                        })
+                        .ToList();
+                }
+                else
+                {
+                    //No tabs for paragraph therefore 1 tab at Left edge of page.
+                    tabTable.Add( new InternalTab(){Index = 0,Justification = "left",NextPos = "0",Position = "0"});
+                }
                 paraTabTables.Add(tabTable);
 
                 var currentTab = 0;
@@ -218,20 +212,20 @@ namespace DocxToPdf.Core
 
                 while (nodeNum < rNodes.Count())
                 {
-                    if (rNodes[nodeNum].Descendants(w + "tab").Any())
+                    if (rNodes[nodeNum].Descendants(DocXNs.w + "tab").Any())
                     {
                         currentTabKey = currentTab++;
                         textAccumulator[currentTabKey] = new StringBuilder();
                     }
 
-                    if (rNodes[nodeNum].Descendants(w + "t").Any())
+                    if (rNodes[nodeNum].Descendants(DocXNs.w + "t").Any())
                     {
                         textAccumulator[currentTabKey].Append(SanitizePdfCharacters(rNodes[nodeNum].Value));
                     }
 
                     nodeNum++;
                 }
-                newParas.Add(textAccumulator);
+                runsWithTabIndexes.Add(textAccumulator);
                 paraNum++;
             }
 
@@ -239,12 +233,11 @@ namespace DocxToPdf.Core
             //this comes from each pages's <w:p/w:pPr/w:sectPr/(w:pgSz|w:pgMar>
             //OR this default to make the Train Docs fit properly...
             var page = pdf.AddPage(new PageExtents(612, 792, 32, 10, 32, 10));
-
             page.AddFont(CourierNew);
             var contentObj = page.AddContentObject();
             int paragraphTableIdx = 0;
 
-            foreach (var para in newParas)
+            foreach (var para in runsWithTabIndexes)
             {
                 //Null entry means skip a line.
                 if (para==null)
@@ -266,7 +259,7 @@ namespace DocxToPdf.Core
                         break;
                     //get the tab positions inc justifications
                     var LPos = (double.Parse(tabs[run.Key].Position) / 20) * hScale;
-                    var RPos = (double.Parse(tabs[run.Key].NextPos) / 20) * hScale;
+                    //var RPos = (double.Parse(tabs[run.Key].NextPos) / 20) * hScale;
                     var justification = tabs[run.Key].Justification;
                     if (justification == "left")
                     {
@@ -281,6 +274,18 @@ namespace DocxToPdf.Core
                 paragraphTableIdx++;
             }
             return pdf;
+        }
+
+        private static string GetParagraphStyleId(XElement para, XmlNamespaceManager nsm)
+        {
+            var paraStyleName = para.Attributes(pt14 + "StyleName").FirstOrDefault()?.Value;
+            if (string.IsNullOrEmpty(paraStyleName))
+            {
+                //name held in the pPr node?
+                paraStyleName = para.XPathSelectElement("w:pPr/w:pStyle", nsm)?.Attribute(w + "val").Value;
+            }
+
+            return paraStyleName;
         }
 
         private static XmlNamespaceManager CreateNameSpaceManager(XDocument docx, Dictionary<string, XNamespace> dictionary)
@@ -309,99 +314,6 @@ namespace DocxToPdf.Core
 
 
        
-        public static PdfDocument FromPartialDocX(XDocument xdoc)
-        {
-
-            var reader = xdoc.Root.CreateReader();
-            var nsm = new XmlNamespaceManager(reader.NameTable);
-            XNamespace w = "http://schemas.openxmlformats.org/wordprocessingml/2006/main";
-            XNamespace pt14 = "http://powertools.codeplex.com/2011";
-            nsm.AddNamespace("w", "http://schemas.openxmlformats.org/wordprocessingml/2006/main");
-            nsm.AddNamespace("pt14", "http://powertools.codeplex.com/2011");
-
-            int yPos = 0;
-            int fontSize = 9;
-            double hScale = 1.1;
-            double vScale = 1.6;
-
-            var paras = xdoc.Descendants(w + "p").ToList();
-            var pdf = new PdfDocument();
-
-            // TODO: Should come from the classes in the doc but for now, its all MonoSpaced.
-            FontObject CourierNew = new FontObject("Courier",pdf);
-            // TODO: Should come from the Docs metadata..
-            pdf.AddInfoObject("XDoc2Pdf", "RobHill","3Squared");
-
-            // TODO: Point sizes from adobe for A4 - Fixed for now. Margins fixed for now.
-            var page = pdf.AddPage(new PageExtents(612, 792, 32, 10, 32, 10));
-            // TODO: The text object should add the font to the page IF it's not already added (Possibly). Slower than this but more convenient.
-
-            page.AddFont(CourierNew);
-
-            // TODO: SHould refactor this so the PAGE object is responsible for creation of content object so the parentRef can be set on creation.
-            var contentObj = page.AddContentObject();
-
-            foreach (var para in paras)
-            {
-                //Get the TABS table.
-
-                var tabs = para.XPathSelectElements("w:pPr/w:tabs/w:tab", nsm).ToList();
-                var rNodes = para.XPathSelectElements("w:r", nsm).ToList();
-                var tNodes = para.XPathSelectElements("w:r/w:t", nsm);
-
-                // var anytext = tNodes.Any(tn => String.IsNullOrWhiteSpace(tn.Value));
-                // $"TabCount  = {tabs.Count}\n<r> count = {rNodes.Count()}\n<t> count = {tNodes.Count()}\n".Dump($"Paragraph {paraNum}");
-
-                var matchedTabNodes = new List<Tuple<string, double, string>>()
-                          .Select(t => new { Text = string.Empty, TabPos = double.MinValue, Justification = String.Empty }).ToList();
-                var tabNo = 0;
-                var tabCount = tabs.Count();
-                foreach (var rnode in rNodes)
-                {
-                    double tabStop = 0;
-                    string justification = "left";
-
-                    //Only create a tabstop IF we have tabs.
-                    if (tabNo < tabs.Count)
-                    {
-                        tabStop = (double.Parse(tabs[tabNo].Attribute(w + "pos").Value) / 20) * hScale;
-                        justification = tabs[tabNo].Attribute(w + "val").Value;
-                    }
-
-                    var newNode = new
-                    {
-                        Text = SanitizePdfCharacters(rnode.XPathSelectElement("w:t", nsm)?.Value),
-                        TabPos = tabStop,  //(fontSize*1.6),
-                        Justification = justification
-                    };
-                    matchedTabNodes.Add(newNode);
-                        //if (!string.IsNullOrEmpty(newNode.Text))
-                    tabNo++;
-                    if (tabNo >= tabs.Count) break;
-                }
-                var final = matchedTabNodes.Where(n => !String.IsNullOrEmpty(n.Text)).ToList();
-                foreach (var textNode in final)
-                {
-                    //Null entry means skip a line.
-                    if (textNode == null)
-                    {
-                        yPos += (int)(fontSize * vScale);
-                        continue;
-                    }
-                    //no text? skip object output!
-                    if (!string.IsNullOrEmpty(textNode.Text))
-                    {
-                        contentObj.AddTextObject(textNode.TabPos, yPos, textNode.Text, CourierNew, fontSize, textNode.Justification);
-                    }
-                }
-                yPos += (int)(fontSize * vScale);
-            }
-            //NOT USED ANYMORE - Get previous TAB value
-            //var previousTab = textNodes[1].XPathEvaluate("string(preceding-sibling::*[1]/w:tab/@pt14:TabWidth)",nsm).Dump("Previous Run TabWidth") ;
-            //var tabPos = double.Parse(textNodes[1].PreviousNode.XPathSelectElement("w:tab",nsm).Attribute(pt14 + "TabWidth")?.Value) / 20;
-            return pdf;
-        }
-
         public static string SanitizePdfCharacters(string value)
         {
             if (String.IsNullOrEmpty(value))
