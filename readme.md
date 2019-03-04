@@ -2,9 +2,10 @@
 
 # DocXToPdf
 
-![image](https://gitlab.3squared.com/RobHill/docxtopdf/badges/debug/pipeline.svg?style=flat-square)
-<!-- <img src="http://teamcity.3squared.com/app/rest/builds/buildType:DocXToPdf_Release/statusIcon"/> -->
-<!-- <iframe src="http://teamcity.3squared.com/guestAuth/app/rest/builds?locator=project:DocXToPdf,running:any,branch:branched:any,count:20"></iframe> -->
+![image](https://gitlab.3squared.com/RobHill/docxtopdf/badges/release/coverage.svg?style=flat-square)
+![image](http://teamcity.3squared.com/app/rest/builds/buildType:(id:DocXToPdf_Release)/statusIcon)
+![image](http://teamcity.3squared.com/app/rest/builds/buildType:(id:DocXToPdf_Debug)/statusIcon)
+
 
 
 Converts simple Microsoft Word DocX documents to PDF files.
