@@ -2,9 +2,10 @@
 
 # DocXToPdf
 
-![image](https://gitlab.3squared.com/RobHill/docxtopdf/badges/release/coverage.svg?style=flat-square)
-![image](http://teamcity.3squared.com/app/rest/builds/buildType:(id:DocXToPdf_Release)/statusIcon)
-![image](http://teamcity.3squared.com/app/rest/builds/buildType:(id:DocXToPdf_Debug)/statusIcon)
+| Release | Debug | Release | Debug |
+|------|-------|---------|---------|
+|![image](https://gitlab.3squared.com/RobHill/docxtopdf/badges/release/coverage.svg?style=flat-square)|![image](https://gitlab.3squared.com/RobHill/docxtopdf/badges/debug/coverage.svg?style=flat-square)|![image](http://teamcity.3squared.com/app/rest/builds/buildType:(id:DocXToPdf_Release)/statusIcon)|![image](http://teamcity.3squared.com/app/rest/builds/buildType:(id:DocXToPdf_Debug)/statusIcon)|
+
 
 
 
