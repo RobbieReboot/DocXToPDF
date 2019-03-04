@@ -12,6 +12,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "powershell", "powershell", "{2C5DF22E-1A11-4E1D-BCB8-EB01FF66950F}"
 	ProjectSection(SolutionItems) = preProject
 		powershell\packandpush.ps1 = powershell\packandpush.ps1
+		powershell\SetTeamCityVersionFromNuSpec.ps1 = powershell\SetTeamCityVersionFromNuSpec.ps1
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlyphTableGenerator", "GlyphTableGenerator\GlyphTableGenerator.csproj", "{65AEA428-CDAD-4664-8F80-B020881AB2E8}"

@@ -2,8 +2,8 @@
 
 # DocXToPdf
 
-![image](https://gitlab.3squared.com/RobHill/docxtopdf/badges/debug/coverage.svg?style=flat-square)
-<img src="http://teamcity.3squared.com/app/rest/builds/buildType:DocXToPdf_Release/statusIcon"/>
+![image](https://gitlab.3squared.com/RobHill/docxtopdf/badges/debug/pipeline.svg?style=flat-square)
+<!-- <img src="http://teamcity.3squared.com/app/rest/builds/buildType:DocXToPdf_Release/statusIcon"/> -->
 <!-- <iframe src="http://teamcity.3squared.com/guestAuth/app/rest/builds?locator=project:DocXToPdf,running:any,branch:branched:any,count:20"></iframe> -->
 
 
@@ -22,6 +22,7 @@ Currently only supports the first page (for the ORS implementation) and Monospac
 > This library _does not_ crack open the word document, it only converts the xml content file.
 
 ## Usage:
+Read and write to a file:
 ```cs
 
 var reader = XmlReader.Create(@"document.xml");
@@ -34,6 +35,18 @@ There is also an XDocument convenience extension method:
 var reader = XmlReader.Create(@"document.xml");
 var xdoc = XDocument.Load(reader);
 xdoc.ToPdf().Write(@"output.pdf");
+```
+Or returning a stream :
+```cs
+var memoryStream = new MemoryStream();
+var pdf = PdfDocument.FromDocX(fileName);
+var outputName = Path.ChangeExtension(fileName, "pdf");
+pdf.Write(out memoryStream);
+using (FileStream file = new FileStream(outputName, FileMode.OpenOrCreate, FileAccess.ReadWrite))
+{
+    memoryStream.WriteTo(file);
+    file.Close();
+}
 ```
 
 ## References used :
@@ -52,3 +65,4 @@ xdoc.ToPdf().Write(@"output.pdf");
 
 [Portable Document Format: An Introduction for Programmers](http://preserve.mactech.com/articles/mactech/Vol.15/15.09/PDFIntro/index.html)
 
+[Points, inches and Emus: Measuring units in Office Open XML](https://startbigthinksmall.wordpress.com/2010/01/04/points-inches-and-emus-measuring-units-in-office-open-xml/)

@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>DocXToPdf</id>
-    <title>DocXToPdf</title>
+    <id>DocXToPdf.Core</id>
+    <title>DocXToPdf.Core</title>
     <authors>Rob Hill</authors>
     <owners>Rob Hill</owners>
     <projectUrl>https://gitlab.3squared.com/RobHill/docxtopdf</projectUrl>
     <iconUrl>https://gitlab.3squared.com/uploads/-/system/project/avatar/470/pdf7.jpg?width=40</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>DocXToPDF converts simple docx xml files to pdf.</description>
+    <description>DocXToPDF.Core converts simple docx xml files to pdf.</description>
     <releaseNotes>First release, specific to ORS</releaseNotes>
     <copyright>Copyright 2019</copyright>
     <tags>docx pdf netcore $TC.build.config$</tags>

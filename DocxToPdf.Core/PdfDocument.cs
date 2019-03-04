@@ -198,7 +198,6 @@ namespace DocxToPdf.Core
             foreach (var para in paras)
             {
                 bool paraHasTabs = false;
-                Console.WriteLine($"Para({paraNum})");
 
                 //Get the runs
                 var rNodes = para.XPathSelectElements("w:r", nsm).ToList();
@@ -373,6 +372,26 @@ namespace DocxToPdf.Core
             ms.Close();
             return ms.GetBuffer();
         }
+        public void Write(out MemoryStream ms)
+        {
+            ms = new MemoryStream();
+            var size = 0;
+            ms.Write(RenderHeader("1.4", out size), 0, size);
+
+            //Just do first page for now...
+            ms.Write(pageObjects[0].RenderPageRefs(ms.Length, out size), 0, size);
+            ms.Write(pageObjects[0].RenderPageContent(ms.Length, out size), 0, size);
+
+            ms.Write(catalogObj.RenderBytes(ms.Length, out size), 0, size);
+            ms.Write(pageTreeObj.RenderBytes(ms.Length, out size), 0, size);
+
+            ms.Write(pageObjects[0].RenderPageFonts(ms.Length, out size), 0, size);
+
+            ms.Write(infoObject.RenderBytes(ms.Length, out size), 0, size);
+            ms.Write(xrefTable.RenderBytes(ms.Length, out size), 0, size);
+            ms.Write(RenderTrailer(catalogObj.PdfObjectId, infoObject.PdfObjectId, out size), 0, size);
+        }
+
 
         public void Write(string fileName)
         {
