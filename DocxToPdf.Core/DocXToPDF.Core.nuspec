@@ -12,7 +12,7 @@
     <releaseNotes>First release, specific to ORS</releaseNotes>
     <copyright>Copyright 2019</copyright>
     <tags>docx pdf netcore $TC.build.config$</tags>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
   </metadata>
   <files>
     <file src="..\readme.md" target="" />

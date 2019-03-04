@@ -10,9 +10,9 @@ namespace DocxToPdf.Core
     /// </summary>
     public static class XDocumentExtensions
     {
-        public static PdfDocument ToPdf(this XDocument xdoc)
+        public static PdfDocument ToPdf(string fileName)
         {
-            return PdfDocument.FromDocX(xdoc);
+            return PdfDocument.FromDocX(fileName);
         }
     }
 }

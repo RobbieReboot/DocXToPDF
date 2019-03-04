@@ -3,7 +3,7 @@
 namespace DocxToPdf.Core
 {
     /// <summary>
-    /// Represents the Object Id and the byte offset in the file.
+    /// Represents the ObjectId and the byte offset in the file - must be sortable because the XRef table must be in OBJECT order!
     /// </summary>
     public class ObjectXRef : IComparable
     {
@@ -21,7 +21,7 @@ namespace DocxToPdf.Core
         public int CompareTo(object obj)
         {
             int result = 0;
-            result = (this.objNum.CompareTo(((ObjectXRef) obj).objNum));
+            result = (this.objNum.CompareTo(((ObjectXRef)obj).objNum));
             return result;
         }
 

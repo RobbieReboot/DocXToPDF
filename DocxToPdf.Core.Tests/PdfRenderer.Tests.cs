@@ -33,31 +33,7 @@ namespace DocxToPdf.Core.Tests
             pdf.Write(@"output\pdfUnit1.pdf");
         }
 
-        [Theory]
-        [InlineData("validXml")]
-        [InlineData("invalidXml")]
-
-        public void PdfConvertConvertsDocXShouldThrowNoExceptionsWhenDocXIsValid(string folder)
-        {
-            //process all input folders to the output folder.
-
-            var filter = "*.xml";
-            IEnumerable<string> GetFilesFromDir(string dir) =>
-                Directory.EnumerateFiles(dir, filter).Concat(
-                    Directory.EnumerateDirectories(dir)
-                        .SelectMany(subdir => GetFilesFromDir(subdir)));
-
-            var validXml = GetFilesFromDir(folder);
-
-            foreach (var xmlFile in validXml)
-            {
-                var reader = XmlReader.Create(xmlFile);
-                var xdoc = XDocument.Load(reader);
-                var outFile = Path.Combine("output", Path.ChangeExtension(Path.GetFileName(xmlFile), "pdf"));
-                xdoc.ToPdf().Write(outFile);
-            }
-        }
-
+        
         [Theory]
         [InlineData(@"(", @"\(")]
         [InlineData(@")", @"\)")]
@@ -66,6 +42,48 @@ namespace DocxToPdf.Core.Tests
         {
             var result = PdfDocument.SanitizePdfCharacters(input);
             Assert.Equal(sanitized,result);
+        }
+
+        [Theory]
+        [InlineData("validDocX")]
+        public void ShouldCreateValidPdfFromConsecutiveRunsWithTabs(string folder)
+        {
+            var filter = "*.docx";
+            IEnumerable<string> GetFilesFromDir(string dir) =>
+                Directory.EnumerateFiles(dir, filter).Concat(
+                    Directory.EnumerateDirectories(dir)
+                        .SelectMany(subdir => GetFilesFromDir(subdir)));
+
+            var validDocs = GetFilesFromDir(folder);
+
+            foreach (var docx in validDocs)
+            {
+                var pdf = PdfDocument.FromDocX(docx);
+                var outputName = Path.ChangeExtension(docx, "pdf");
+                pdf.Write(outputName);
+            }
+        }
+        //file_3 was DIFFERENT! it contained no p:pPr with tabs , they were only in the styles.
+        [Theory]
+        [InlineData(@"validDocX\file_3.docx")]
+        public void File3ShouldRenderProperly(string file)
+        {
+            var pdf = PdfDocument.FromDocX(file);
+            var outputName = Path.ChangeExtension(file, "pdf");
+            pdf.Write(outputName);
+        }
+
+        [Theory]
+        [InlineData(@"validDocX\file_3.docx")]
+        public void File3AsMemoryStream(string fileName)
+        {
+            using (var memoryStream = new MemoryStream(File.ReadAllBytes(fileName)))
+            {
+                var pdf = PdfDocument.FromDocX(memoryStream);
+                var outputName = Path.ChangeExtension(fileName, "pdf");
+                pdf.Write(outputName);
+            }
+            
         }
     }
 }
