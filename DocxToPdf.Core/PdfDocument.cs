@@ -198,7 +198,6 @@ namespace DocxToPdf.Core
             foreach (var para in paras)
             {
                 bool paraHasTabs = false;
-                Console.WriteLine($"Para({paraNum})");
 
                 //Get the runs
                 var rNodes = para.XPathSelectElements("w:r", nsm).ToList();
