@@ -33,31 +33,7 @@ namespace DocxToPdf.Core.Tests
             pdf.Write(@"output\pdfUnit1.pdf");
         }
 
-        [Theory]
-        [InlineData("validXml")]
-        [InlineData("invalidXml")]
-        public void PdfConvertConvertsDocXShouldThrowNoExceptionsWhenDocXIsValid(string folder)
-        {
-            //process all input folders to the output folder.
-
-            var filter = "*.xml";
-            IEnumerable<string> GetFilesFromDir(string dir) =>
-                Directory.EnumerateFiles(dir, filter).Concat(
-                    Directory.EnumerateDirectories(dir)
-                        .SelectMany(subdir => GetFilesFromDir(subdir)));
-
-            var validXml = GetFilesFromDir(folder);
-
-            foreach (var xmlFile in validXml)
-            {
-                var pdf = PdfDocument.FromDocX(xmlFile);
-                //var reader = XmlReader.Create(xmlFile);
-                //var xdoc = XDocument.Load(reader);
-                var outFile = Path.Combine("output", Path.ChangeExtension(Path.GetFileName(xmlFile), "pdf"));
-                pdf.Write(outFile);
-            }
-        }
-
+        
         [Theory]
         [InlineData(@"(", @"\(")]
         [InlineData(@")", @"\)")]
@@ -87,6 +63,7 @@ namespace DocxToPdf.Core.Tests
                 pdf.Write(outputName);
             }
         }
+        //file_3 was DIFFERENT! it contained no p:pPr with tabs , they were only in the styles.
         [Theory]
         [InlineData(@"validDocX\file_3.docx")]
         public void File3ShouldRenderProperly(string file)

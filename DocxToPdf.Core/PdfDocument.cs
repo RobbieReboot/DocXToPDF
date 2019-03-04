@@ -289,14 +289,7 @@ namespace DocxToPdf.Core
                     var LPos = (double.Parse(tabs[run.Key].Position) / 20) * hScale;
                     //var RPos = (double.Parse(tabs[run.Key].NextPos) / 20) * hScale;
                     var justification = tabs[run.Key].Justification;
-                    if (justification == "left")
-                    {
-                        contentObj.AddTextObject(LPos, yPos,run.Value.ToString(), CourierNew, fontSize,justification);
-                    }
-                    else
-                    {
-                        contentObj.AddTextObject(LPos, yPos, run.Value.ToString(), CourierNew, fontSize, justification);
-                    }
+                    contentObj.AddTextObject(LPos, yPos, run.Value.ToString(), CourierNew, fontSize, justification);
                 }
                 yPos += (int)(fontSize * vScale);
                 paragraphTableIdx++;
