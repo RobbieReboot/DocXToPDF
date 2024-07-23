@@ -21,13 +21,13 @@ namespace DocxToPdf.Core.Tests
 
             var contentObj = page.AddContentObject();
 
-            contentObj.AddTextObject(0, 0, "BOLLOX", courierNew, 12, "left");
-            contentObj.AddTextObject(0, 0, "BOLLOX", courierNew, 12, "left");
-            contentObj.AddTextObject(10, 10, "BOLLOX", courierNew, 12, "left");
-            contentObj.AddTextObject(20, 20, "BOLLOX", courierNew, 12, "left");
-            contentObj.AddTextObject(30, 30, "BOLLOX", courierNew, 12, "left");
-            contentObj.AddTextObject(40, 40, "BOLLOX", courierNew, 12, "left");
-            contentObj.AddTextObject(50, 50, "BOLLOX", courierNew, 12, "left");
+            contentObj.AddTextObject(0, 0, "TEST", courierNew, 12, "left");
+            contentObj.AddTextObject(0, 0, "TEST", courierNew, 12, "left");
+            contentObj.AddTextObject(10, 10, "TEST", courierNew, 12, "left");
+            contentObj.AddTextObject(20, 20, "TEST", courierNew, 12, "left");
+            contentObj.AddTextObject(30, 30, "TEST", courierNew, 12, "left");
+            contentObj.AddTextObject(40, 40, "TEST", courierNew, 12, "left");
+            contentObj.AddTextObject(50, 50, "TEST", courierNew, 12, "left");
             pdf.Write(@"C:\Dumpzone\pdfUnit1.pdf");
         }
 
